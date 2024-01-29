@@ -1,7 +1,7 @@
 package org.alpha.darshan;
 
-public class Hello {
+public class GitPractice {
     public static void main(String[] args) {
-        System.out.println("new practice");
+        System.out.println("practice");
     }
 }
