@@ -1,8 +1,7 @@
 package org.alpha.mahesh;
 
-public class TestHello {
+public class TestBranch {
     public static void main(String[] args) {
-        System.out.println("Hello");
-
+        System.out.println("Git branch concept");
     }
 }
