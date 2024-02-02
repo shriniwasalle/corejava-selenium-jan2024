@@ -5,6 +5,6 @@ public class GitPractice {
 
         System.out.println("practice");
         System.out.println("gitbash");
-        System.out.println("adding changes for conflicts");
+        System.out.println("adding changes for conflicts 567");
     }
 }
