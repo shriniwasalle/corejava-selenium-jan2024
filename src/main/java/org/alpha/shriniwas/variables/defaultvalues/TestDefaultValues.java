@@ -1,4 +1,7 @@
-package org.alpha.shriniwas.variables;
+package org.alpha.shriniwas.variables.defaultvalues;
+
+import org.alpha.shriniwas.variables.Employee;
+import org.alpha.shriniwas.variables.Student;
 
 public class TestDefaultValues {
     static byte b;
