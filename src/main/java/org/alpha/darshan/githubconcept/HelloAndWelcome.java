@@ -1,4 +1,4 @@
-package org.alpha.darshan;
+package org.alpha.darshan.githubconcept;
 
 public class HelloAndWelcome {
     public static void main(String[] args) {
