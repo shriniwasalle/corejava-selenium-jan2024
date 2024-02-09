@@ -34,12 +34,20 @@ public class InstanceVariable {
         System.out.println(emp.CompanyNme);
     }
 
+    public void m3(){
+        System.out.println(age);
+        System.out.println(name);
+        System.out.println(bb);
+        System.out.println(dd);
+    }
+
     public static void main(String[] args) {
 
         InstanceVariable var= new InstanceVariable();
 
         var.m1();
         var.m2();
+        var.m3();
 
     }
 }
