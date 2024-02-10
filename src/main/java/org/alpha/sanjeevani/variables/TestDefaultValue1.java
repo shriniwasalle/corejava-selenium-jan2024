@@ -1,10 +1,12 @@
 package org.alpha.sanjeevani.variables;
 
-public class TestVariables1 {
+public class TestDefaultValue1 {
     static byte b;
     static short s;
+
     static int i;
     static long l;
+
     static float f;
     static double d;
     static boolean bb;
