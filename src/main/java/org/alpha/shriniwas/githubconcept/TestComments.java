@@ -1,4 +1,4 @@
-package org.alpha.shriniwas;
+package org.alpha.shriniwas.githubconcept;
 
 /**
  * This is a documentation comment

@@ -1,4 +1,4 @@
-package org.alpha.shriniwas;
+package org.alpha.shriniwas.githubconcept;
 
 public class GitBashDemo {
     public static void main(String[] args) {

@@ -1,4 +1,7 @@
-package org.alpha.shriniwas.variables;
+package org.alpha.shriniwas.variables.defaultvalues;
+
+import org.alpha.shriniwas.variables.Employee;
+import org.alpha.shriniwas.variables.Student;
 
 public class TestDefaultValues {
     static byte b;
@@ -16,6 +19,7 @@ public class TestDefaultValues {
     static Student st;
     static Employee emp;
 
+    static String [] names;
     public static void main(String[] args) {
 
         System.out.println("------ Primitive Data Types ------");
@@ -36,5 +40,6 @@ public class TestDefaultValues {
         System.out.println("Student ---> " +st);
         System.out.println("Employee ---> " +emp);
 
+        System.out.println("String [] ---> " +names);
     }
 }
