@@ -42,6 +42,7 @@ public class InstanceVariable {
         Employee emp= new Employee();
 
         System.out.println(emp.CompanyNme);
+        System.out.println(emp.CompanyId);
     }
 
     public void m3(){
