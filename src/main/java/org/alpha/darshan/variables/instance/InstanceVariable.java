@@ -1,6 +1,7 @@
 package org.alpha.darshan.variables.instance;
 
 import org.alpha.darshan.variables.defaultvalues.Employee;
+import org.alpha.darshan.variables.defaultvalues.Student;
 
 public class InstanceVariable {
 
@@ -11,6 +12,15 @@ public class InstanceVariable {
     byte bb;
 
     double dd;
+
+    {
+        age=35;
+
+        name="darhan";
+
+        System.out.println(age);
+        System.out.println(name);
+    }
 
     public void m1() {
         age = 18;
@@ -40,7 +50,11 @@ public class InstanceVariable {
         System.out.println(bb);
         System.out.println(dd);
     }
+    public  void m4(){
+        Student st= new Student();
+        System.out.println(st.StudentName);
 
+    }
     public static void main(String[] args) {
 
         InstanceVariable var= new InstanceVariable();
@@ -48,6 +62,7 @@ public class InstanceVariable {
         var.m1();
         var.m2();
         var.m3();
+        var.m4();
 
     }
 }
