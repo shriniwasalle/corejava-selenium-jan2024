@@ -55,6 +55,7 @@ public class InstanceVariable {
         System.out.println(st.StudentName);
 
     }
+
     public static void main(String[] args) {
 
         InstanceVariable var= new InstanceVariable();
