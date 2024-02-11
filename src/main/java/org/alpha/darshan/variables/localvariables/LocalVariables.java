@@ -11,10 +11,15 @@ public class LocalVariables {
         int age=200;
         System.out.println(age);
     }
+    public  static void m3(){
+        char ch='s';
+        System.out.println(ch);
+    }
     public static void main(String[] args) {
         LocalVariables l1= new LocalVariables();
         l1.m1("darshan");
         LocalVariables.m2();
+        LocalVariables.m3();
          byte b=125;
 
          int in=10221;
