@@ -2,6 +2,7 @@ package org.alpha.darshan.variables.instance;
 
 import org.alpha.darshan.variables.defaultvalues.Employee;
 import org.alpha.darshan.variables.defaultvalues.Student;
+import org.alpha.darshan.variables.localvariables.LocalVariables;
 
 public class InstanceVariable {
 
@@ -60,6 +61,10 @@ public class InstanceVariable {
     public static void main(String[] args) {
 
         InstanceVariable var= new InstanceVariable();
+        LocalVariables l1= new LocalVariables();
+        l1.m1("Darshan");
+        LocalVariables.m3();
+        LocalVariables.m2();
 
         var.m1();
         var.m2();
