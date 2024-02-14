@@ -6,7 +6,6 @@ public class TestMethodObjectAsParameter {
         System.out.println(emp.empName);
         System.out.println(emp.empId);
         System.out.println(emp.salary);
-        System.out.println("company name:"+comName);
     }
     public static void main(String[] args) {
         Employee emp=new Employee();
