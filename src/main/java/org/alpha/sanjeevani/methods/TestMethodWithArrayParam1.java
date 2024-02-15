@@ -12,9 +12,14 @@ public class TestMethodWithArrayParam1 {
         }
 
     }
-    public void getNameDta(char [] name){
+    public void getNameData(char [] name){
         for (int i=0;i<=name.length-1;i++){
             System.out.println(name[i]);
+        }
+    }
+    public void getNameData2(char [] name){
+        for(char cr :name){
+            System.out.println(cr);
         }
     }
     public static void main(String[] args) {
@@ -26,6 +31,8 @@ public class TestMethodWithArrayParam1 {
         System.out.println("                    ");
         obj.getStrDta(str);
         System.out.println("                    ");
-        obj.getNameDta(name);
+        obj.getNameData(name);
+        System.out.println("                    ");
+        obj.getNameData2(name);
     }
 }
