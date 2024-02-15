@@ -10,4 +10,12 @@ public class Employee {
         System.out.println("Alle");
         System.out.println("Microsoft");
     }
+
+    public String getEmployeeName() {
+        return empName;
+    }
+
+    public Employee getEmployeeDetails() {
+        return this;
+    }
 }
