@@ -19,6 +19,14 @@ public class TestMethodWithReturnValueFromDiffMethod1 {
     public static void main(String[] args) {
         TestMethodWithReturnValueFromDiffMethod1 obj=new TestMethodWithReturnValueFromDiffMethod1();
         System.out.println(obj.getMaxLength());
+        Employee emp=new Employee();
+        //System.out.println(emp.getEmpName().toUpperCase());
+        String str=emp.getEmpName();
+        System.out.println(str.toUpperCase());
+
+        TestMethodWithThisReturnType obj1=new TestMethodWithThisReturnType();
+        String name=obj1.getDetails().getData().getEmpName();
+        System.out.println(name);
     }
 
 }
