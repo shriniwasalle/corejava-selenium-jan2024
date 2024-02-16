@@ -9,10 +9,16 @@ public class TestMethodWithReturnValueFromDiffMethod1 {
         System.out.println(getName());
         return getName().length();
     }
+    public boolean getMaxLength(){
+        if(getNameLength()>=15){
+            return true;
+        }else
+            return false;
+    }
 
     public static void main(String[] args) {
         TestMethodWithReturnValueFromDiffMethod1 obj=new TestMethodWithReturnValueFromDiffMethod1();
-        System.out.println(obj.getNameLength());
+        System.out.println(obj.getMaxLength());
     }
 
 }
