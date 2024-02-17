@@ -5,6 +5,8 @@ public class TestHelloWorld {
         System.out.println("Welcome to Automation");
 
         System.out.println("Hello World");
+
+        System.out.println("Hello");
     }
 
 }
