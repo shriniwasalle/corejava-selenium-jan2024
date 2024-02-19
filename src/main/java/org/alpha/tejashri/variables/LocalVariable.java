@@ -37,7 +37,7 @@ char ch = 'S'; // need to use single quotes
         System.out.println(d);
 
 
-        System.out.println("----  Array Variables ---- ");
+        System.out.println("****  Array Variables **** ");
         System.out.println(st);
         System.out.println(st[0]);
         System.out.println(st[1]);
@@ -45,10 +45,10 @@ char ch = 'S'; // need to use single quotes
         System.out.println(names);
         System.out.println(flags);
 
-        System.out.println("----  User Defined Class Variable ---- ");
+        System.out.println("*****  User Defined Class Variable **** ");
         System.out.println(emp);
 
-        System.out.println("----  User Defined Class Array Variable ---- ");
+        System.out.println("****  User Defined Class Array Variable **** ");
         System.out.println(emps);
     }
 }
