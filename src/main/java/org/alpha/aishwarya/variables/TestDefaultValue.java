@@ -31,7 +31,7 @@ public class TestDefaultValue {
         System.out.println("char --> " +ch);
 
         System.out.println("--Non Primitive Data Types Default Values--");
-        System.out.println("String --> "+str);
+         System.out.println("String --> "+str);
         System.out.println("StringBuffer --> "+sb);
 
         System.out.println("--User defined Types Default Values--");
