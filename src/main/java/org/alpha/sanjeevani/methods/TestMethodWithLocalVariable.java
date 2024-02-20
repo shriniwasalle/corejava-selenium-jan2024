@@ -19,7 +19,7 @@ public class TestMethodWithLocalVariable {
     }
     public static void main(String[] args) {
         //nameless object creation
-       new TestMethodWithLocalVariable ().m1();
+       new TestMethodWithLocalVariable().m1();
        new TestMethodWithLocalVariable().m2();
         new TestMethodWithLocalVariable().m3(45,45);
     }
