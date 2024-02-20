@@ -15,5 +15,6 @@ public class TestMethodWithParameter {
         obj.addition(100, 200);
         obj.addition(200, 400);
         obj.addition(100, 200, 300);
+
     }
 }

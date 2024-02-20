@@ -1,4 +1,4 @@
-package org.alpha.tejashri.variables;
+package org.alpha.tejashri.variables.localvariables;
 
 import org.alpha.shriniwas.variables.Employee;
 
