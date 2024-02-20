@@ -2,7 +2,7 @@ package org.alpha.tejashri.variables.staticvariables;
 public class Company {
 String empName;
 int empId;
-static String companyName = "Google"; // Static Variables common for all objects
+static String companyName = "Microsoft"; // Static Variables common for all objects
                                       // static variable (companyName) created for un-necessary memory west for all different-different objects
     public void getEmp1() { // 1st Method Created
        empName = "Mahika";

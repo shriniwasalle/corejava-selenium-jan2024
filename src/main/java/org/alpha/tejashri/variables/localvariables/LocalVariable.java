@@ -1,9 +1,8 @@
 package org.alpha.tejashri.variables.localvariables;
 
-import org.alpha.shriniwas.variables.Employee;
-
+import org.alpha.tejashri.variables.Employee;
 public class LocalVariable {
-    public static void main(String[] args) {
+    public static <Employee> void main(String[] args) {
         int age = 10; // how to read ---> age is a variable of  type int
         /* int : primitive data type
         age : variable
@@ -37,7 +36,7 @@ char ch = 'S'; // need to use single quotes
         System.out.println(d);
 
 
-        System.out.println("****  Array Variables **** ");
+        System.out.println("*****  Array Variables ***** ");
         System.out.println(st);
         System.out.println(st[0]);
         System.out.println(st[1]);
