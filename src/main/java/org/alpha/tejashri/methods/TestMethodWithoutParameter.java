@@ -29,5 +29,7 @@ public class TestMethodWithoutParameter {
         obj.m1();// Without Parameters
         obj.m2();// Without Parameters
         TestMethodWithoutParameter.m3(); // directly called class name bcoz statics method
+        obj.add();
+        obj.addition();
     }
 }
