@@ -11,10 +11,7 @@ public void m1() {
         System.out.println("instance / Non-Static variables accessed by direct");
         System.out.println(age);
         System.out.println(name);
-
     }
-
-
     public static void main(String[] args) {
         // Static Method
 // 1. by using class name
