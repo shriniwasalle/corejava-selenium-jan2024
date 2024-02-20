@@ -1,4 +1,7 @@
-package org.alpha.tejashri.variables;
+package org.alpha.tejashri.variables.defaultvalues;
+
+import org.alpha.tejashri.variables.Employee;
+import org.alpha.tejashri.variables.Student;
 
 public class TestDefaultValues {
     static byte b;
