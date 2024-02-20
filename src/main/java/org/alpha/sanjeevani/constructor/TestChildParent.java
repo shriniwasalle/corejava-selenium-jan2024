@@ -2,7 +2,7 @@ package org.alpha.sanjeevani.constructor;
 
 public class TestChildParent {
     TestChildParent(){
-        System.out.println("i am in parent class");
+        System.out.println("i am in parent class constructor");
 
     }
         TestChildParent(String name){
