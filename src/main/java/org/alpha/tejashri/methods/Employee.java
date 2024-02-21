@@ -11,10 +11,13 @@ public class Employee {
     }
 
     public String getEmployeeName() {
+
         return empName;
     }
 
     public Employee getEmployeeDetails() {
+
         return this;
     }
 }
+
