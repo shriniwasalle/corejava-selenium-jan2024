@@ -18,5 +18,8 @@ public class TestMethodWithParameter {
         obj.addition(200, 400); // called with same method with different data
         obj.addition(100, 200, 300);
         obj.addition(10, 20,30); // called with same method with different data
+
+
+
     }
 }

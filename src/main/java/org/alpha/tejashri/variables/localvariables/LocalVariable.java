@@ -1,6 +1,6 @@
 package org.alpha.tejashri.variables.localvariables;
 
-import org.alpha.tejashri.variables.Employee;
+//import org.alpha.tejashri.variables.Employee;
 public class LocalVariable {
     public static <Employee> void main(String[] args) {
         int age = 10; // how to read ---> age is a variable of  type int
@@ -20,13 +20,13 @@ char ch = 'S'; // need to use single quotes
         String [] names = {"Tejashri", "Mahika", "Anshika"};
         boolean [] flags = {false, false, true};
 
-            Employee emp = new Employee();
+//            Employee emp = new Employee();
 
         /* emp = ref variable
          Employee = class
          new Employee() = Object */
 
-        Employee[] emps = null;
+//        Employee[] emps = null;
 
         System.out.println(age);
         System.out.println(bb);
@@ -45,9 +45,9 @@ char ch = 'S'; // need to use single quotes
         System.out.println(flags);
 
         System.out.println("*****  User Defined Class Variable **** ");
-        System.out.println(emp);
+//        System.out.println(emp);
 
         System.out.println("****  User Defined Class Array Variable **** ");
-        System.out.println(emps);
-    }
+//        System.out.println(emps);
+   }
 }

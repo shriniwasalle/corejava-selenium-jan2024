@@ -18,5 +18,10 @@ public static void main(String[] args) {
     obj.empDetails(200, "Shri");
     obj.empDetails("Boppa", 100);
     obj.employeeSalay(10000.5f);
+
+
+    String name = "Mahi";
+    int id = 100;
+    obj.empDetails(name, id); // call to Employee Details2 method
 }
 }
