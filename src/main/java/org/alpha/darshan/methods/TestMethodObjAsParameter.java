@@ -11,7 +11,6 @@ public class TestMethodObjAsParameter {
         System.out.println(name);
         eee.empAddress("Solapur");
 
-
     }
 
     public static void main(String[] args) {
