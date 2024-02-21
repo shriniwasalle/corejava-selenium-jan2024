@@ -7,8 +7,8 @@ public class TestMethodAsObjectParameter {
         System.out.println("Employee salary :"+emp.empSalary);
     }
     public static void main(String[] args) {
-        Employee emp=new Employee();
         TestMethodAsObjectParameter obj=new TestMethodAsObjectParameter();
+        Employee emp=new Employee();
         obj.getEmpDetails(emp);
     }
 }
