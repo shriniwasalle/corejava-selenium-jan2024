@@ -30,6 +30,6 @@ public class TestStaticBlocks {
 //        System.out.println("---------------------");
 //
 //        TestStaticBlocks obj3 = new TestStaticBlocks();
-    }
 
+    }
 }
