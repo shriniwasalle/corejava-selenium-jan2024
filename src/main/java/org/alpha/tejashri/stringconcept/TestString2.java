@@ -28,7 +28,6 @@ public class TestString2 {
         System.out.println("S5: " + System.identityHashCode(s5));
 
         // What is thr difference between == & equal()?
-
         // == : Address Comparison
         // equal( : Content Comparison
         System.out.println(s4 == s5); // false --> s4, s5 address different
@@ -36,6 +35,17 @@ public class TestString2 {
         System.out.println(s4.equals(s5)); // true --> s4=java, s5=Java content same
         System.out.println(s1.equals(s3)); // false --> s1=java, s3=Hello content different
         System.out.println(s2.equals(s3)); // true
-
     }
 }
+
+//Output:
+//S1: 1134712904
+//S2: 114132791
+//S3: 114132791
+//S4: 586617651
+//S5: 328638398
+//false
+//true
+//true
+//false
+//true
