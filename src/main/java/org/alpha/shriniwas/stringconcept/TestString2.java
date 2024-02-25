@@ -30,6 +30,7 @@ public class TestString2 {
 
         System.out.println(s4 == s5); // false
         System.out.println(s2 == s3); // true
-        System.out.println(s4.equals(s5));
+        System.out.println(s4.equals(s5)); // true
+        System.out.println(s2.equals(s3)); // true
     }
 }
