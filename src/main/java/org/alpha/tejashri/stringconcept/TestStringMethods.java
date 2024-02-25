@@ -36,7 +36,7 @@ public class TestStringMethods {
         System.out.println("startsWith : " + name.startsWith("shri")); //false
         System.out.println("endsWith : " + name.endsWith("shri")); //true
         System.out.println("endsWith : " + name.endsWith("Shri")); //false
-        System.out.println("withouttrim : " + str4); //      Automation
+        System.out.println("without trim : " + str4); //      Automation
         System.out.println("trim : " + str4.trim()); //Automation
 
         System.out.println("substring : " + name.substring(0, 5)); //Tejas---> begin index 0 to before endindex 5-1=4
@@ -143,7 +143,7 @@ public class TestStringMethods {
 //substring : jashri
 //substring : ash
 //substring : shri
-//        Tejashri
+//Tejashri
 //Mahi
 //Mahi
 //T
