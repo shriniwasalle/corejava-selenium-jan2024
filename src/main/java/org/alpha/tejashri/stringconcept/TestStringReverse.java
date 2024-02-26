@@ -2,9 +2,7 @@ package org.alpha.tejashri.stringconcept;
 
 public class TestStringReverse {
 
-
     public static void main(String[] args) {
-
         String str = "Tejashri";
         str.charAt(7);//i
         str.charAt(6);//r
@@ -24,10 +22,9 @@ public class TestStringReverse {
         StringBuffer sbf = new StringBuffer(str);
         System.out.println(sbf.reverse());
 
-
         char[] chArr = str.toCharArray();
         // [T, e, j, a, s, h, r, i]
-        System.out.println("Length of Tejashri : " +chArr.length); //8
+        System.out.println("Length of Tejashri : " + chArr.length); //8
 
         System.out.println("---------3.Using toCharArray---------------");
         System.out.println(chArr[7]);

@@ -15,6 +15,5 @@ public class TestExplianSout {
         // System = is a class
         //out = is a static variable of type PrintStream class
         // println() = is a method present inside PrintStream class
-
     }
 }

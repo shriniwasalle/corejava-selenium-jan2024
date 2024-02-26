@@ -7,17 +7,18 @@ public class TestStaticBlocks {
     static {
         System.out.println("I am in Static Block 1");
     }
+
     static {
         System.out.println("I am in Static Block 2");
     }
 
- // Instance Block
+    // Instance Block
     {
         System.out.println("I am in Instance Block ");
     }
 
- // Constructor
-    TestStaticBlocks(){ //excess specifier is default so default constructor
+    // Constructor
+    TestStaticBlocks() { //excess specifier is default so default constructor
 
         System.out.println("I am in No-arg Constructor");
     }

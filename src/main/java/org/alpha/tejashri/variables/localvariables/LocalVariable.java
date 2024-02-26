@@ -18,17 +18,17 @@ public class LocalVariable {
         float f = 100.5f;
         double d = 100.5;
 
-        int [] st = { 100 , 200, 300};
-        String [] names = {"Tejashri", "Mahika", "Anshika"};
-        boolean [] flags = {false, false, true};
+        int[] st = {100, 200, 300};
+        String[] names = {"Tejashri", "Mahika", "Anshika"};
+        boolean[] flags = {false, false, true};
 
         Employee emp = new Employee();
 
-//        /* emp = ref variable
-//         Employee = class
-//         new Employee() = Object */
+        /* emp = ref variable
+           Employee = class
+           new Employee() = Object */
 
-        Employee [] emps = null;
+        Employee[] emps = null;
 
         System.out.println(age);
         System.out.println(bb);
@@ -50,5 +50,5 @@ public class LocalVariable {
 
         System.out.println("****  User Defined Class Array Variable **** ");
         System.out.println(emps);
-   }
+    }
 }
