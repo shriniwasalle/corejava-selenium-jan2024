@@ -1,14 +1,13 @@
-package org.alpha.shriniwas.methods;
+package org.alpha.tejashri.methods;
 
 public class Employee {
-
-    String empName = "Shriniwas";
+    String empName = "Tejashri";
     int empId = 100;
 
     public void getEmpData() {
-        System.out.println("Shriniwas");
-        System.out.println("Alle");
-        System.out.println("Microsoft");
+        System.out.println("Tejashri");
+        System.out.println("Boppa");
+        System.out.println("Google");
     }
 
     public String getEmployeeName() {
