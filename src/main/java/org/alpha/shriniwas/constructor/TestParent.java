@@ -1,7 +1,5 @@
 package org.alpha.shriniwas.constructor;
 
-import org.alpha.tejashri.Test;
-
 public class TestParent {
 
     String empName = "ABCD";
