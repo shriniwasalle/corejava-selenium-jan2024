@@ -1,6 +1,6 @@
 package org.alpha.tejashri.variables.localvariables;
 
-import org.alpha.shriniwas.variables.Employee;
+import org.alpha.tejashri.variables.Employee;
 
 public class LocalVariable {
     public static void main(String[] args) {
@@ -9,23 +9,24 @@ public class LocalVariable {
         age : variable
         10 : value
         = : assignment operator */
+
         boolean bb = true;
         //bb is a variable of type boolean
 
-char ch = 'S'; // need to use single quotes
+        char ch = 'S'; // need to use single quotes
         String name = "Tejashri"; // need to use double quotes
         float f = 100.5f;
         double d = 100.5;
 
-        int [] st = { 100 , 200, 300};
-        String [] names = {"Tejashri", "Mahika", "Anshika"};
-        boolean [] flags = {false, false, true};
+        int[] st = {100, 200, 300};
+        String[] names = {"Tejashri", "Mahika", "Anshika"};
+        boolean[] flags = {false, false, true};
 
-            Employee emp = new Employee();
+        Employee emp = new Employee();
 
         /* emp = ref variable
-         Employee = class
-         new Employee() = Object */
+           Employee = class
+           new Employee() = Object */
 
         Employee[] emps = null;
 
@@ -36,8 +37,7 @@ char ch = 'S'; // need to use single quotes
         System.out.println(f);
         System.out.println(d);
 
-
-        System.out.println("****  Array Variables **** ");
+        System.out.println("*****  Array Variables ***** ");
         System.out.println(st);
         System.out.println(st[0]);
         System.out.println(st[1]);
