@@ -1,8 +1,8 @@
 package org.alpha.akash.methods;
 
 public class Employee {
-    // String empName = "Akash";
-   // int empId =100;
+     String empName = "Akki";
+    int empId =100;
 
     public void getEmpData(){
        // System.out.println(empId);
@@ -10,4 +10,7 @@ public class Employee {
         System.out.println("Vaitala");
         System.out.println("MS");
     }
+
+    public String getEmpName() {return empName;}
+   // public Employee getEmpDetailes() {return this;}
 }

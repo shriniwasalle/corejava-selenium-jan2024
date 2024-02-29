@@ -25,16 +25,6 @@ public class MethodWithDifferentTypeParam {
         int id = 100;
         obj.empDetails(name, id);
 
-
-
-
-
-
-
-
-
-
-
     }
 
     public void data1(int i, int i1) {
