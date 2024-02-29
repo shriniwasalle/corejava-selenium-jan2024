@@ -3,12 +3,10 @@ package org.alpha.darshan.stringpractice;
 public class TestStringImmutable {
 
 
-
-
     public static void main(String[] args) {
-        String s1="Darshan";
+        String s1 = "Darshan";
         s1.concat("gaikwad");
-        s1= s1.concat("gaikwad");
+        s1 = s1.concat("gaikwad");
         System.out.println(s1);
 
     }
