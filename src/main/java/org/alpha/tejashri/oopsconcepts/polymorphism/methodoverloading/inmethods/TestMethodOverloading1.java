@@ -1,4 +1,4 @@
-package org.alpha.tejashri.oopsconcepts.polymorphism.methodoverloading;
+package org.alpha.tejashri.oopsconcepts.polymorphism.methodoverloading.inmethods;
 
 public class TestMethodOverloading1 {
 
