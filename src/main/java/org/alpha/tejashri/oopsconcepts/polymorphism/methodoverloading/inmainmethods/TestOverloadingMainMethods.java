@@ -22,7 +22,7 @@ public class TestOverloadingMainMethods {
             System.out.println(a);
         }
     }
-    // These above 2 main methods are overloaded -in same class, 2 same method names,
+    // These above 3 main methods are overloaded -in same class, 3 same method names,
     // with diff parameters, with diff logic/behaviour
 
     public static void main(String[] args) { //without this type of main method the program can not be Run/executed
