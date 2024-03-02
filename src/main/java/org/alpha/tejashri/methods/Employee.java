@@ -7,7 +7,7 @@ public class Employee {
     public void getEmpData() {
         System.out.println("Tejashri");
         System.out.println("Boppa");
-        System.out.println("Google");
+        System.out.println("Microsoft");
     }
 
     public String getEmployeeName() {
@@ -18,3 +18,4 @@ public class Employee {
         return this;
     }
 }
+
