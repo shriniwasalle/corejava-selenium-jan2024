@@ -14,5 +14,7 @@ public class SampleClassReturn1 {
         System.out.println(data.empName);
         System.out.println(data.empId);
         data.empDetails();
+        Employee e1= new Employee();
+        System.out.println(e1.empId);
     }
 }

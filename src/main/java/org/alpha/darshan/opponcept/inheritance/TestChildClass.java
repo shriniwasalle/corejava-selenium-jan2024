@@ -1,6 +1,5 @@
 package org.alpha.darshan.opponcept.inheritance;
 
-import org.alpha.darshan.custructors.TestChild;
 
 public class TestChildClass extends TestParentClass {
 
