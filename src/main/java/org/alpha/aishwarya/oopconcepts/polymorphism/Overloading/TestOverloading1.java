@@ -6,7 +6,7 @@ public class TestOverloading1 {
     }
 
     public void Add(int a,int b, int c){
-        System.out.println(a+b+c);
+        System.out.println("Addition of A,B and C  " + (a+b+c));
     }
 
     public static void main(String[] args) {
