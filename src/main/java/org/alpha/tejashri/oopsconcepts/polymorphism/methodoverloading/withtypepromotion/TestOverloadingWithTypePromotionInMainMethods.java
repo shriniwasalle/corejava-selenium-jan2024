@@ -35,6 +35,31 @@ public class TestOverloadingWithTypePromotionInMainMethods {
         System.out.println("-----Type Promotion char[]->int[]-----");
         main(new int[]{'A', 'b', '[', '%', '&', '<', '/'});// Type Promotion char[]->int[]
         //will give the ASCII values of that char
-
     }
 }
+
+//----------Output---------
+//I am in int [] parameter :: Main Method [I@6aaa5eb0
+//1
+//2
+//3
+//4
+//I am in char[] parameter :: Main Method
+//a
+//b
+//c
+//I am in float parameter :: Main Method : 100.9
+//
+//-----Type Promotion-----
+//I am in float parameter :: Main Method : 97.0
+//I am in float parameter :: Main Method : 1000.0
+//
+//-----Type Promotion char[]->int[]-----
+//I am in int [] parameter :: Main Method [I@79b4d0f
+//65
+//98
+//91
+//37
+//38
+//60
+//47
