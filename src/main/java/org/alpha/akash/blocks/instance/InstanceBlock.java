@@ -6,6 +6,8 @@ public class InstanceBlock {
         name ="Akash";
         System.out.println("I am Instance Block :- 1");
     }
+
+
     {
         System.out.println("I am Instance Block :-2");
     }
