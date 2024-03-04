@@ -1,18 +1,19 @@
 package org.alpha.tejashri.oopsconcepts.polymorphism.methodoverriding.methodhiding;
 
-public class TestChildMethodHiding extends TestParentMethodHiding {
+public class TestChildMethodHidingInStatic extends TestParentMethodHidingInStatic {
 
     public static void m1() {
+
         System.out.println("Child :: m1 method");
     }
 
     public static void main(String[] args) {
-        TestChildMethodHiding obj1 = new TestChildMethodHiding();
+        TestChildMethodHidingInStatic obj1 = new TestChildMethodHidingInStatic();
         obj1.m1();// child m1 method
         // Here child class object with reference of child class itself
 
 
-        TestParentMethodHiding obj2 = new TestChildMethodHiding();
+        TestParentMethodHidingInStatic obj2 = new TestChildMethodHidingInStatic();
         //TestChildMethodHiding() : object of child
         //TestParentMethodHiding : reference of parent class
         obj2.m1(); // Parent m1 method instead of child m1 method
@@ -22,7 +23,7 @@ public class TestChildMethodHiding extends TestParentMethodHiding {
         //Static methods are linked with classes, not with Objects
         // whoever class object but reference class of that object is matters
 
-        TestParentMethodHiding obj3 = new TestParentMethodHiding();
+        TestParentMethodHidingInStatic obj3 = new TestParentMethodHidingInStatic();
         obj3.m1(); // obviously parent m1 method
     }
 }
