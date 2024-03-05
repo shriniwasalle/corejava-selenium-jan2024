@@ -24,5 +24,15 @@ public class TestOverloading3 {
     }
 }
 
+//----Output---
+/**
+ * Inside String array
+ * [Ljava.lang.String;@43a25848
+ * Inside String array
+ * [Ljava.lang.String;@43a25848
+ * [I@3ac3fd8b
+ */
+
+
 
 
