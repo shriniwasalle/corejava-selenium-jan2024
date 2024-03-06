@@ -7,7 +7,7 @@ public class InsatanceBlock {
     {
         System.out.println("i am in instance block");
     }
-    //instance block executed whenever we create and object but it will execute before the constructor.
+    /*instance block executed whenever we create and object but it will execute before the constructor.*/
     public InsatanceBlock(){
         System.out.println("i am in constructor");
     }
