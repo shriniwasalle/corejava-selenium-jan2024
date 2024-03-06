@@ -7,8 +7,8 @@ public class TestChild1 extends TestParent1{
     }
     public static void main(String[] args) {
        //case::1
-        //TestChild1: object of TestParent1
-        //TestChild1: reference of parent
+        //TestChild1: object of TestChild1
+        //TestChild1: reference of TestChild1
         //compiler will check if marry method present the TestChild1 class
         //if it is present then JVM will call the marry method of whoever created an object
         TestChild1 obj=new TestChild1();
