@@ -17,4 +17,6 @@ public class TestAccessSpecifier1 {
     protected void m4() {
         System.out.println("In m4 method which is protected");
     }
+
+
 }
