@@ -12,7 +12,7 @@ public abstract class TestParentClassRBI {
     public void saving(){
         System.out.println("In TestParentClassRBI :: Saving Account Department");
     }
-    public void current(){
+    public static void current(){
         System.out.println("In TestParentClassRBI :: Current Account Department");
     }
 }
