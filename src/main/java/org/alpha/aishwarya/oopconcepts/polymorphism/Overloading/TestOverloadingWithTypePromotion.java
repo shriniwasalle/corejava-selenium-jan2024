@@ -2,24 +2,25 @@ package org.alpha.aishwarya.oopconcepts.polymorphism.Overloading;
 
 public class TestOverloadingWithTypePromotion {
 
-    public void m1(int id){ // method creating
+    public void m1(int id) { // method creating
         System.out.println(id); // method output logic
     }
 
     //public void m1(char ch) { // method creating
-       // System.out.println(ch);
+    // System.out.println(ch);
     // }
 
-    public void m1(char ch , int age) { // method creating
+    public void m1(char ch, int age) { // method creating
         System.out.println(ch);
         System.out.println(age);
     }
 
 
-    public void m1(String str){
+    public void m1(String str) {
         System.out.println(str);
 
     }
+
     public static void main(String[] args) {
         TestOverloadingWithTypePromotion obj = new TestOverloadingWithTypePromotion();
         obj.m1('A'); // Type Promotion zal ahe char --->int
@@ -29,7 +30,8 @@ public class TestOverloadingWithTypePromotion {
     }
 }
 
-/**----OutPut----
+/**
+ * ----OutPut----
  * 65 -----> ASCII Number print of char
  * Jay Shree Ram
  * 65 ---> ASCII Number print of char
