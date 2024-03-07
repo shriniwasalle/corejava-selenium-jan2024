@@ -2,11 +2,11 @@ package org.alpha.aishwarya.oopconcepts.polymorphism.Overloading;
 
 public class TestOverloadingConstructor {
 
-    public TestOverloadingConstructor (int age){
+    public TestOverloadingConstructor(int age) {
         System.out.println("I am in int parameter constructor " + age);
     }
 
-    public TestOverloadingConstructor(String str){
+    public TestOverloadingConstructor(String str) {
         System.out.println("I am in String parameter constructor" + str);
     }
 
@@ -17,10 +17,10 @@ public class TestOverloadingConstructor {
 }
 
 
-
 //----Output----
-/** I am in int parameter constructor 10
- *  I am in String parameter constructorShree Ram
+/**
+ * I am in int parameter constructor 10
+ * I am in String parameter constructorShree Ram
  */
 
 
