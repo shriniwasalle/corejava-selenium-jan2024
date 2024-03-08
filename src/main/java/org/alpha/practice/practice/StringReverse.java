@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.practice;
+package org.alpha.practice.practice;
 
 public class StringReverse {
     public static void main(String[] args) {
