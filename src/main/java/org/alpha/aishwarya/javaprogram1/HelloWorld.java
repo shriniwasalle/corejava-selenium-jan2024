@@ -1,4 +1,4 @@
-package org.alpha.aishwarya;
+package org.alpha.aishwarya.javaprogram1;
 
 public class HelloWorld {
     public static void main(String[] args) {
