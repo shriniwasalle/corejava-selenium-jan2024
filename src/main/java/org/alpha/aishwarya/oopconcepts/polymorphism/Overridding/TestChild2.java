@@ -17,7 +17,7 @@ public class TestChild2 extends TestParent2 {
         TestChild2 obj = new TestChild2();
         obj.m1();
 
-
+         // Run Time Polymorphism : run time la decide krto ki kutl object call kraycha..
         TestParent2 obj1 = new TestChild2();
         obj.m2("Aishwarya Run time Polymorphism: learning Overriding");
 
