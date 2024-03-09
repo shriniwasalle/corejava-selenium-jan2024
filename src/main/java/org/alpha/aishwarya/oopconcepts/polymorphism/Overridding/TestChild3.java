@@ -25,6 +25,12 @@ public class TestChild3 extends TestParent3 {
         TestParent3 obj2 = new TestChild3();
         obj.m1("Saga", 97);
 
+        /** TestChild3 obj4 = new TestParent3();
+         *   obj4.m1(10, "Aish");
+         *   "This is not possible in Overriding - if Child reference and parent object not possible to call.
+         */
+
+
 
     }
 }
