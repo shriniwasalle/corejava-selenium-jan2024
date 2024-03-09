@@ -1,4 +1,4 @@
-package org.alpha.aishwarya;
+package org.alpha.aishwarya.gitconcepts;
 
 public class BranchingConcept {
 
