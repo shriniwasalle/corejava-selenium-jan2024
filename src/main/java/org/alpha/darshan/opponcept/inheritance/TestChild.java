@@ -6,6 +6,7 @@ public class TestChild extends TestParent {
 
     public void methodChild(){
         System.out.println(age);
+        int age=10;
     }
 
     public  void m2(){
