@@ -20,6 +20,7 @@ public class ChildMethodHiding extends ParentMethodHiding{
     public static void main(String[] args) {
         ParentMethodHiding obj = new ChildMethodHiding();
         obj.m1();
+        //ChildMethodHiding.m1(); //valid
         // static methods are linked with classes, not the Objects
         // Method Hiding : TestMethodHidingChild m1 method got hide here.
 
