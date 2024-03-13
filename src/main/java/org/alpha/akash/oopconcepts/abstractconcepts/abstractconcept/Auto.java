@@ -1,6 +1,4 @@
-package org.alpha.akash.oopconcepts.abstractconcepts;
-
-import com.sun.tools.javac.Main;
+package org.alpha.akash.oopconcepts.abstractconcepts.abstractconcept;
 
 public class Auto extends AbstractClass {
 
