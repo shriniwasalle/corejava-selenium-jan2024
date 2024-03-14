@@ -1,7 +1,6 @@
 package org.alpha.shriniwas.oopsconcepts.inheritance;
 
 public class TestChild extends TestParent {
-
     int age = 10;
 
     public void getData() {
@@ -10,6 +9,7 @@ public class TestChild extends TestParent {
         System.out.println(super.age); // 100
         System.out.println(name); // Shri
     }
+
 
     public void m1() {
         System.out.println("I am in TestChild :: m1 method");
