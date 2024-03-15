@@ -20,6 +20,9 @@ public class TestArrayList {
         list1.add(3, "Sagar"); // size added and Updated index number 3 & old inder shifted to next index i.e 4
         // int[] arr ={100,200,300,400}; we also call Array in ArrayList
 
+
+        list1.set(3,"Sagar1");
+
         ArrayList list2 = new ArrayList();
         list2.addAll(list1);
 
