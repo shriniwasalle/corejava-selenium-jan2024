@@ -59,9 +59,8 @@ public class TestArrayListGeneric {
         empList.add(emp3);
 
         for (Employee emp : empList) {
-            Employee e= emp;
-            System.out.println(e.empName);
-            System.out.println(e.empId);
+            System.out.println(emp.empName);
+            System.out.println(emp.empId);
         }
     }
 }
