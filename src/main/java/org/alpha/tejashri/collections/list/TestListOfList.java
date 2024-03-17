@@ -10,7 +10,7 @@ public class TestListOfList {
         list1.add("Shri2");
         list1.add("Shri3");
 
-        List<String> list = new ArrayList<>(list1); // ArrayList(Collection e) passed parameter
+        List<String> list = new ArrayList<>(list1); // ArrayList(Collection e) passed parameters
         System.out.println(list1);
         // list =[Shri1, Shri2, Shri3]
 
@@ -33,12 +33,10 @@ public class TestListOfList {
         // Multi Dimensional collection
         //lists = [list1 = [Shri1, Shri2, Shri3], list2 = [Shri1, Shri2, Shri3], list3 =[Shri7, Shri8, Shri9]]
 
-        for (List<String> liStr : lists) {   // Multi Dimensional collection iteration
+        for (List<String> liStr : lists) { // Multi Dimensional collection iteration
             for (String str : liStr) {
                 System.out.println(str);
             }
         }
-
-
     }
 }

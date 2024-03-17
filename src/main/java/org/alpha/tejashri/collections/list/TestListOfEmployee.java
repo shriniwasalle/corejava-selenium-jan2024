@@ -40,6 +40,7 @@ public class TestListOfEmployee {
         list1.add('X'); // character
         list1.add(99.9f); //float
 
+        //Iteration
         System.out.println("------Using For Each loop-----");
         for (Object value : list1) {
             if (value instanceof String) { //Type checking

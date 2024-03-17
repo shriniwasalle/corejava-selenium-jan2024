@@ -7,7 +7,7 @@ import java.util.List;
 public class TestArrayListWithMethodParameter {
     Integer[] arr = {10, 20, 30};
     ArrayList<Integer> integerList = new ArrayList<>(Arrays.asList(arr));
-    ArrayList<Integer> intList = new ArrayList<>(Arrays.asList(100, 200, 300));
+    ArrayList<Integer> intList = new ArrayList<>(Arrays.asList(100, 200, 300)); // direct given array values
 
     //Arrays.asList() it passes the created arr Array into list/collection
     public void printListValues(List<String> list) {
@@ -22,7 +22,6 @@ public class TestArrayListWithMethodParameter {
     public ArrayList<Integer> getIntListValues() {
         return intList;
     }
-
 
     public static void main(String[] args) {
         List<String> list = new ArrayList<>();

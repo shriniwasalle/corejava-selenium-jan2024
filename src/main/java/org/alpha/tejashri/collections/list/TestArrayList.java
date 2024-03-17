@@ -6,7 +6,7 @@ import java.util.List;
 public class TestArrayList {
     public static void main(String[] args) {
         ArrayList list1 = new ArrayList();
-        list1.add(100); //0
+        list1.add(100); //0 index
         list1.add(200);//1
         list1.add("Tejashri");//2
         list1.add('X');//3
@@ -26,7 +26,7 @@ public class TestArrayList {
 
         List list2 = new ArrayList();
         int [] arr = {55, 66, 77};
-        list2.add(arr); // will add the memory location of that values
+        list2.add(arr); // will add the Ash codes/memory location of that values
         list2.add(500);
         list2.add("Anshika");
         System.out.println("List2 : " + list2);

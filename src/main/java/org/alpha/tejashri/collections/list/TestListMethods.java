@@ -61,9 +61,9 @@ public class TestListMethods {
         list3.add('A');
         list3.add('C');
         list3.add('B');
-        list3.sort(Comparator.reverseOrder());
+        list3.sort(Comparator.reverseOrder());//[C, B, A]
         System.out.println(list3);
-        list3.sort(Comparator.naturalOrder());
+        list3.sort(Comparator.naturalOrder());//[A, B, C]
         System.out.println(list3);
 
         List<String> list4 = new ArrayList<>();
@@ -72,14 +72,13 @@ public class TestListMethods {
         list4.add("Mahi");
         list4.add("Anshu");
 
-        list4.sort(Comparator.reverseOrder());
+        list4.sort(Comparator.reverseOrder());//[Shri, Mahi, Anshu]
         System.out.println(list4);
-        list4.sort(Comparator.naturalOrder());
+        list4.sort(Comparator.naturalOrder());//[Anshu, Mahi, Shri]
         System.out.println(list4);
 
         System.out.println(list);
         System.out.println(list.indexOf("Shri7")); // 6 will give the specified object index
-
 
         System.out.println("----Array converting to string----");
         // Array converting to string
@@ -106,6 +105,6 @@ public class TestListMethods {
         }
 
         list.clear();
-        System.out.println(list);// will clear all list/collection
+        System.out.println(list);// [], will clear all list/collection
     }
 }

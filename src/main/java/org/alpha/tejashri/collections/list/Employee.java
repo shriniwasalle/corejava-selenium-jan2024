@@ -7,8 +7,5 @@ public class Employee {
     public Employee(String empName, int empId) {
         this.empName = empName; //this.empName ="Shri"
         this.empId = empId; //this.empId = 100
-
     }
-
-
 }
