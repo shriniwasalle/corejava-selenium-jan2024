@@ -1,4 +1,4 @@
-package org.alpha.akash.variable;
+package org.alpha.akash.oopconcepts.encapsulation;
 
 import org.alpha.akash.oopconcepts.encapsulation.Encapsulation;
 
