@@ -16,7 +16,7 @@ public class TestIterator {
 
         // list = [Shri1, Shri2, Shri3]
 
-        Iterator<String> itr = list.iterator(); // iterator is allowed for List, Set, Queue, Map interface classes
+        Iterator<String> itr = list.iterator(); // iterator is allowed for List, Set, Queue
 
         // itr = [Shri1, Shri2, Shri3]
         while (itr.hasNext()) {

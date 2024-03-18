@@ -22,7 +22,7 @@ public class TestListIterator {
 
         // itr = [Shri1, Shri2, Shri3]
         while (itr.hasPrevious()) {
-            System.out.println(itr.previous()); // Shri1
+            System.out.println(itr.previous());
         }
     }
 }
