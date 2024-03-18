@@ -40,6 +40,7 @@ public class TestConditionalStatements {
         System.out.println(str1);
 
         //Switch Statements
+        System.out.println("----Using Switch Statement-----");
         int day = 4;
         switch (day) {
             case 1:

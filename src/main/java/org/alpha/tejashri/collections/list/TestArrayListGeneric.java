@@ -41,7 +41,7 @@ public class TestArrayListGeneric {
         System.out.println(list2);
 
         System.out.println("-----For Each loop---- ");
-        for (Integer i : list2){ // (int i : list2)
+        for (Integer i : list2){ // can also use (int i : list2)
             System.out.println(i);
         }
 
@@ -57,6 +57,8 @@ public class TestArrayListGeneric {
         Employee emp2 = new Employee("Mahi", 200);
         Employee emp3 = new Employee("Anshu", 300);
 
+        System.out.println(emp1);// will print the objects/Hash codes
+
         List<Employee> empList = new ArrayList<>();
         empList.add(emp1);
         empList.add(emp2);
@@ -64,7 +66,7 @@ public class TestArrayListGeneric {
 
         System.out.println("-----For Each loop---- ");
         for (Employee emp : empList){
-            //System.out.println(emp);// will print the objects
+            //System.out.println(emp);// will print the objects /Hash codes
             System.out.println(emp.empName);
             System.out.println(emp.empId);
         }

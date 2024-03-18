@@ -1,6 +1,7 @@
 package org.alpha.tejashri.collections.list;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -33,7 +34,6 @@ public class TestListMethods {
         list1.add("Shri5");
         list1.add("Shri6");
         list.addAll(list1); // will add all values of list1 into list
-        System.out.println(list);
 
         List<String> list2 = new ArrayList<>();
 
@@ -66,11 +66,35 @@ public class TestListMethods {
         list3.sort(Comparator.naturalOrder());//[A, B, C]
         System.out.println(list3);
 
+        Collections.sort(list3);//[A, B, C]
+        System.out.println(list3);
+
+        System.out.println("----Iteration of list3 Using for each loop----");
+        //Iteration of list3 using for each & for loop
+        for (Character i : list3){
+            System.out.println(i);
+        }
+
+        System.out.println("----Iteration of list3 Using for loop----");
+        for(int i =0; i<list3.size(); i++){
+            System.out.println(list3.get(i));
+        }
+
         List<String> list4 = new ArrayList<>();
 
         list4.add("Shri");
-        list4.add("Mahi");
         list4.add("Anshu");
+        list4.add("Mahi");
+        System.out.println(list4);//[Shri, Anshu, Mahi]
+
+        Collections.sort(list4);//[Anshu, Mahi, Shri]
+        System.out.println(list4);
+
+        //Iteration of list4 using for each
+        System.out.println("----Iteration of list4 Using for each loop----");
+        for (String i : list4){
+            System.out.println(i);
+        }
 
         list4.sort(Comparator.reverseOrder());//[Shri, Mahi, Anshu]
         System.out.println(list4);
@@ -79,6 +103,17 @@ public class TestListMethods {
 
         System.out.println(list);
         System.out.println(list.indexOf("Shri7")); // 6 will give the specified object index
+
+        //Iteration of list using for each & for loop
+        System.out.println("----Iteration of list Using for each loop----");
+        for (String i : list){
+            System.out.println(i);
+        }
+
+        System.out.println("----Iteration of list Using for loop----");
+        for(int i =0; i<list.size(); i++){
+            System.out.println(list.get(i));
+        }
 
         System.out.println("----Array converting to string----");
         // Array converting to string
