@@ -1,25 +1,28 @@
 package org.alpha.shriniwas.collections.list;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public class TestListIterator {
 
     public static void main(String[] args) {
-        List<String> list = new ArrayList<>();
-        list.add("Shri1");
-        list.add("Shri2");
-        list.add("Shri3");
-
-        System.out.println(list);
+        List<String> obj = new ArrayList<>();
+        obj.add("Shri1");
+        obj.add("Shri2");
+        obj.add("Shri3");
+        obj.add("Shri4");
 
         // list = [Shri1, Shri2, Shri3]
 
-        Iterator<String> itr = list.iterator();
+        // ListIterator<String> itr = obj.listIterator(); // listIterator is allowed only for List interface classes
+        ListIterator<String> itr = obj.listIterator(obj.size());
+
+//        itr.next();
+//        itr.next();
+//        itr.next();
+
         // itr = [Shri1, Shri2, Shri3]
-        while (itr.hasNext()) {
-            System.out.println(itr.next());
+        while (itr.hasPrevious()) {
+            System.out.println(itr.previous()); // Shri1
         }
     }
 }
