@@ -1,4 +1,4 @@
-package org.alpha.aishwarya.abstraction;
+package org.alpha.aishwarya.oopconcepts.abstraction;
 
 public abstract class TestAbstractClass {
     public String name ="Aishwarya";

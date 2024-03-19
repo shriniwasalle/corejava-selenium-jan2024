@@ -1,4 +1,4 @@
-package org.alpha.aishwarya.abstraction;
+package org.alpha.aishwarya.oopconcepts.abstraction;
 
 import org.alpha.shriniwas.oopsconcepts.abstraction.abstractclass.TestAbstractClass;
 
