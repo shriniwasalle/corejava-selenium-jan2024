@@ -8,8 +8,12 @@ public class TestSet {
         HashSet set = new HashSet();
         set.add("Shriniwas");
         set.add(100);
+        set.add(100); // false
+        set.add(true);
         set.add(true);
         set.add(100.50);
+        set.add(null);
+        set.add(null);
 
         System.out.println(set);
 
