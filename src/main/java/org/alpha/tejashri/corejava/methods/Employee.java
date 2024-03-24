@@ -1,0 +1,21 @@
+package org.alpha.tejashri.corejava.methods;
+
+public class Employee {
+    String empName = "Tejashri";
+    int empId = 100;
+
+    public void getEmpData() {
+        System.out.println("Tejashri");
+        System.out.println("Boppa");
+        System.out.println("Microsoft");
+    }
+
+    public String getEmployeeName() {
+        return empName;
+    }
+
+    public Employee getEmployeeDetails() {
+        return this;
+    }
+}
+
