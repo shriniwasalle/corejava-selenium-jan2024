@@ -11,12 +11,17 @@ public class TestSet {
         set.add(1000);
         set.add(true);
         set.add(99.9f);
-        set.add(null); // can add only 1 null value bcz duplicate values not allowed
-        //set.add(1000); // duplicate values are not allowed
-        //set.add("Tejashri");
-        System.out.println(set);
+        set.add('H');
+        set.add(null);
+        set.add(1000); // false so duplicate values will not print
+        set.add("Tejashri");// false //duplicate values are not allowed
+        set.add(null);// can add only 1 null value bcz duplicate values not allowed
 
-        for (Object obj:set){
+        System.out.println(set); //insertion order is not preserved/maintained
+
+        // iteration with for loop is not possible bcz insertion order is not maintained,
+        // with index iteration not possible, so get() method not there
+        for (Object obj : set) {
             System.out.println(obj);
         }
     }

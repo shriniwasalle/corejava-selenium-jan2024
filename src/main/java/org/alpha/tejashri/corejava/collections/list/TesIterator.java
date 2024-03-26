@@ -13,7 +13,7 @@ public class TesIterator {
         list.add("Shri3");
         System.out.println(list);//list = [Shri1, Shri2, Shri3]
 
-         /* Iterator is a Cursor concept
+        /* Iterator is a Cursor concept
          * Iterator is allowed for List, Set, Queue, Map interface classes
          * Iterator-> is interface, iterator()-> is method  */
 
@@ -66,10 +66,9 @@ public class TesIterator {
                 itrInt.remove();
             }
         }
-        System.out.println("Print values > 100 : " +list1);
+        System.out.println("Print values > 100 : " + list1);
         //Trying to remove items using a for loop or a for-each loop
         // would not work correctly because the collection is changing size
         // at the same time that the code is trying to loop
-
     }
 }
