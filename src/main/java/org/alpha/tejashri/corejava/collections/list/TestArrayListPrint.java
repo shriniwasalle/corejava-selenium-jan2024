@@ -30,7 +30,7 @@ public class TestArrayListPrint {
         }
 
         System.out.println("-----Iterate Using For Each Loop-----");
-        for (Object obj : list1){ // object class is the parent class for all primitive data type
+        for (Object obj : list1) { // object class is the parent class for all primitive data type
             System.out.println(obj);
         }
     }

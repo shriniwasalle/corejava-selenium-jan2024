@@ -52,7 +52,6 @@ public class TestListIterator {
         //Now cursor(|) is at |Shri1 (before Shri1)
         System.out.println(itr1.hasNext()); //true
 
-
         System.out.println("----list1 (Integer)----");
         List<Integer> list1 = new ArrayList<>();
 
@@ -80,6 +79,7 @@ public class TestListIterator {
                 itrInt.remove();
             }
         }
+
         System.out.println("Print values after removing : " + list1);
         //Trying to remove items using a for loop or a for-each loop
         // would not work correctly because the collection is changing size

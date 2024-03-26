@@ -8,8 +8,8 @@ public class TestArrayListWithMethodParameter {
     Integer[] arr = {10, 20, 30};
     ArrayList<Integer> integerList = new ArrayList<>(Arrays.asList(arr));
     ArrayList<Integer> intList = new ArrayList<>(Arrays.asList(100, 200, 300)); // direct given array values
-
     //Arrays.asList() it passes the created arr Array into list/collection
+
     public void printListValues(List<String> list) {
         for (String str : list) {
             System.out.println(str);
@@ -19,6 +19,7 @@ public class TestArrayListWithMethodParameter {
     public ArrayList<Integer> getListValues() {
         return integerList;
     }
+
     public ArrayList<Integer> getIntListValues() {
         return intList;
     }

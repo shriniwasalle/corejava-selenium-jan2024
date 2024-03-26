@@ -26,7 +26,7 @@ public class TestArrayList {
 
         List list2 = new ArrayList();
         int [] arr = {55, 66, 77};
-        list2.add(arr); // will add the Hash codes/memory location of that values
+        list2.add(arr); // will add the Hash codes/memory locations of that values
         list2.add(500);
         list2.add("Anshika");
         System.out.println("List2 : " + list2);

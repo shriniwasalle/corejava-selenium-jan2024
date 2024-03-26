@@ -16,15 +16,20 @@ public class TestListMethods {
 
         System.out.println(list.add("Shri4")); // true, return type of add method is boolean
         System.out.println(list);
+
         System.out.println(list.size()); //4
+
         list.add(1, "Shri11");// will add the value at specified index previous index value will shift to next & so on
         System.out.println(list);
         list.set(1, "Shri111");// will replace the value at specified index
         System.out.println(list);
+
         System.out.println(list.get(0));// will give specified index value
         System.out.println(list.get(3));
+
         list.remove("Shri111"); // will remove specified object value
         System.out.println(list);
+
         list.remove(3);// will remove specified index object value
         System.out.println(list);
 
@@ -40,19 +45,25 @@ public class TestListMethods {
         list2.add("Shri7");
         list2.add("Shri8");
         list2.add("Shri9");
+
         list.addAll(0, list2);// will add all values of list1 at specified index of list
         System.out.println(list);
+
         list.removeAll(list2); // will remove all list2 values from list
         System.out.println(list);
+
         list.addAll(6, list2);
         System.out.println(list);
+
         System.out.println(list.isEmpty());// false, will check that is that list is empty or not
         System.out.println(!list.isEmpty());// true, !false=true, !true=false
+
         System.out.println(list.contains("Shri9"));// true, will check that specified object/value is present or not
         System.out.println(list.contains("Shri111"));// false
 
         list.sort(Comparator.reverseOrder()); // will give the Revers Order object values
         System.out.println(list);
+
         list.sort(Comparator.naturalOrder()); // will give the Natural Order object values
         System.out.println(list);
 
@@ -63,6 +74,7 @@ public class TestListMethods {
         list3.add('B');
         list3.sort(Comparator.reverseOrder());//[C, B, A]
         System.out.println(list3);
+
         list3.sort(Comparator.naturalOrder());//[A, B, C]
         System.out.println(list3);
 
@@ -98,6 +110,7 @@ public class TestListMethods {
 
         list4.sort(Comparator.reverseOrder());//[Shri, Mahi, Anshu]
         System.out.println(list4);
+
         list4.sort(Comparator.naturalOrder());//[Anshu, Mahi, Shri]
         System.out.println(list4);
 

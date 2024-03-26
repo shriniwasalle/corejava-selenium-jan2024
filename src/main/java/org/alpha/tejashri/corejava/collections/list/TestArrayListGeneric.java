@@ -2,6 +2,7 @@ package org.alpha.tejashri.corejava.collections.list;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /*
 Wrapper Class which is extending Number class
 int - Integer
@@ -24,12 +25,12 @@ public class TestArrayListGeneric {
         System.out.println(list1);
 
         System.out.println("-----For Each loop---- ");
-        for (String str : list1){
+        for (String str : list1) {
             System.out.println(str);
         }
-        
+
         System.out.println("-----For loop---- ");
-        for (int i=0; i<=list1.size()-1; i++){
+        for (int i = 0; i <= list1.size() - 1; i++) {
             System.out.println(list1.get(i));
         }
 
@@ -40,12 +41,12 @@ public class TestArrayListGeneric {
         System.out.println(list2);
 
         System.out.println("-----For Each loop---- ");
-        for (Integer i : list2){ // can also use (int i : list2)
+        for (Integer i : list2) { // can also use (int i : list2)
             System.out.println(i);
         }
 
         System.out.println("-----For loop---- ");
-        for (int i=0; i<=list2.size()-1; i++){ // Auto Boxing from Integer->int
+        for (int i = 0; i <= list2.size() - 1; i++) { // Auto Boxing from Integer->int
             System.out.println(list2.get(i));
         }
 
@@ -64,7 +65,7 @@ public class TestArrayListGeneric {
         empList.add(emp3);
 
         System.out.println("-----For Each loop---- ");
-        for (Employee emp : empList){
+        for (Employee emp : empList) {
             //System.out.println(emp);// will print the objects /Hash codes
             System.out.println(emp.empName);
             System.out.println(emp.empId);
