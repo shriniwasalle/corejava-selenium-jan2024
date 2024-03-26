@@ -13,16 +13,23 @@ public class TestMethodWithLocalVar {
         System.out.println(this.a+this.b);
     }
 
+
+    public static void getdetail(){
+
+        int a=10;
+        System.out.println("i am in static method");
+    }
     public String getlength(){
         return "Darshan";
     }
 
-    public static void main(String[] args) {
+    static public void main(String[] args) {
         TestMethodWithLocalVar p1= new TestMethodWithLocalVar();
         p1.localVariable();
         String name=p1.getlength();
         System.out.println(name);
         System.out.println(name.length());
+        TestMethodWithLocalVar.getdetail();
     }
 
 }

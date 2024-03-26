@@ -1,4 +1,4 @@
-package org.alpha.darshan.collections;
+package org.alpha.darshan.collections.list;
 
 public class WideningTypeCasting {
 

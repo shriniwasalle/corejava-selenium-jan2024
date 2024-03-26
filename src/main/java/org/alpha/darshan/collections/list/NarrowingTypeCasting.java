@@ -1,4 +1,4 @@
-package org.alpha.darshan.collections;
+package org.alpha.darshan.collections.list;
 
 public class NarrowingTypeCasting {
 
@@ -17,5 +17,6 @@ public class NarrowingTypeCasting {
         System.out.println("before converting double value="+d);
         System.out.println("after converting int value="+i);
         System.out.println("after converting byte value="+b);
+
     }
 }

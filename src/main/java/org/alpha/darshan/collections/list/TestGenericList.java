@@ -1,4 +1,4 @@
-package org.alpha.darshan.collections;
+package org.alpha.darshan.collections.list;
 
 import java.util.ArrayList;
 import java.util.List;
