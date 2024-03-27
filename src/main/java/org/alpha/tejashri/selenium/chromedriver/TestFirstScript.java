@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium;
+package org.alpha.tejashri.selenium.chromedriver;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +12,7 @@ public class TestFirstScript {
         //WebDriver -> Interface, ChromeDriver -> class
 
         //Open Website
-        driver.get("https://www.saucedemo.com/");
+        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
         //To maximize the window size
         driver.manage().window().maximize();
@@ -21,7 +21,7 @@ public class TestFirstScript {
         //driver.manage().window().fullscreen();
 
         //Get the Title of the windows/browsers
-        String title = driver.getTitle();//<title>Swag Labs<title>
+        String title = driver.getTitle();//<title>OrangeHRM<title>
         System.out.println("Title : " + title);
 
         //To Check the Current Url
@@ -35,6 +35,6 @@ public class TestFirstScript {
         driver.close();
 
         // To close multiple windows/browsers
-        //driver.quit();
+        driver.quit();
     }
 }
