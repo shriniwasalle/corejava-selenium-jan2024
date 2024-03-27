@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.practice;
+package org.alpha.practice.practice;
 
 import java.util.Scanner;
 
