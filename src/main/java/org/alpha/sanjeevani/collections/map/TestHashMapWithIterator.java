@@ -18,8 +18,17 @@ public class TestHashMapWithIterator {
         Set<Map.Entry<Integer, String>> entries = map.entrySet();
         Iterator<Map.Entry<Integer, String>> itr = entries.iterator();
 
-        while (itr.hasNext()) {
-            System.out.println(itr.next());
+        /*while (itr.hasNext()) {
+
+           Map.Entry<Integer, String>en= itr.next();
+            System.out.println(en.getValue());
+            System.out.println(en.getKey());
+        }*/
+        for (int i=1;i<= map.size()-1;i++){
+           Map.Entry<Integer, String>en=itr.next();
+            System.out.println(en.getKey());
+            System.out.println(en.getValue());
+            //System.out.print(map.get(i));
         }
 
     }

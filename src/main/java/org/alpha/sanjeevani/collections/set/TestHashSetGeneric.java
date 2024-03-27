@@ -21,8 +21,9 @@ public class TestHashSetGeneric {
         }
         System.out.println("<----------------------------------------------->");
         Iterator<String> itr = str.iterator();
-        while (itr.hasNext())
+        while (itr.hasNext()){
             System.out.println(itr.next());
+        }
 
     }
 }
