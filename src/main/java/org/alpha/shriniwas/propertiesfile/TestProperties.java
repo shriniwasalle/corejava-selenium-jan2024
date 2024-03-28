@@ -9,7 +9,7 @@ import java.util.Properties;
 public class TestProperties {
 
     public String getPropertyValue(String key) throws IOException {
-        File file = new File("D:\\corejava-selenium-jan2024\\src\\main\\java\\org\\alpha\\shriniwas\\propertiesfile\\config.properties");
+        File file = new File("D:\\corejava-selenium-jan2024\\src\\main\\java\\org\\alpha\\shriniwas\\propertiesfile\\automation_config.properties");
         FileInputStream fileInputStream = new FileInputStream(file);
 
         Properties prop = new Properties();
