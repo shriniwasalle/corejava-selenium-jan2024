@@ -5,6 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class TestFirstScript {
     public static void main(String[] args) {
+        //Manually set the chrome driver
         System.setProperty("webdriver.chrome.driver", "D:\\Tejashri\\Drivers\\chromedriver.exe");
 
         //Creating the object of ChromeDriver
@@ -12,7 +13,7 @@ public class TestFirstScript {
         //WebDriver -> Interface, ChromeDriver -> class
 
         //Open Website
-        driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+        driver.get("https://www.saucedemo.com/");
 
         //To maximize the window size
         driver.manage().window().maximize();
@@ -21,7 +22,7 @@ public class TestFirstScript {
         //driver.manage().window().fullscreen();
 
         //Get the Title of the windows/browsers
-        String title = driver.getTitle();//<title>OrangeHRM<title>
+        String title = driver.getTitle();//<title>Swag Labs<title>
         System.out.println("Title : " + title);
 
         //To Check the Current Url
