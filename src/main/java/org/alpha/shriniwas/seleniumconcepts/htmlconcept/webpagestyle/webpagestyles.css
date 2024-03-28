@@ -1,0 +1,11 @@
+table {
+    border: 1px dotted red;
+}
+th {
+    border: 1px solid black;
+    font-size: 20px;
+    color: blueviolet
+}
+tr, td {
+    border: 1px solid #ea1f8e;
+}
