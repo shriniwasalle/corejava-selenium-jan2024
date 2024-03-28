@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.methods;
+package org.alpha.sanjeevani.corejavaconcepts.accessspecifier1.methods;
 
 public class Employee {
     String empName="sanjeevani";

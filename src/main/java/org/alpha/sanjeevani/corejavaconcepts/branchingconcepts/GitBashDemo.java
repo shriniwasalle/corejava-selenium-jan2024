@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani;
+package org.alpha.sanjeevani.corejavaconcepts.branchingconcepts;
 
 public class GitBashDemo {
     public static void main(String[] args) {
