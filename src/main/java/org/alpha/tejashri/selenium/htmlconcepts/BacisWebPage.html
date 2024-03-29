@@ -3,34 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <title>Sample Wed Page</title>
+    <!-- Internal CSS is defined in the <head> section of an HTML page, within a <style> element.-->
+    <!-- <style> Defines style information for an HTML document -->
+    <style>
+        img {
+          width: 50%;
+        }
+
+  table, th, td {
+  border:1px solid black;
+}
+    </style>
+    <!-- <link>	Defines a link between a document and an external resource -->
+    <!-- To use an external style sheet, add a link to it in the <head> section of each HTML page-->
+    <link rel="style Sheets" href="styleSheets.css">
 </head>
 <body>
-<h1 style="font-size:60px;" title="I'm a header"> Headline Font Size 1</h1><!-- Changed font size -->
-<h2 style="color:orange;font-size:300%;">Headline Font Size 2</h2><!-- Changed font size & color -->
-<h3 style="color:yellow;text-align:center;">Headline Font Size 3 in Center</h3><!-- Changed text-align to center -->
-<h4 style="color:blue;text-align:right;">Headline Font Size 4</h4><!-- Changed text-align to right side -->
-<h5 style="color:Green;">Headline Font Size 5</h5>
-<h6 style="color:purple;">Headline Font Size 6</h6>
+<!-- CSS can be added to HTML documents, Inline - by using the style attribute inside HTML elements -->
+<h1 style="font-size:60px;" title="I'm a header"> Headline Font Size 1</h1><!-- Added font size & title -->
+<h2 style="color:orange;font-size:300%;">Headline Font Size 2</h2><!-- Added font color & size -->
+<h3 style="color:Tomato;text-align:center;">Headline Font Size 3 in Center</h3><!-- Added color & text-align to center -->
+<h4 style="color:DodgerBlue;text-align:right;">Headline Font Size 4 in right</h4><!-- Added color & text-align to right side -->
+<h5 style="color:MediumSeaGreen;border:3px solid DodgerBlue; padding: 30px;">Headline Font Size 5 with padding increased font size</h5><!-- Added color, border & padding :space between the text and the border-->
+<h6 style="color:Gray;">Headline Font Size 6</h6>
+<p>Adding background colors in 3 ways.</p>
+<h1 style="background-color:rgb(255, 99, 71);">RGB:rgb(255, 99, 71)</h1>
+<h1 style="background-color:#ff6347;">HEX:#ff6347</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">HSL:hsl(9, 100%, 64%)</h1>
 <hr><!-- thematic break/Horizontal break -->
-<p style="font-family:courier;">This is my Paragraph.</p><!-- Changed font style -->
-<p style="background-color:powderblue;">This is my another Paragraph with background color.</p><!-- Changed background color -->
+<p style="font-family:courier;">This is my Paragraph added font style.</p><!-- Added font style -->
+<p style="background-color:Violet;">This is my another Paragraph with background color.</p><!-- Added background color -->
 
 <p>This is my another Paragraph <br> with a single line break in middle of the line.</p><!-- Inserts a single line break in middle of the line-->
 <br><!-- Inserts a single line break -->
-<a href="https://www.google.com/">This is a link to visit Google</a>
-<br>
-<p style="color:red;">This is a red color paragraph.</p>
+<a href="https://www.google.com/" target="_blank">This is a link to visit Google</a><!-- <a href= : Add link, click on a link and jump to another document. -->
+<!-- target attribute to define where to open the linked document
+_self - Default. Opens the document in the same window/tab as it was clicked
+_blank - Opens the document in a new window or tab
+_parent - Opens the document in the parent frame
+_top - Opens the document in the full body of the window
+-->
+<h5>The image below is a link. Try to click on it.</h5>
+<!-- Used an Image as a Link -->
+<a href="https://www.flipkart.com/"><img src="flipkart-icon.jpg" alt="HTML tutorial" style="width:42px;height:42px;"></a>
+<h5>Link to an Email Address</h5>
+<p><a href="mailto:someone@example.com">Send email</a></p><!-- mailto: inside the href attribute to create a link that opens the user's email program  -->
+<h5>Button as a Link</h5>
+<button onclick="https://www.amazon.in/">Amazon Shopping</button><!-- <button> Added Button as a Links-->
+<br><br>
+<h5>Link Title</h5>
+<a href="https://www.google.com/" title="Go to google page">Visit Google page</a>
+<p style="color:red;border: 2px solid powderblue; margin: 50px;">This is a red color paragraph.</p><!-- Added margin space outside the border. -->
 <p title='Test "WebPage" First'>Test with double quotes</p>
 <p title="Test 'WebPage' First">Test with single quotes</p>
-<p><!-- a paragraph does not preserve both spaces and line breaks/ removes spaces and line breaks  -->
-    This paragraph
+<p> p paragraph does not preserve both spaces and line breaks/ removes spaces and line breaks</p>
+<p>   This paragraph
     contains         a lot of lines & spaces
     in the source         code,
     but the        browser
     ignores it.
 </p><hr>
-<pre><!-- pre-formatted text preserves both spaces and line breaks -->
-           श्लोक
+<pre> pre-formatted text preserves both spaces and line breaks </pre>
+<pre>       श्लोक
 
     गुरुर्ब्रह्मा गुरुर्विष्णुः गुरुर्देवो महेश्वरः।
 
@@ -67,13 +101,98 @@
     Address so & so<br>
     India
 </address>
-
-
-
-<img src="google pic.png" alt="Google image" width="104" height="142"/>
-<img src="google images.jpg" height="168" width="300"/>
+<hr>
+<!-- <img> tag is used to embed an image in a web page. image has two required attributes:
+src - Specifies the path to the image
+alt - Specifies an alternate text for the image
+Style - width and height attributes-->
 <img src="google-rainbow-texture-1491566442.jpg" height="300" width="640"/>
-<br><br>
+<br>
+<h2>Images on Another Server</h2>
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fbeautiful%2F&psig=AOvVaw3A7iDUIq0LajCBTuVqQvsG&ust=1711802999363000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMDnnaPBmYUDFQAAAAAdAAAAABAE" style="width:104px;height:142px;">
+<br>
+<h2>Animated Images</h2>
+<p>HTML allows moving images:</p>
+<img src="programming_man.gif" alt="Computer man" style="width:60px;height:60px;">
+<br>
+<h2>Background Image</h2>
+<p>A background image for a p element:</p>
+<p style="background-image: url('google images.jpg');background-repeat: no-repeat;">
+    You can specify background images<br>
+    for any visible HTML element.<br>
+    In this example, the background image<br>
+    is specified for a p element.<br>
+    By default, the background-image<br>
+    will repeat itself in the direction(s)<br>
+    where it is smaller than the element<br>
+    where it is specified. (Try resizing the<br>
+    browser window to see how the<br>
+    background image behaves.
+</p><br>
+<p>The HTML cite element which is in italic defines the title of a work.</p>
+<p>Google was founded on September 4, 1998, by American computer scientists <cite>Larry Page and Sergey Brin.</cite></p><!-- <cite>	title of a work -->
+<p>If your browser supports bi-directional override (bdo), the next line will be written from right to left (rtl):</p>
+
+<bdo dir="ltr">This line will be written from right to left</bdo><br><!-- <bdo>	text direction (rtl or ltr) Normal direction-->
+<bdo dir="rtl">This line will be written from right to left</bdo><!-- <bdo>	text direction (rtl or ltr) Revers direction -->
+<!-- Comments can be used to hide content. -->
+<!--
+<p>This is another paragraph </p>
+<p>This is a paragraph too.</p>
+-->
+<h2>Added HTML Table</h2>
+<!-- <table> Added HTML Table-->
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds </td>
+        <td>Maria </td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Centro </td>
+        <td>Francisco </td>
+        <td>Mexico</td>
+    </tr>
+</table>
+<h2>TD elements define table cells</h2>
+
+<table style="width:100%">
+    <tr>
+        <td>First name</td>
+        <td>Middle name</td>
+        <td>Last name</td>
+    </tr>
+</table>
+<br>
+
+<h2>An unordered HTML list</h2>
+<!-- <ul> Added unordered HTML list-->
+<ul style="list-style-type:square;">
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ul>  <br>
+
+<h2>An ordered HTML list</h2>
+<!-- <ol> Added ordered HTML list-->
+<ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol> <br>
+
+<h2>A Description List</h2>
+<!-- <dl> Added Description HTML list-->
+<dl>
+    <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
 </body>
 </html>
-<!-- contact information for the author/owner of a document -->

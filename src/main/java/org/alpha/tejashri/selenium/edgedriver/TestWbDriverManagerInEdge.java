@@ -10,10 +10,15 @@ public class TestWbDriverManagerInEdge {
 
         WebDriver driver = new EdgeDriver();
         driver.get("https://www.google.com/");
-        String title = driver.getTitle();
-        System.out.println(title);
 
-        if (title.equals("Google"))
+        String actualTitle = driver.getTitle();//Google
+        String expectedTitle = "Google";
+
+        System.out.println(actualTitle);
+
+        //In if else condition after if statement only 1 statement
+        //then no need of { } parenthesis\brackets, also same for else
+        if (actualTitle.equals(expectedTitle))
             System.out.println("Test case Pass");
         else System.out.println("Test case Fail");
 

@@ -1,0 +1,17 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+
+}
+
+td, th {
+  border: 3px solid red;
+  text-align: left;
+  padding: 5px;
+
+}
+
+tr:nth-child(even) {
+background-color: yellow;
+}
