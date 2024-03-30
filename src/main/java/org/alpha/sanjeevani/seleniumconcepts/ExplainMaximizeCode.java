@@ -38,6 +38,6 @@ public class ExplainMaximizeCode {
         WebDriver.Window win = options.window();// window() present in Window interface it is present in WebDriver interface
         win.maximize();
        // driver.manage().window().fullscreen();// It will open the browser in full-screen mode(minimize,maximize and close etc. controls won't be visible)
-        driver.close();
+
     }
 }

@@ -25,6 +25,6 @@ public class TestWebDriverManager {
 
             System.out.println("Test case fail");
 
-        driver.close();
+
     }
 }

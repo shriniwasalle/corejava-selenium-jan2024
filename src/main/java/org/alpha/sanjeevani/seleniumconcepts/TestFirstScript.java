@@ -20,7 +20,6 @@ public class TestFirstScript {
         System.out.println("Title :"+title);
 
         //closing the browser
-        driver.close();// used for single windows/browser close
-       // driver.quit(); used for multiple windows/browser close
+      // driver.quit(); used for multiple windows/browser close
     }
 }
