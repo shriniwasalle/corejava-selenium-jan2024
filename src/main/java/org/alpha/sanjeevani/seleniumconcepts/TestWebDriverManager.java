@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestWebDriverManager {
     public static void main(String[] args) {
 
-         WebDriverManager.chromedriver().setup(); //setup(): This method instructs the WebDriverManager to set up the necessary WebDriver binaries.It automatically downloads the appropriate version of the Chrome driver
+        WebDriverManager.chromedriver().setup(); //setup(): This method instructs the WebDriverManager to set up the necessary WebDriver binaries.It automatically downloads the appropriate version of the Chrome driver
 
         //WebDriverManager.edgedriver().setup();/also we can create like this
 
@@ -18,13 +18,11 @@ public class TestWebDriverManager {
         String expectedTitle = "Google";
 
         if (actualTitle.equals(expectedTitle))
-
             System.out.println("Test case pass");
 
-         else
-
+        else
             System.out.println("Test case fail");
 
-
+          driver.close();
     }
 }
