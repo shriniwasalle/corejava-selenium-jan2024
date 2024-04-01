@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:text-align="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Web Page</title>
+    <style>
+        header {
+           background-color: #ac4318;
+           color: #fff;
+           padding: 20px;
+           text-align: center;
+       }
+        form {
+           background-color: #dadf38;
+           color: red;
+           padding: 10px;
+           text-align:center;
+        }
+
+        label
+        {
+        text-align: center;
+        font-size=10px;
+    }
+        h2
+        {
+                text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+<header><h1> Welcome To Automation Course</h1>
+</header>
+
+<h2>Admission Forms</h2>
+
+<form action="/action_page.php">
+    <label for="fname">Student Name:</label><br>
+    <input type="text" id="fname" name="fname" value="Sanjeevani Sutar"><br><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Selenium"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<p style="color:red;">
+    If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p> <br><br>
+
+<br>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<label style="class= center" for="Subject">Choose a Subject:</label>
+<select id="Subject" name="SubjectList" :form="SubjectForm">
+    <option value="CoreJava">CoreJava</option>
+    <option value="Selenium">Selenium</option>
+    <option value="Testng">Testng</option>
+    <option value="API Test">"API Test"</option>
+</select>
+<p style="color:red;">The drop-down list is defined outside the form element, but will be submitted with the form.</p>
+</body>
+</html>
