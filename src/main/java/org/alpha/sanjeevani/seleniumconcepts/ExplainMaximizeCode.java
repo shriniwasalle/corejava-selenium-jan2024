@@ -13,8 +13,8 @@ public class ExplainMaximizeCode {
 
         //open website
         driver.get("https://www.amazon.in/");
-        String currenturl=driver.getCurrentUrl();
-        System.out.println(currenturl);
+        String currentUrl=driver.getCurrentUrl();
+        System.out.println(currentUrl);
 
         String pageSource=driver.getPageSource();//it will get all html code regarding page
         System.out.println(pageSource);
