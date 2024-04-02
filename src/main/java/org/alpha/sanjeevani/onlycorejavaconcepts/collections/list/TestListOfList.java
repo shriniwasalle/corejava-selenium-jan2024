@@ -6,6 +6,7 @@ import java.util.List;
 public class TestListOfList {
     public static void main(String[] args) {
         List<String> list1 = new ArrayList<>();
+
         list1.add("Raje1");
         list1.add("Raje2");
         list1.add("Raje3");

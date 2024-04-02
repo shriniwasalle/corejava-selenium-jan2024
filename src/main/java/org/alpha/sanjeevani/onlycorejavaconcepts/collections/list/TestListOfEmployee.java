@@ -33,7 +33,12 @@ public class TestListOfEmployee {
         list1.add(300);
         list1.add(10.4);
 
+        System.out.println("Element of list1 is:" + list1);
+
         for (Object value : list1) {
+
+            System.out.println("Element of list1 is:" + value);
+
             if (value instanceof String) { // type checking
                 String str = (String) value;
                 System.out.println("Length of String is :" + str.length());
@@ -47,5 +52,6 @@ public class TestListOfEmployee {
                 System.out.println("value of Double is:" + value);
             }
         }
+
     }
 }
