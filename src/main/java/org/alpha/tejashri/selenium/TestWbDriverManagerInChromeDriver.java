@@ -1,10 +1,10 @@
-package org.alpha.tejashri.selenium.chromedriver;
+package org.alpha.tejashri.selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestWbDriverManager {
+public class TestWbDriverManagerInChromeDriver {
     public static void main(String[] args) {
         //Directly will set the updated version of driver by using WebDriverManager, no need to set hard coded set property
         //Automatic downloaded driver path in our local. Check in-> C:\Users\parth\.cache\selenium\chromedriver\win64\123.0.6312.86

@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.edgedriver;
+package org.alpha.tejashri.selenium;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

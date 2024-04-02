@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.firefoxdriver;
+package org.alpha.tejashri.selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;

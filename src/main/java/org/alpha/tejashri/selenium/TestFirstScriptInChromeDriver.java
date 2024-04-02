@@ -1,9 +1,9 @@
-package org.alpha.tejashri.selenium.chromedriver;
+package org.alpha.tejashri.selenium;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class TestFirstScript {
+public class TestFirstScriptInChromeDriver {
     public static void main(String[] args) {
         //Manually set the chrome driver
         System.setProperty("webdriver.chrome.driver", "D:\\Tejashri\\Drivers\\chromedriver.exe");
