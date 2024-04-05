@@ -1,10 +1,10 @@
-package org.alpha.tejashri.selenium.assignments.Assignment_No_1;
+package org.alpha.tejashri.selenium.assignments.AssignmentNo1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class AssignmentNo1_VerifyingTitleWithChromeDrive {
+public class assignmentNo1_VerifyingTitleWithChromeDrive {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
 

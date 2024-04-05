@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium;
+package org.alpha.tejashri.selenium.testfirstscript;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

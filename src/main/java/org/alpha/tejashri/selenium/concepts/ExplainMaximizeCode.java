@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium;
+package org.alpha.tejashri.selenium.concepts;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +18,7 @@ public class ExplainMaximizeCode {
         WebDriver.Window win = opt.window();
         win.maximize();// maximize the browser window size
 
-        //Directly to maximize the window size
+        //Directly to maximize the window screen size
         driver.manage().window().maximize();
 
         //Explanation of full screen (Minimize, maximize, Close ect controls won't be visible)
@@ -26,7 +26,7 @@ public class ExplainMaximizeCode {
         WebDriver.Window window = options.window();
         window.fullscreen();//fullscreen the browser window size
 
-        //Directly to fullscreen the window size
+        //Directly to fullscreen the window screen size
         driver.manage().window().fullscreen();
     }
 }

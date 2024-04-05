@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium;
+package org.alpha.tejashri.selenium.testfirstscript;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.edge.EdgeDriver;

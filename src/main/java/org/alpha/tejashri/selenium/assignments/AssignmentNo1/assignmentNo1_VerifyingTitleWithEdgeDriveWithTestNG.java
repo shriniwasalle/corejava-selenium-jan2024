@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.assignments.Assignment_No_1;
+package org.alpha.tejashri.selenium.assignments.AssignmentNo1;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -7,7 +7,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 @Test
-public class AssignmentNo1_VerifyingTitleWithEdgeDriveWithTestNG {
+public class assignmentNo1_VerifyingTitleWithEdgeDriveWithTestNG {
     public void VerifyingTitle() {
         WebDriverManager.edgedriver().setup();
 

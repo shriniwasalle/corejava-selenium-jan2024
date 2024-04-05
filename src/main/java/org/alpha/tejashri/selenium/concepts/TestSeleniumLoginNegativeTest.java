@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium;
+package org.alpha.tejashri.selenium.concepts;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -21,7 +21,7 @@ public class TestSeleniumLoginNegativeTest {
         textPassword.sendKeys("secret_sauc");//Enter password
 
         WebElement btnLogin = driver.findElement(By.name("login-button"));
-        Thread.sleep(5000);
+        Thread.sleep(5000);//throws InterruptedException in main method
         btnLogin.click();
 
         //xpath syntax--> //tagName[@attributeName = 'attributeValue']
@@ -34,7 +34,7 @@ public class TestSeleniumLoginNegativeTest {
 
         String expectedErrorText = "Epic sadface: Username and password do not match any user in this service";
 
-        //Testing Error Text
+        //Testing with if else condition
         if (expectedErrorText.equals(actualErrorText)) System.out.println("Test Case Pass");
         else System.out.println("Test Case Fail");
 
