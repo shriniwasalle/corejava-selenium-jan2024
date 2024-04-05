@@ -11,6 +11,7 @@ import org.testng.annotations.Test;
 public class TestSeleniumLoginNegativeTestUsingTestng1 {
     @Test
     public void verifyLoginWithInvalidCreds() {
+
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
