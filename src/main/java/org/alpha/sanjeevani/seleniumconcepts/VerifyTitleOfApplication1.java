@@ -17,7 +17,8 @@ public class VerifyTitleOfApplication1 {
         driver.manage().window().maximize();
 
        String actualTitle = driver.getTitle();
-        String expectedTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
+        System.out.println(actualTitle);
+       String expectedTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
 
         if (actualTitle.equalsIgnoreCase(expectedTitle)) System.out.println("Test Pass");
         else System.out.println("Test fail");
