@@ -12,7 +12,6 @@ public class TestExplainSout {
         // name : is a static variable of type String
         // length() : is a method present inside String class
 
-
         System.out.println();
 
         // System : Is a class
