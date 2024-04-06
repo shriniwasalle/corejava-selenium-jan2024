@@ -1,10 +1,10 @@
-package org.alpha.sanjeevani.seleniumconcepts;
+package org.alpha.sanjeevani.assignment;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class VerifyTitleOfApplication1 {
+public class TestAssignment1VerifyTitleOfApplication1 {
     public static void main(String[] args) {
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
