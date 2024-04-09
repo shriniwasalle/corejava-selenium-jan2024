@@ -6,7 +6,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
-
 import java.util.List;
 import java.util.ListIterator;
 
@@ -20,6 +19,7 @@ public class assignmentNo5 {
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.makemytrip.com/");
+
         driver.manage().window().maximize();
 
         String linkTile = "Product Offering";
@@ -28,34 +28,30 @@ public class assignmentNo5 {
 
         System.out.println("Total Links  Count : " + links.size());
 
-//        WebElement link1 = links.get(0);
-//        WebElement link2 = links.get(1);
-//        System.out.println(link1.getText());
-//        System.out.println(link2.getText());
+        //WebElement link1 = links.get(0);
+        //WebElement link2 = links.get(1);
+        //System.out.println(link1.getText());
+        //System.out.println(link2.getText());
 
         System.out.println("----- Iterate using for each loop -----");
-        for(WebElement link : links){
+        for (WebElement link : links) {
             System.out.println(link.getText());
         }
 
         System.out.println("----- Iterate using for loop -----");
-
-        for(int i = 0; i <= links.size() - 1; ++i) {
+        for (int i = 0; i <= links.size() - 1; ++i) {
             WebElement link = links.get(i);
             System.out.println(link.getText());
         }
 
         System.out.println("----- Iterate using ListIterator with while loop -----");
-
-
         ListIterator<WebElement> itr = links.listIterator();
 
-        while(itr.hasNext()) {
+        while (itr.hasNext()) {
             WebElement link = itr.next();
             System.out.println(link.getText());
         }
 
-
-
+        driver.close();
     }
 }

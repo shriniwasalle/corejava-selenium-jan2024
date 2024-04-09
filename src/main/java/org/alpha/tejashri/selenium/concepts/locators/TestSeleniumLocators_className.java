@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.locators;
+package org.alpha.tejashri.selenium.concepts.locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -28,13 +28,12 @@ public class TestSeleniumLocators_className {
         userName.sendKeys("standard_user");
 
         //WebElement password = txtBoxes.get(1);
-        //without storing in an another variable
+        //without storing in another variable perform next action
         txtBoxes.get(1).sendKeys("secret_sauce");
 
         WebElement btnLogin = driver.findElement(By.className("submit-button"));
         btnLogin.click();
 
         driver.close();
-
     }
 }

@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.locators;
+package org.alpha.tejashri.selenium.concepts.locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,12 +9,13 @@ import org.testng.annotations.Test;
 
 public class TestSeleniumLocators_xpath {
     @Test
-    public  void xpathLocatorConcept(){
+    public void xpathLocatorConcept() {
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://www.saucedemo.com/");
+
         driver.manage().window().maximize();
 
         /*

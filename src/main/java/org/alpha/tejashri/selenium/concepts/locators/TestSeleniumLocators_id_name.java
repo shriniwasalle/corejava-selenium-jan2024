@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.locators;
+package org.alpha.tejashri.selenium.concepts.locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -34,8 +34,8 @@ public class TestSeleniumLocators_id_name {
         btnLogin.click();// Click on login button
 
         String expectedUrl = "https://www.saucedemo.com/inventory.html";
-        String actualUrl = driver.getCurrentUrl();
 
+        String actualUrl = driver.getCurrentUrl();
         System.out.println("Actual URL : " + actualUrl);
 
         //Testing with if else condition

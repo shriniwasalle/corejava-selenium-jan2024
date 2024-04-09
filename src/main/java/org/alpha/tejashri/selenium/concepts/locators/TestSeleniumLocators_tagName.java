@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.locators;
+package org.alpha.tejashri.selenium.concepts.locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -27,6 +27,7 @@ public class TestSeleniumLocators_tagName {
         txtBoxes.get(0).sendKeys("standard_user");
         txtBoxes.get(1).sendKeys("secret_sauce");
         txtBoxes.get(2).click();
+
         driver.close();
     }
 }

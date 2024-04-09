@@ -28,5 +28,7 @@ public class assignmentNo4 {
         } else {
             System.out.println("Title has less than 10 char");
         }
+
+        driver.close();
     }
 }

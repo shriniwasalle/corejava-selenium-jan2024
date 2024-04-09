@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.locators;
+package org.alpha.tejashri.selenium.concepts.locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -21,6 +21,6 @@ public class TestSeleniumLocators_linkText {
         WebElement lnkTxt = driver.findElement(By.linkText("Gmail"));
         lnkTxt.click();
 
-       driver.close();
+        driver.close();
     }
 }

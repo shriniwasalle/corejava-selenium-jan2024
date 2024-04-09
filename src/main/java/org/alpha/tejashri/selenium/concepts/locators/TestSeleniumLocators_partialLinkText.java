@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.locators;
+package org.alpha.tejashri.selenium.concepts.locators;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class TestSeleniumLocators_partialLinkText {
     @Test
-    public void verifyLocators(){
+    public void verifyLocators() {
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver = new ChromeDriver();
