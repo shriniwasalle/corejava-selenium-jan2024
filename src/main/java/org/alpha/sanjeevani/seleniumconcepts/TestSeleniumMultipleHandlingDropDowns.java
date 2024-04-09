@@ -21,10 +21,21 @@ public class TestSeleniumMultipleHandlingDropDowns extends BaseTest{
         System.out.println("Is Multiple :"+ide.isMultiple());
 
         ide.selectByVisibleText("IntelliJ IDEA");
-
         ide.selectByValue("ec");
+        ide.selectByIndex(2);
 
-       // driver.close();
+        // ide.deselectByVisibleText("Eclipse");
+        //ide.deselectByValue("ij");
+        //ide.deselectByIndex(2);
+
+       // ide.deselectAll();
+
+       List<WebElement>options =ide.getAllSelectedOptions();
+       for (WebElement option:options){
+           System.out.println(option.getText());
+       }
+
+        driver.close();
 
     }
 }
