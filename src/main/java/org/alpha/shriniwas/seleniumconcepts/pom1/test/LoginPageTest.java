@@ -1,10 +1,12 @@
-package org.alpha.shriniwas.seleniumconcepts.pom1;
+package org.alpha.shriniwas.seleniumconcepts.pom1.test;
 
+import org.alpha.shriniwas.seleniumconcepts.pom1.pages.LoginPage;
+import org.alpha.shriniwas.seleniumconcepts.pom1.pages.ProductsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestLoginPage extends BaseTest {
+public class LoginPageTest extends BaseTest {
 
     @Test
     public void verifyLogin() {
