@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.pom1;
+package org.alpha.sanjeevani.pom1.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
