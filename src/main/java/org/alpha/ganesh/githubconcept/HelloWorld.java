@@ -1,4 +1,4 @@
-package org.alpha.ganesh;
+package org.alpha.ganesh.githubconcept;
 
 public class HelloWorld {
     public static void main(String[] args) {

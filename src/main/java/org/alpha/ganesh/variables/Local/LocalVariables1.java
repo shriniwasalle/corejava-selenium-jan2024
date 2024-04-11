@@ -1,4 +1,4 @@
-package org.alpha.ganesh.variables;
+package org.alpha.ganesh.variables.Local;
 
 public class LocalVariables1 {
 
