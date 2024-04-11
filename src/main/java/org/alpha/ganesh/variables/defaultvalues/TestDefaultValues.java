@@ -1,7 +1,7 @@
 package org.alpha.ganesh.variables.defaultvalues;
 
-import org.alpha.shriniwas.variables.Employee;
-import org.alpha.shriniwas.variables.Student;
+import org.alpha.ganesh.variables.Employee;
+import org.alpha.ganesh.variables.Student;
 
 public class TestDefaultValues {
     static byte b;
