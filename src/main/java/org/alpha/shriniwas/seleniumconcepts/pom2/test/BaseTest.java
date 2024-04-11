@@ -1,4 +1,4 @@
-package org.alpha.shriniwas.seleniumconcepts.pom1;
+package org.alpha.shriniwas.seleniumconcepts.pom2.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -8,10 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseTest {
 
-    WebDriver driver;
-
     public WebDriver initBrowser(String url, String browser) {
-
+        WebDriver driver = null;
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
