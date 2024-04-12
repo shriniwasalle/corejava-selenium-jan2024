@@ -1,9 +1,11 @@
-package org.alpha.tejashri.selenium.concepts.pom1;
+package org.alpha.tejashri.selenium.pom.pom1.test;
 
+import org.alpha.tejashri.selenium.pom.pom1.pages.LoginPage;
+import org.alpha.tejashri.selenium.pom.pom1.pages.ProductsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestLoginPage extends BrowserInitialisation{
+public class TestLoginPage extends BrowserInitialisation {
 
     @Test
     public void verifyLogin(){

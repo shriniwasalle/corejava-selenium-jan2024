@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.concepts.pom1;
+package org.alpha.tejashri.selenium.pom.pom1.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -14,13 +14,13 @@ public class BrowserInitialisation {
     public WebDriver initBrowser(String url, String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
-            this.driver = new ChromeDriver();
+            driver = new ChromeDriver();
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
-            this.driver = new FirefoxDriver();
+            driver = new FirefoxDriver();
         } else if (browser.equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
-            this.driver = new EdgeDriver();
+            driver = new EdgeDriver();
         }
 
         driver.get(url);

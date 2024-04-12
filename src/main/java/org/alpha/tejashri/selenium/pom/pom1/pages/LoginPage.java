@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.concepts.pom1;
+package org.alpha.tejashri.selenium.pom.pom1.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
