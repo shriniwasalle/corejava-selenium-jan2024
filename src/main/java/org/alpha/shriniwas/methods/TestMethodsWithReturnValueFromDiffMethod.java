@@ -2,7 +2,7 @@ package org.alpha.shriniwas.methods;
 
 public class TestMethodsWithReturnValueFromDiffMethod {
 
-    public String getName() {
+    public  String getName() {
         String name = "Shriniwas";
         name = name + "Automation";
         return name; // ShriniwasAutomation
@@ -25,5 +25,6 @@ public class TestMethodsWithReturnValueFromDiffMethod {
 
         System.out.println(len1);
         System.out.println(len2);
+
     }
 }
