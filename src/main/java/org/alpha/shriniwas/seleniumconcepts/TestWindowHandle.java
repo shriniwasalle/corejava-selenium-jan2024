@@ -22,7 +22,7 @@ public class TestWindowHandle extends BaseTest {
 
         System.out.println("Parent Window Id : " +parentWindow); // 8A6F
 
-        driver.findElement(By.id("newTabBtn")).click();
+        driver.findElement(By.id("newWindowBtn")).click();
 
         Set<String> windows = driver.getWindowHandles();
 
