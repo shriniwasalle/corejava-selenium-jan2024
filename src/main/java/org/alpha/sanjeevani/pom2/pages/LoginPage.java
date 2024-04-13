@@ -21,4 +21,7 @@ public class LoginPage {
         driver.findElement(txtPassword).sendKeys(password);
         driver.findElement(btnLogin).click();
     }
+
+    public void loginToApplication() {
+    }
 }

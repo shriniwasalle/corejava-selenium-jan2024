@@ -15,7 +15,6 @@ public class TestLoginPage extends BaseTest {
 //@BeforeMethod---->@Test---->@AfterMethod
 
     WebDriver driver;
-
     final String URL = "https://www.saucedemo.com/";
 
     final String browser = "chrome";
@@ -24,7 +23,6 @@ public class TestLoginPage extends BaseTest {
     public void init() {
         driver = initBrowser(URL, browser);
     }
-
     @Test
     public void verifyLogin() {
 

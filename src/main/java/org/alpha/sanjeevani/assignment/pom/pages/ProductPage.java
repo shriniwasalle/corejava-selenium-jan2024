@@ -1,15 +1,15 @@
-package org.alpha.sanjeevani.pom2.pages;
+package org.alpha.sanjeevani.assignment.pom.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class ProductsPage {
+public class ProductPage {
     private final WebDriver driver;
     private final By headingProducts=By.xpath("//span[@data-test='title']");
 
-    public ProductsPage(WebDriver driver){
-         this.driver=driver;
+    public ProductPage(WebDriver driver) {
+        this.driver=driver;
     }
 
     public String getProductPageHeading() {
@@ -17,4 +17,5 @@ public class ProductsPage {
         WebElement Heading = driver.findElement(headingProducts);
         return Heading.getText();
     }
+
 }
