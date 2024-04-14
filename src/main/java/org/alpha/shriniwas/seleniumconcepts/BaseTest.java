@@ -6,6 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
 public class BaseTest {
     WebDriver driver;
 
@@ -22,6 +25,10 @@ public class BaseTest {
             driver = new EdgeDriver();
         }
 
+        // URL link = new URL(url);
+
+        // driver.navigate().to(link);
+        // driver.navigate().to(url);
         driver.get(url);
         return driver;
     }
