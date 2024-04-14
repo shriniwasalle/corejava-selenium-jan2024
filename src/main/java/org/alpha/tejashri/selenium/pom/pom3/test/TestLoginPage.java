@@ -15,9 +15,6 @@ public class TestLoginPage extends BrowserInitialisation {
 
     WebDriver driver;
 
-    final String url = "url";
-
-
     @BeforeMethod // concept of TestNG
     public void init() throws IOException {
         //with storing in another variable

@@ -8,8 +8,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserInitialisation {
 
-
-
     //Initializing the Wed Browser
     public WebDriver initBrowser(String url, String browser) {
         WebDriver driver = null;

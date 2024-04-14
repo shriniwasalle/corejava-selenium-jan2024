@@ -1,9 +1,9 @@
 package org.alpha.tejashri.selenium.pom.pom4.test;
 
-import org.alpha.tejashri.selenium.pom.pom3.pages.LoginPage;
-import org.alpha.tejashri.selenium.pom.pom3.pages.ProductsPage;
-import org.alpha.tejashri.selenium.pom.pom3.test.BrowserInitialisation;
-import org.alpha.tejashri.selenium.pom.pom3.utils.ReadPropertiesFile;
+
+import org.alpha.tejashri.selenium.pom.pom4.pages.LoginPage;
+import org.alpha.tejashri.selenium.pom.pom4.pages.ProductsPage;
+import org.alpha.tejashri.selenium.pom.pom4.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -15,9 +15,6 @@ import java.io.IOException;
 public class TestLoginPage extends BrowserInitialisation {
 
     WebDriver driver;
-
-    final String url = "url";
-
 
     @BeforeMethod // concept of TestNG
     public void init() throws IOException {
