@@ -4,14 +4,18 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
-    WebDriver driver;
+    private final WebDriver driver;
+    private final By txtUserName=By.id("user-name");
+    private final By txtPassWord=By.id("password");
+    private final By btnLogin=By.id("login-button");
+
     public LoginPage(WebDriver driver ){
         this.driver=driver;
     }
-    public void loginToApplication() {
+    public void loginToApplication(String userName,String passWord) {
 
-        driver.findElement(By.id("user-name")).sendKeys("standard_user");
-        driver.findElement(By.id("password")).sendKeys("secret_sauce");
-        driver.findElement(By.id("login-button")).click();
+        driver.findElement(txtUserName).sendKeys(userName);
+        driver.findElement(txtPassWord).sendKeys(passWord);
+        driver.findElement(btnLogin).click();
     }
 }

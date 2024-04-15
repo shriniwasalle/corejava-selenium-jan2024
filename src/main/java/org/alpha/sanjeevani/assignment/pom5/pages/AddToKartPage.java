@@ -5,19 +5,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class AddToKartPage {
-    WebDriver driver;
+   private final WebDriver driver;
+    private final By txtAddToCart= By.xpath("//div[text()='Sauce Labs Backpack']");
+    private final By txtAddToCart1=By.id("add-to-cart");
+    private final By txtAddToCart2=By.cssSelector("span[data-test=shopping-cart-badge]");
 
     public AddToKartPage(WebDriver driver) {
         this.driver = driver;
     }
-
     public void getAddToKart() throws InterruptedException {
         Thread.sleep(2000);
-        driver.findElement(By.xpath("//div[text()='Sauce Labs Backpack']")).click();
-
+        driver.findElement(txtAddToCart).click();
         Thread.sleep(2000);
-        driver.findElement(By.id("add-to-cart")).click();
+        driver.findElement(txtAddToCart1).click();
         Thread.sleep(2000);
-        driver.findElement(By.cssSelector("span[data-test=shopping-cart-badge]")).click();
+        driver.findElement(txtAddToCart2).click();
     }
 }

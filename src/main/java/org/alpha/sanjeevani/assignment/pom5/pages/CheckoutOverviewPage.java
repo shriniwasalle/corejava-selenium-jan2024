@@ -6,11 +6,13 @@ import org.openqa.selenium.WebDriver;
 public class CheckoutOverviewPage {
 
     WebDriver driver;
+
+   By txtFinish= By.id("finish");
     public CheckoutOverviewPage(WebDriver driver){
         this.driver=driver;
     }
     public void getCheckoutOverviewPage(){
-        driver.findElement(By.id("finish")).click();
+        driver.findElement(txtFinish).click();
 
     }
 }
