@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.pom;
+package org.alpha.tejashri.selenium.TestNG;
 
 import org.testng.annotations.*;
 
@@ -8,23 +8,23 @@ public class TestTestNGConcept {
     //@BeforeMethod--> @Test2 --> @AfterMethod
 
     @BeforeMethod
-    public void init(){
+    public void init() {
         System.out.println("Open Browser");
     }
 
     @AfterMethod
-    public void closeBrowser(){
+    public void closeBrowser() {
         System.out.println("Close Browser");
         System.out.println("------------------------");
     }
 
     @Test
-    public void verifyLogin1(){
-        System.out.println("Inside Login 1");
+    public void verifyLogin1() {
+        System.out.println("Inside Login 1 method");
     }
 
     @Test
-    public void verifyLogin2(){
-        System.out.println("Inside Login 2");
+    public void verifyLogin2() {
+        System.out.println("Inside Login 2 method");
     }
 }

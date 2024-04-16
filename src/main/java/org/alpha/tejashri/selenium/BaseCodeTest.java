@@ -24,6 +24,13 @@ public class BaseCodeTest {
         driver.get(url);
         driver.manage().window().maximize();
 
+
+        //Using Navigation
+        //driver.navigate().to(url);
+
+        //URL link = new URL(url);
+        //driver.navigate().to(link);
+
         return driver;
     }
 }
