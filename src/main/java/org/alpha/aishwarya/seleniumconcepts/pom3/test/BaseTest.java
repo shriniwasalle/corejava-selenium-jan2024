@@ -1,4 +1,4 @@
-package org.alpha.aishwarya.seleniumconcepts.pom1;
+package org.alpha.aishwarya.seleniumconcepts.pom3.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -7,10 +7,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseTest {
-    WebDriver driver;
+
 
     public WebDriver initBrowser(String url, String browser) {   // Multiple param use: baherun access kraycha aahe
-
+        WebDriver driver= null;
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
@@ -25,6 +25,7 @@ public class BaseTest {
 
         }
         driver.get(url);
+        driver.manage().window().maximize();
         return driver;
     }
 }
