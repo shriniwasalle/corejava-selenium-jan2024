@@ -10,6 +10,7 @@ public class ProductsPage {
     private final By headingProducts = By.xpath("//span[@data-test='title']");
 
     public ProductsPage(WebDriver driver) {
+
         this.driver = driver;
     }
 

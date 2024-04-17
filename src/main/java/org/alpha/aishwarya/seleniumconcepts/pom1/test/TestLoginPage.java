@@ -1,6 +1,8 @@
-package org.alpha.aishwarya.seleniumconcepts.pom1;
+package org.alpha.aishwarya.seleniumconcepts.pom1.test;
 
-import org.openqa.selenium.By;
+import org.alpha.aishwarya.seleniumconcepts.pom1.pages.LoginPage;
+import org.alpha.aishwarya.seleniumconcepts.pom1.pages.ProductsPage;
+import org.alpha.aishwarya.seleniumconcepts.pom1.test.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
