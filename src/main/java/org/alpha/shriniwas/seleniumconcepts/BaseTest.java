@@ -3,20 +3,42 @@ package org.alpha.shriniwas.seleniumconcepts;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.Collections;
 
 public class BaseTest {
     WebDriver driver;
 
     public WebDriver initBrowser(String url, String browser) {
 
+        ChromeOptions options = new ChromeOptions();
+
+        // 1. To disable the Info Bar
+        // options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
+        // options.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));
+
+        String [] strArr = {"enable-automation"};
+        options.setExperimentalOption("excludeSwitches", strArr);
+        // options.setExperimentalOption("excludeSwitches", new String[] {"enable-automation"});
+
+        // Headless : Execute Script without opening the browser window
+        // Headed : Execute Script with opening the browser window
+
+        // 2. Headless Mode
+        // options.addArguments("headless");
+
+        // 3. Incognito Code
+        options.addArguments("incognito");
+
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
-            driver = new ChromeDriver();
+            driver = new ChromeDriver(options);
         } else if (browser.equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -30,6 +52,7 @@ public class BaseTest {
         // driver.navigate().to(link);
         // driver.navigate().to(url);
         driver.get(url);
+        // driver.manage().window().maximize();
         return driver;
     }
 }
