@@ -9,7 +9,7 @@ public class ReadPropertiesFile {
 
     public static String getPropertyValues(String key) throws IOException {
         //without storing in another variable
-        File file = new File(System.getProperty("user.dir") +"\\src\\main\\java\\org\\alpha\\tejashri\\selenium\\assignments\\AssignmentNo7\\resources\\config.properties");
+        File file = new File(System.getProperty("user.dir") + "\\src\\main\\java\\org\\alpha\\tejashri\\selenium\\assignments\\AssignmentNo7\\resources\\config.properties");
         FileInputStream fileInputStream = new FileInputStream(file);
 
         Properties prop = new Properties();

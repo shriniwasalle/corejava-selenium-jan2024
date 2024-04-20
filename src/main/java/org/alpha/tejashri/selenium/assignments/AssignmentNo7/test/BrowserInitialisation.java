@@ -7,10 +7,10 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BrowserInitialisation {
+    private WebDriver driver;
 
     //Initializing the Wed Browser
     public WebDriver initBrowser(String url, String browser) {
-        WebDriver driver = null;
 
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();

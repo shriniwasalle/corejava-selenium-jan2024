@@ -12,15 +12,15 @@ public class ProductsPage {
     private final By submitSearch = By.id("nav-search-submit-button");
 
     //created parametrised constructor
-    public ProductsPage(WebDriver driver){
+    public ProductsPage(WebDriver driver) {
         this.driver = driver;
     }
 
     public void getProductsPageSearch() {
 
         //Product Page Related Actions
-        WebElement enterSerach = driver.findElement(searchBox);
-        enterSerach.sendKeys("iphone");
+        WebElement enterSearch = driver.findElement(searchBox);
+        enterSearch.sendKeys("iphone 15");
 
         driver.findElement(submitSearch).click();
     }

@@ -7,7 +7,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class BaseCodeTest {
-    WebDriver driver;
+    private WebDriver driver;
 
     public WebDriver initBrowser(String url, String browser) {
         if (browser.equalsIgnoreCase("chrome")) {
