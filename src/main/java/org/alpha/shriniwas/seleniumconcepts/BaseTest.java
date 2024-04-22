@@ -11,6 +11,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     WebDriver driver;
@@ -36,6 +37,19 @@ public class BaseTest {
         // 3. Incognito Code
         options.addArguments("incognito");
 
+        // 4. Maximize Window
+        // options.addArguments("--start-maximized");
+
+        // 5. To change the location of downloaded file
+
+//        Map<String, Object> prefs = new HashMap<String, Object>();
+//        prefs.put("download.default_directory",  System.getProperty("user.dir")+ File.separator + "externalFiles" + File.separator + "downloadFiles");
+//        ChromeOptions options = new ChromeOptions();
+//        options.setExperimentalOption("prefs", prefs);
+//        ChromeDriver driver = new ChromeDriver(options);
+
+
+
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver(options);
@@ -53,6 +67,7 @@ public class BaseTest {
         // driver.navigate().to(url);
         driver.get(url);
         // driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
     }
 }
