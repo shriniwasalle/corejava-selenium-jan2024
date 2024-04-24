@@ -42,11 +42,18 @@ public class TestMultiDimensionalArrays {
         System.out.println();
 
         //Loop Through a Multi-Dimensional Array
-        System.out.println("Loop Through a Multi-Dimensional Array");
-        char [][] letters = {{'A','B','C'} , {'D','F','G'}};
+        System.out.println("Iterating a Multi-Dimensional Array with for loop");
+        char[][] letters = {{'A', 'B', 'C'}, {'D', 'F', 'G'}};
         for (char i = 0; i < letters.length; ++i) {
-            for(char j = 0; j < letters[i].length; ++j) {
+            for (char j = 0; j < letters[i].length; ++j) {
                 System.out.println(letters[i][j]);
+            }
+        }
+
+        System.out.println("Iterating a Multi-Dimensional Array with for each loop");
+        for (char[] letter : letters) {
+            for (char ltr : letter) {
+                System.out.println(ltr);
             }
         }
     }
