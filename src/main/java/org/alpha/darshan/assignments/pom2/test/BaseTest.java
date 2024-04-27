@@ -1,4 +1,4 @@
-package org.alpha.darshan.pom2.test;
+package org.alpha.darshan.assignments.pom2.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

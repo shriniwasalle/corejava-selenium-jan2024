@@ -1,8 +1,8 @@
-package org.alpha.darshan.pom1.test;
+package org.alpha.darshan.assignments.pom1.test;
 
-import org.alpha.darshan.pom1.pages.LogInPage;
-import org.alpha.darshan.pom1.pages.productsPage;
-import org.alpha.darshan.pom1.test.BaseTest;
+import org.alpha.darshan.assignments.pom1.pages.LogInPage;
+import org.alpha.darshan.assignments.pom1.pages.productsPage;
+import org.alpha.darshan.assignments.pom1.test.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

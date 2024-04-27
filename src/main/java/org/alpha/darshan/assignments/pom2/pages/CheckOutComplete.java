@@ -1,4 +1,4 @@
-package org.alpha.darshan.pom2.pages;
+package org.alpha.darshan.assignments.pom2.pages;
 
 import com.google.j2objc.annotations.Weak;
 import org.openqa.selenium.By;

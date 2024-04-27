@@ -1,4 +1,4 @@
-package org.alpha.darshan.pom2.utils;
+package org.alpha.darshan.assignments.pom2.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

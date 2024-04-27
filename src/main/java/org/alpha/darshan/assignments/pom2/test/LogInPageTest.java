@@ -1,7 +1,7 @@
-package org.alpha.darshan.pom2.test;
+package org.alpha.darshan.assignments.pom2.test;
 
-import org.alpha.darshan.pom2.pages.*;
-import org.alpha.darshan.pom2.utils.ReadPropertiesFile;
+import org.alpha.darshan.assignments.pom2.pages.*;
+import org.alpha.darshan.assignments.pom2.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

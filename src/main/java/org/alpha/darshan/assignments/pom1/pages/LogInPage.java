@@ -1,4 +1,4 @@
-package org.alpha.darshan.pom1.pages;
+package org.alpha.darshan.assignments.pom1.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
