@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="TestIncludeExclude">
+        <classes>
+            <!-- class name="org.alpha.shriniwas.testngconcepts.TestIgnore1" />
+            <class name="org.alpha.shriniwas.testngconcepts.TestIgnore2" / -->
+            <class name="org.alpha.shriniwas.testngconcepts.TestIgnore3" >
+                <methods>
+                    <include name="test7" />
+                    <exclude name="test9" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
