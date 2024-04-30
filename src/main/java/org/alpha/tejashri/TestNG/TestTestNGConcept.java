@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.TestNG;
+package org.alpha.tejashri.TestNG;
 
 import org.testng.annotations.*;
 
