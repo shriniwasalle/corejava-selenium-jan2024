@@ -32,7 +32,7 @@ public class TestActions extends BaseCodeTest {
 
     @AfterMethod
     public void closeBrowser() {
-        driver.close();
+        //driver.close();
     }
 
     //1.Right click in mouse
@@ -120,7 +120,9 @@ public class TestActions extends BaseCodeTest {
         WebElement element = driver.findElement(By.id("user-name"));
 
         actions.keyDown(element, Keys.SHIFT).sendKeys("tejashri").keyUp(Keys.SHIFT).perform();//TEJASHRI
+
         //doubleClick() method without parameter used for select the word where the cursor is present
-        actions.doubleClick().perform();
+        actions.doubleClick();
+        element.clear();
     }
 }

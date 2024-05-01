@@ -3,6 +3,7 @@ package org.alpha.tejashri.selenium.assignments;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class assignmentNo4 {
@@ -28,6 +29,9 @@ public class assignmentNo4 {
         } else {
             System.out.println("Title has less than 10 char");
         }
+
+        //Assertions
+        Assert.assertEquals(title, "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!");
 
         driver.close();
     }

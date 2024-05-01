@@ -1,9 +1,9 @@
 package org.alpha.tejashri.selenium.assignments.AssignmentNo8.test;
 
-
 import org.alpha.tejashri.selenium.assignments.AssignmentNo8.pages.GoogleSearchPage;
 import org.alpha.tejashri.selenium.assignments.AssignmentNo8.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -30,5 +30,11 @@ public class TestPage extends BrowserInitialisation {
         //Created the object of GoogleSearchPage class
         GoogleSearchPage googleSearchPage = new GoogleSearchPage(driver);
         googleSearchPage.getSearch();
+
+        //Assertions
+        String actualTitle = driver.getTitle();
+        System.out.println("Actual Title : " + actualTitle);
+
+        Assert.assertEquals(actualTitle, "Google");
     }
 }

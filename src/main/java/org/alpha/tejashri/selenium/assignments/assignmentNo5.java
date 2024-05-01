@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.List;
 import java.util.ListIterator;
@@ -22,11 +23,19 @@ public class assignmentNo5 {
 
         driver.manage().window().maximize();
 
-        String linkTile = "Product Offering";
+        System.out.println("Title : " +driver.getTitle());
 
-        List<WebElement> links = driver.findElements(By.xpath("//p[text()='" + linkTile + "']/following-sibling::ul[1]/li/a"));
+        WebElement txtLink = driver.findElement(By.xpath("//p[text()='Product Offering']"));
 
-        System.out.println("Total Links  Count : " + links.size());
+        String txtLinkTitle = txtLink.getText();
+
+        System.out.println("Actual Link Title : " +txtLinkTitle);
+
+        String linkTitle = "Product Offering";
+
+        List<WebElement> links = driver.findElements(By.xpath("//p[text()='" + linkTitle + "']/following-sibling::ul[1]/li/a"));
+
+        System.out.println("Total Links Count in " +linkTitle+ " are : " + links.size());
 
         //WebElement link1 = links.get(0);
         //WebElement link2 = links.get(1);
@@ -52,6 +61,7 @@ public class assignmentNo5 {
             System.out.println(link.getText());
         }
 
-        driver.close();
+        //Assertions
+        Assert.assertNotEquals(txtLinkTitle, linkTitle);
     }
 }

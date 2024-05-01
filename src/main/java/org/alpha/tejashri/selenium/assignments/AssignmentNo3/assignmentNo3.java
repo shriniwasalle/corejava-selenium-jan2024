@@ -5,9 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class assignmentNo3 {
+
     @Test
     public void verifySignIn() throws InterruptedException {
         WebDriverManager.chromedriver().setup();
@@ -43,7 +45,7 @@ public class assignmentNo3 {
         texLastName.sendKeys("Xyz");//Enter Last Name
 
         WebElement texEmail = driver.findElement(By.name("email"));
-        texLastName.sendKeys("abc123xyz@example.com");//Enter Email
+        texEmail.sendKeys("abc123xyz@example.com");//Enter Email
 
 
         WebElement texPassword = driver.findElement(By.name("password"));
@@ -58,5 +60,13 @@ public class assignmentNo3 {
 
         WebElement texLoginPage = driver.findElement(By.linkText("login page"));
         texLoginPage.click();
+
+        WebElement texHeading = driver.findElement(By.xpath(" //h2[text()='New Customer']"));
+        String heading = texHeading.getText();
+        System.out.println("Heading : " + heading);
+
+        Assert.assertEquals(heading, "New Customer");
+
+        driver.close();
     }
 }

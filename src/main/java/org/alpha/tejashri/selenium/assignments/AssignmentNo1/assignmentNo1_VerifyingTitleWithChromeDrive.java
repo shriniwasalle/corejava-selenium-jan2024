@@ -3,6 +3,7 @@ package org.alpha.tejashri.selenium.assignments.AssignmentNo1;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 public class assignmentNo1_VerifyingTitleWithChromeDrive {
     public static void main(String[] args) {
@@ -15,9 +16,9 @@ public class assignmentNo1_VerifyingTitleWithChromeDrive {
 
         //Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books &amp; More. Best Offers!
 
-        if (actualTitle.equals("Flipkart"))
-            System.out.println("Test case Pass");
-        else System.out.println("Test case Fail");
+        String expectedTitle = "Online Shopping Site for Mobiles, Electronics, Furniture, Grocery, Lifestyle, Books & More. Best Offers!";
+
+        Assert.assertEquals(actualTitle, expectedTitle);
 
         driver.close();
     }

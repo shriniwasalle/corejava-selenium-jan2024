@@ -6,6 +6,7 @@ import org.alpha.tejashri.selenium.assignments.AssignmentNo7.pages.ProductsPage;
 import org.alpha.tejashri.selenium.assignments.AssignmentNo7.pages.IphoneSearchPage;
 import org.alpha.tejashri.selenium.assignments.AssignmentNo7.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -36,12 +37,18 @@ public class TestPage extends BrowserInitialisation {
         productsPage.getProductsPageSearch();
 
         //Created the object of IphoneSearchPage class
-        IphoneSearchPage iphonePage = new IphoneSearchPage(driver);
-        iphonePage.getFirstResult();
-        iphonePage.verifyWindowHandle();
+        IphoneSearchPage iphoneSearchPage = new IphoneSearchPage(driver);
+        iphoneSearchPage.getFirstResult();
+        iphoneSearchPage.verifyWindowHandle();
 
         //Created the object of Iphone15BlackPage class
-        Iphone15BlackPage iphone15Page = new Iphone15BlackPage(driver);
-        iphone15Page.verifyIphone15Details();
+        Iphone15BlackPage iphone15BlackPage = new Iphone15BlackPage(driver);
+        iphone15BlackPage.verifyIphone15Details();
+
+        //Assertions
+        String actualTitle = driver.getTitle();
+        System.out.println("Actual Title : " + actualTitle);
+
+        Assert.assertEquals(actualTitle, "Apple iPhone 15 (128 GB) - Black : Amazon.in: Electronics");
     }
 }

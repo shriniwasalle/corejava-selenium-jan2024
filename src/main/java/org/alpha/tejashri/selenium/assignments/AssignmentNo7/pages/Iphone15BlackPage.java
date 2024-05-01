@@ -22,7 +22,8 @@ public class Iphone15BlackPage {
     }
 
     public void verifyIphone15Details() {
-        System.out.println("Product Name : " + driver.findElement(iphone15Heading).getText());
+
+        System.out.println("Product Name : " + driver.findElement(iphone15Heading));
         System.out.println("Product Price : " + driver.findElement(iphone15BlackPrice).getText());
 
         //Locate the table element
