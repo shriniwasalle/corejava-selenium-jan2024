@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.assignments;
+package org.alpha.tejashri.selenium.assignments.AssignmentNo5;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;

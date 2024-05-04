@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Test Groups">
+        <groups>
+            <!--1st way-->
+            <!--<define name="group1">-->
+            <!--<include name="regression" />-->
+            <!--</define>-->
+            <!--<define name="group2">-->
+            <!--<include name=".*database.*" />-->
+            <!--</define>-->
+            <!--<run>-->
+            <!--<include name="group1" />-->
+            <!--</run>-->
+
+            <!--2nd way-->
+            <run>
+                <!-- ignoring groups -->
+                <!--<include name="regression" />--> <!-- 1. By commenting -->
+                <!--<exclude name="database-tests"/>--><!-- 2. By exclude tag-->
+                <!--<include name="database-testNG"/>-->
+                <include name=".*database.*"/><!-- Using Regular Expressions -->
+            </run>
+        </groups>
+        <classes>
+            <class name="org.alpha.tejashri.TestNG.groups.TestGroup1"/>
+            <class name="org.alpha.tejashri.TestNG.groups.TestGroup2"/>
+        </classes>
+    </test>
+</suite>

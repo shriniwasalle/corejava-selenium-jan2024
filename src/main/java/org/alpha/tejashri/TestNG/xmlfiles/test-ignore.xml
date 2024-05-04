@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Test Ignore">
+        <classes>
+            <!-- ignoring groups
+            1. By commenting -->
+            <!-- class name="org.alpha.tejashri.TestNG.TestIgnore.TestIgnore1">
+                <methods>
+                    <include name="test1"/>
+                    <include name="test2"/>
+                    <include name="test3"/>
+                    <include name="test4"/>
+                </methods>
+            </class -->
+            <class name="org.alpha.tejashri.TestNG.TestIgnore.TestIgnore1">
+               <methods>
+                   <include name="test1"/>
+                   <include name="test2"/>
+                   <include name="test3"/>
+                   <include name="test4"/>
+               </methods>
+           </class >
+            <class name="org.alpha.tejashri.TestNG.TestIgnore.TestIgnore2">
+                <methods>
+                    <include name="test5"/>
+                    <include name="test7"/>
+                </methods>
+            </class>
+            <class name="org.alpha.tejashri.TestNG.TestIgnore.TestIgnore3">
+                <methods>
+                    <!-- 2. By exclude tag-->
+                    <exclude name="test8"/>
+                    <exclude name="test10"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

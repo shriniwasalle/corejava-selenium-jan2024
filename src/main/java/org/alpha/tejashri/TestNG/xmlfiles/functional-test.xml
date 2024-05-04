@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Functional Test">
+        <classes>
+            <class name="org.alpha.tejashri.TestNG.FunctionalTest.TestClass1"/>
+            <class name="org.alpha.tejashri.TestNG.FunctionalTest.TestClass2"/>
+        </classes>
+    </test>
+</suite>

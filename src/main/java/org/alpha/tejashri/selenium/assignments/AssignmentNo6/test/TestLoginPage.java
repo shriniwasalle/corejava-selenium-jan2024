@@ -62,10 +62,10 @@ public class TestLoginPage extends BrowserInitialisation {
         //Called parameterized UserInfo method from CheckOutPage class & passed the parameters values
         checkOutPage.UserInfo("Tejashri", "Boppa", "413001");
 
-        //Created the object of OverviewPage class
+        //Created the object of SignInPage class
         OverviewPage overviewPage = new OverviewPage(driver);
 
-        //Called verifyOverviewPage method from OverviewPage class
+        //Called verifyOverviewPage method from SignInPage class
         overviewPage.verifyOverviewPage();
 
         //Created the object of CompletePage class
