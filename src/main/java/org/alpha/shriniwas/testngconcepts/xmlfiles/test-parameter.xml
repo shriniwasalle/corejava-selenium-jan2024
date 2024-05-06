@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <!-- Valid Username , Valid Password -->
+    <test name="TestParameters1">
+        <parameter name="username" value="standard_user" />
+        <parameter name="password" value="secret_sauce" />
+        <classes>
+            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParameters" >
+            </class>
+        </classes>
+    </test>
+
+<!--    Valid Username , Invalid Password -->
+    <test name="TestParameters2">
+        <parameter name="username" value="standard_user" />
+        <parameter name="password" value="secret_sauce1234" />
+        <classes>
+            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParameters" />
+        </classes>
+    </test>
+
+<!--    Invalid Username , Valid Password  -->
+    <test name="TestParameters3">
+        <parameter name="username" value="standard_user123" />
+        <parameter name="password" value="secret_sauce" />
+        <classes>
+            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParameters" />
+        </classes>
+    </test>
+
+<!--    Invalid Username , Invalid Password  -->
+    <test name="TestParameters4">
+        <parameter name="username" value="standard_user123" />
+        <parameter name="password" value="secret_sauce123" />
+        <classes>
+            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParameters" />
+        </classes>
+    </test>
+</suite>

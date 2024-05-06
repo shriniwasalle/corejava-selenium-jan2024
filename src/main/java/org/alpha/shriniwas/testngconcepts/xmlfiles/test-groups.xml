@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="TestIncludeExclude">
+        <groups>
+<!--            <define name="group1">-->
+<!--                <include name="regression" />-->
+<!--            </define>-->
+<!--            <define name="group2">-->
+<!--                <include name=".*database.*" /> &lt;!&ndash; Regular Expression &ndash;&gt;-->
+<!--            </define>-->
+<!--            <run>-->
+<!--                <include name="group1"/>-->
+<!--                <include name="group2"/>-->
+<!--            </run>-->
+
+            <run>
+                <include name="regression" />
+                <include name=".*database.*" />
+            </run>
+        </groups>
+        <classes>
+            <class name="org.alpha.shriniwas.testngconcepts.TestGroup1" />
+            <class name="org.alpha.shriniwas.testngconcepts.TestGroup2" />
+        </classes>
+    </test>
+</suite>
