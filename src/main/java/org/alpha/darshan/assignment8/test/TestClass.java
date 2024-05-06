@@ -15,7 +15,7 @@ public class TestClass extends BaseTest {
     }
 
     @Test
-    public void fetchResults(){
+    public void fetchResults() throws InterruptedException {
         GoogleSearchPage googleSearchPage= new GoogleSearchPage(driver);
         googleSearchPage.search();
         

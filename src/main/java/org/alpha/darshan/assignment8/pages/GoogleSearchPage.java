@@ -12,13 +12,13 @@ public class GoogleSearchPage {
     public GoogleSearchPage(WebDriver driver){
         this.driver=driver;
     }
-    public void search(){
+    public void search() throws InterruptedException {
         driver.findElement(By.id("APjFqb")).sendKeys("selenium");
-
-       List<WebElement> searchResults= driver.findElements(By.xpath("//div[@class='wM6W7d'][1]/span/b"));
+        Thread.sleep(1000);
+       List<WebElement> searchResults= driver.findElements(By.xpath("//ul[@role=\"listbox\"]/li"));
 
        for (WebElement result:searchResults){
-           System.out.println(result);
+           System.out.println(result.getText());
        }
     }
 }
