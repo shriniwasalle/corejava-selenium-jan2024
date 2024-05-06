@@ -4,29 +4,35 @@
 
     <!-- Valid Username , Valid Password -->
     <test name="TestParameters1">
+        <parameter name="browser" value="chrome" />
         <parameter name="username" value="standard_user" />
         <parameter name="password" value="secret_sauce" />
+        <parameter name="type" value="valid" />
         <classes>
-            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParameters" >
+            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParametersWithActualLogin" >
             </class>
         </classes>
     </test>
 
 <!--    Locked out Username , Password -->
     <test name="TestParameters2">
+        <parameter name="browser" value="firefox" />
         <parameter name="username" value="locked_out_user" />
         <parameter name="password" value="secret_sauce" />
+        <parameter name="type" value="locked_out" />
         <classes>
-            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParameters" />
+            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParametersWithActualLogin" />
         </classes>
     </test>
 
-<!--    Invalid Username , Valid Password  -->
+<!-- Invalid Username , Invalid Valid Password -->
     <test name="TestParameters3">
+        <parameter name="browser" value="edge" />
         <parameter name="username" value="standard_user123" />
-        <parameter name="password" value="secret_sauce" />
+        <parameter name="password" value="secret_sauce123" />
+        <parameter name="type" value="invalid" />
         <classes>
-            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParameters" />
+            <class name="org.alpha.shriniwas.testngconcepts.parameterization.TestParametersWithActualLogin" />
         </classes>
     </test>
 
