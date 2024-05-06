@@ -16,11 +16,10 @@ public class ProductsPage {
         this.driver = driver;
     }
 
-    public void getProductsPageSearch() {
+    public void getProductsPageSearch(String enterProduct) {
 
         //Product Page Related Actions
-        WebElement enterSearch = driver.findElement(searchBox);
-        enterSearch.sendKeys("iphone 15");
+        driver.findElement(searchBox).sendKeys(enterProduct);
 
         driver.findElement(submitSearch).click();
     }

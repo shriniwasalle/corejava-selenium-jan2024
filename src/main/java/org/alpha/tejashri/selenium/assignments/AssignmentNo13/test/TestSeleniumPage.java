@@ -1,8 +1,7 @@
-package org.alpha.tejashri.selenium.assignments.AssignmentNo10.test;
+package org.alpha.tejashri.selenium.assignments.AssignmentNo13.test;
 
-
-import org.alpha.tejashri.selenium.assignments.AssignmentNo10.pages.LoanPage;
-import org.alpha.tejashri.selenium.assignments.AssignmentNo10.utils.ReadPropertiesFile;
+import org.alpha.tejashri.selenium.assignments.AssignmentNo13.pages.SeleniumPage;
+import org.alpha.tejashri.selenium.assignments.AssignmentNo13.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -11,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestPage extends BrowserInitialisation {
+public class TestSeleniumPage extends BaseTest {
 
     WebDriver driver;
 
@@ -26,16 +25,15 @@ public class TestPage extends BrowserInitialisation {
     }
 
     @Test
-    public void verifyTestPage() throws IOException {
+    public void verifyTestPage() throws InterruptedException {
 
         //Created the object of GoogleSearchPage class
-        LoanPage loanPage = new LoanPage(driver);
-        loanPage.verifyLoanPage();
+        SeleniumPage seleniumPage = new SeleniumPage(driver);
+        seleniumPage.verifySeleniumPage();
 
         //Assertions
         String actualTitle = driver.getTitle();
-        System.out.println("Actual Title : " + actualTitle);
 
-        Assert.assertEquals(actualTitle, "EMI Calculator for Home Loan, Car Loan & Personal Loan in India");
+        Assert.assertEquals(actualTitle, "WebElement");
     }
 }

@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestPage extends BrowserInitialisation {
+public class TestIRCTCPage extends BaseTest {
 
     WebDriver driver;
 
@@ -27,9 +27,9 @@ public class TestPage extends BrowserInitialisation {
     }
 
     @Test
-    public void verifyTestPage() {
+    public void verifyTestPage() throws IOException {
         LoginPage loginPage = new LoginPage(driver);
-        loginPage.loginToApplication();
+        loginPage.loginToApplication(ReadPropertiesFile.getPropertyValues("enter_From"), ReadPropertiesFile.getPropertyValues("enter_to"));
 
         ResultPage resultPage = new ResultPage(driver);
         resultPage.getResultHeading();

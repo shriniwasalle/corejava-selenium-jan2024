@@ -1,5 +1,6 @@
 package org.alpha.tejashri.selenium.assignments.AssignmentNo14.pages;
 
+import org.alpha.tejashri.selenium.assignments.AssignmentNo14.pageactions.PageActions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -8,14 +9,16 @@ import java.util.concurrent.TimeUnit;
 public class SuccessPage {
 
     private final WebDriver driver;
-
-    private final By heading = By.xpath("//span[@class=\"base\"]");
+    private final By heading = By.xpath("//span[@class='base']");
     private final By btnDropdown = By.xpath("/html/body/div[2]/header/div[1]/div/ul/li[2]/span/button");
     private final By bntSignOut = By.linkText("Sign Out");
+
+    PageActions actions;
 
     //created parametrised constructor
     public SuccessPage(WebDriver driver) {
         this.driver = driver;
+        actions = new PageActions(driver);
     }
 
     public void verifySuccessPage() throws InterruptedException {
@@ -25,11 +28,10 @@ public class SuccessPage {
 
         //Success Page
         Thread.sleep(5000);
-        System.out.println(driver.findElement(heading).getText());
+        System.out.println("Heading : " +driver.findElement(heading).getText());
 
         Thread.sleep(5000);
-        driver.findElement(btnDropdown).click();
-        driver.findElement(bntSignOut).click();
-        System.out.println(driver.getTitle());
+        actions.clickOnElement(btnDropdown);
+        actions.clickOnElement(bntSignOut);
     }
 }

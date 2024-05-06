@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestPage extends BrowserInitialisation {
+public class TestGooglePage extends BaseTest {
 
     WebDriver driver;
 
@@ -29,7 +29,7 @@ public class TestPage extends BrowserInitialisation {
 
         //Created the object of GoogleSearchPage class
         GoogleSearchPage googleSearchPage = new GoogleSearchPage(driver);
-        googleSearchPage.getSearch();
+        googleSearchPage.getSearch(ReadPropertiesFile.getPropertyValues("enter_Search"));
 
         //Assertions
         String actualTitle = driver.getTitle();

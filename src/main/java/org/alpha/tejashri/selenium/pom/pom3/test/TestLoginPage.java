@@ -11,14 +11,14 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestLoginPage extends BrowserInitialisation {
+public class TestLoginPage extends BaseTest {
 
     WebDriver driver;
 
     @BeforeMethod // concept of TestNG
     public void init() throws IOException {
         //with storing in another variable
-        //Called parameterized initBrowser method from BrowserInitialisation class key values taken from ReadPropertiesFile class
+        //Called parameterized initBrowser method from BaseTest class key values taken from ReadPropertiesFile class
         //getPropertyValues() static method directly called with class name without creating object of that class
 
         String url = ReadPropertiesFile.getPropertyValues("url");

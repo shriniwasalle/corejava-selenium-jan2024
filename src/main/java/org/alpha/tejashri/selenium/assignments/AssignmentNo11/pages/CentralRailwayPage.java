@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 public class CentralRailwayPage {
 
     private final WebDriver driver;
-    private final By btnHoliday = By.xpath("//a[@title='Holiday Packages']");
+    private final By btnHoliday = By.linkText("Holiday Packages");
 
     //created parametrised constructor
     public CentralRailwayPage(WebDriver driver) {

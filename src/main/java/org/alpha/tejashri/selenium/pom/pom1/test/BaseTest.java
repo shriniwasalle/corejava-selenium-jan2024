@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.assignments.AssignmentNo10.test;
+package org.alpha.tejashri.selenium.pom.pom1.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -6,12 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BrowserInitialisation {
-    private WebDriver driver;
+public class BaseTest {
+
+    WebDriver driver;
 
     //Initializing the Wed Browser
     public WebDriver initBrowser(String url, String browser) {
-
         if (browser.equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();

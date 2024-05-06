@@ -5,13 +5,13 @@ import org.alpha.tejashri.selenium.pom.pom1.pages.ProductsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestLoginPage extends BrowserInitialisation {
+public class TestLoginPage extends BaseTest {
 
     @Test
     public void verifyLogin(){
         //Testing Related Actions
 
-        //Called initBrowser method from BrowserInitialisation class
+        //Called initBrowser method from BaseTest class
         initBrowser("https://www.saucedemo.com/", "chrome");
 
         //Created the object of LoginPage class

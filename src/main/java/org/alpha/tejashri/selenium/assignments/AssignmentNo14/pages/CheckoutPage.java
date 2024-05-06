@@ -1,9 +1,13 @@
 package org.alpha.tejashri.selenium.assignments.AssignmentNo14.pages;
 
+import org.alpha.tejashri.selenium.assignments.AssignmentNo14.pageactions.PageActions;
+import org.alpha.tejashri.selenium.assignments.AssignmentNo14.utils.ReadPropertiesFile;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 public class CheckoutPage {
@@ -15,44 +19,43 @@ public class CheckoutPage {
     private final By txtRegion = By.name("region_id");
     private final By txtPostCode = By.name("postcode");
     private final By txtPhone = By.name("telephone");
-    private final By txtFixed = By.name("ko_unique_1");
-    private final By btnNext = By.xpath("//button[@class=\"button action continue primary\"]");
+    private final By txtFixed = By.xpath("//input[@value='tablerate_bestway']");
+    private final By btnNext = By.xpath("//button[@class='button action continue primary']");
+    private final By txtPrice = By.xpath("//span[@data-bind='text: getValue()' and @class='price']");
+    private final By btnPlaceOrder = By.xpath("//button[@class='action primary checkout']");
 
-    private final By txtPrice = By.xpath("//div[2]/div[1]/span[2]");
-    private final By btnPlaceOrder = By.xpath("//button[@class=\"action primary checkout\"]");
+    PageActions actions;
 
     //created parametrised constructor
     public CheckoutPage(WebDriver driver) {
         this.driver = driver;
+        actions = new PageActions(driver);
     }
 
-    public void verifyCheckoutPage() throws InterruptedException {
+    public void verifyCheckoutPage(String add, String city, String post, String phone) throws InterruptedException {
 
         //Implicit Wait added
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
         //Checkout Page
+        actions.enterText(txtAddress, add);
+        actions.enterText(txtCity, city);
 
-//        driver.findElement(txtAddress).sendKeys("street No. 1, Luma Building");
-//        driver.findElement(txtCity).sendKeys("Luma");
-//
-//        WebElement btnRegionID = driver.findElement(txtRegion);
-//        Select regionID = new Select(btnRegionID);
-//        regionID.selectByVisibleText("California");
-//
-//        driver.findElement(txtPostCode).sendKeys("12345-6789");
-//        driver.findElement(txtPhone).sendKeys("1234567890");
+        WebElement btnRegionID = driver.findElement(txtRegion);
+        Select regionID = new Select(btnRegionID);
+        regionID.selectByVisibleText("California");
 
-        Thread.sleep(5000);
-        driver.findElement(txtFixed).click();
-        driver.findElement(btnNext).click();
+        actions.enterText(txtPostCode, post);
+        actions.enterText(txtPhone, phone);
 
         Thread.sleep(5000);
-        WebElement price = driver.findElement(txtPrice);
-        System.out.println(price.getText());
+        actions.clickOnElement(txtFixed);
+        actions.clickOnElement(btnNext);
+
+        Thread.sleep(5000);
+        System.out.println("Order Total Price : " +driver.findElement(txtPrice).getText());
 
         Thread.sleep(2000);
-        driver.findElement(btnPlaceOrder).click();
-
+        actions.clickOnElement(btnPlaceOrder);
     }
 }

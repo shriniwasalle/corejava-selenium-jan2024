@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.assignments.AssignmentNo6.test;
+package org.alpha.tejashri.selenium.pom.pom2.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -6,7 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class BrowserInitialisation {
+public class BaseTest {
+
+
 
     //Initializing the Wed Browser
     public WebDriver initBrowser(String url, String browser) {

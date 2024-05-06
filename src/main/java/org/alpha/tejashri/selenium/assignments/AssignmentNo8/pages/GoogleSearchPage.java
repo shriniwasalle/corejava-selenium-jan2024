@@ -20,12 +20,11 @@ public class GoogleSearchPage {
         this.driver = driver;
     }
 
-    public void getSearch() {
+    public void getSearch(String enterSearch) {
         //Implicit Wait added
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-        WebElement bntSearch = driver.findElement(btnSrc);
-        bntSearch.sendKeys("Selenium");
+        driver.findElement(btnSrc).sendKeys(enterSearch);
 
         WebElement firstSearch = driver.findElement(fstSearch);
         String firstWord = firstSearch.getText();

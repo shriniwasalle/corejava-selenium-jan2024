@@ -31,7 +31,7 @@ public class LoanPage {
         this.driver = driver;
     }
 
-    public void verifyLoanPage() {
+    public void verifyLoanPage(String enterIntRate) {
 
         //Implicit Wait added
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -45,7 +45,7 @@ public class LoanPage {
         //doubleClick(wedElement) method used for mouse left Double click
         actions.doubleClick(intRate).perform();
         intRate.sendKeys(Keys.DELETE);
-        intRate.sendKeys("8.5");
+        intRate.sendKeys(enterIntRate);
 
         WebElement loanTenure = driver.findElement(tenure);
         loanTenure.click();

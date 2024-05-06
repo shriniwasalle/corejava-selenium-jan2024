@@ -1,5 +1,6 @@
 package org.alpha.tejashri.selenium.assignments.AssignmentNo14.pages;
 
+import org.alpha.tejashri.selenium.assignments.AssignmentNo14.pageactions.PageActions;
 import org.openqa.selenium.*;
 
 import java.util.concurrent.TimeUnit;
@@ -12,23 +13,25 @@ public class SignInPage {
     private final By txtPassword = By.id("pass");
     private final By btnSingIn = By.id("send2");
 
+    PageActions actions;
+
     //created parametrised constructor
     public SignInPage(WebDriver driver) {
         this.driver = driver;
+        actions = new PageActions(driver);
     }
 
-    public void verifySignInPage() throws InterruptedException {
+    public void verifySignInPage(String txt_email, String txt_pass) {
 
         //Implicit Wait added
         driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
         //Home Page
-        driver.findElement(linkSingIn).click();
+        actions.clickOnElement(linkSingIn);
 
         //SignIn Page
-        driver.findElement(txtEmail).sendKeys("abc123xyz@example.com");
-        driver.findElement(txtPassword).sendKeys("abcxyz@123");
-        driver.findElement(btnSingIn).click();
-
+        actions.enterText(txtEmail, txt_email);
+        actions.enterText(txtPassword, txt_pass);
+        actions.clickOnElement(btnSingIn);
     }
 }

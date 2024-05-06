@@ -1,4 +1,4 @@
-package org.alpha.tejashri.selenium.pom.pom4.utils;
+package org.alpha.tejashri.selenium.assignments.AssignmentNo13.utils;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class ReadPropertiesFile {
     public static String getPropertyValues(String key) throws IOException {
 
         //without storing in another variable
-        File file = new File(System.getProperty("user.dir") +"\\src\\main\\java\\org\\alpha\\tejashri\\selenium\\pom\\pom4\\resources\\config.properties");
+        File file = new File(System.getProperty("user.dir") + "\\src\\main\\java\\org\\alpha\\tejashri\\selenium\\assignments\\AssignmentNo13\\resources\\config.properties");
         FileInputStream fileInputStream = new FileInputStream(file);
 
         Properties prop = new Properties();

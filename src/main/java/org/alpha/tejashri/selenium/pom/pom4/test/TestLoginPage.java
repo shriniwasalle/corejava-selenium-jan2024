@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestLoginPage extends BrowserInitialisation {
+public class TestLoginPage extends BaseTest {
 
     WebDriver driver;
 
@@ -20,7 +20,7 @@ public class TestLoginPage extends BrowserInitialisation {
     public void init() throws IOException {
 
         //Without storing directly passed parameter keys in the initBrowser() method which is taken from config.properties file
-        //Called parameterized initBrowser method from BrowserInitialisation class key values taken from ReadPropertiesFile class
+        //Called parameterized initBrowser method from BaseTest class key values taken from ReadPropertiesFile class
         //getPropertyValues() static method directly called with class name
 
         driver = initBrowser(ReadPropertiesFile.getPropertyValues("url"), ReadPropertiesFile.getPropertyValues("browser"));

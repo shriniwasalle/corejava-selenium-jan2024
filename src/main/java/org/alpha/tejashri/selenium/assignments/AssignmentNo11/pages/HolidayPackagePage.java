@@ -21,31 +21,26 @@ public class HolidayPackagePage {
         this.driver = driver;
     }
 
-    public void verifyHolidayPackagePage() throws InterruptedException {
+    public void verifyHolidayPackagePage(String destinationCity) throws InterruptedException {
 
         System.out.println("Holiday Package Page Title : " + driver.getTitle());
 
         //Implicit Wait added
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
-        WebElement bntSearch = driver.findElement(searchCity);
-        bntSearch.sendKeys("Tirupati");
+        driver.findElement(searchCity).sendKeys(destinationCity);
 
         Thread.sleep(2000);
 
-        WebElement city = driver.findElement(selectCity);
-        city.click();
+        driver.findElement(selectCity).click();
 
-        WebElement heading = driver.findElement(txtHeading);
-        System.out.println(heading.getText());
+        System.out.println(driver.findElement(txtHeading).getText());
 
         List<WebElement> details = driver.findElements(txtDetails);
 
         for (WebElement detail : details) {
             System.out.println(detail.getText());
         }
-
-        WebElement price = driver.findElement(txtPrice);
-        System.out.println(price.getText());
+        System.out.println(driver.findElement(txtPrice).getText());
     }
 }

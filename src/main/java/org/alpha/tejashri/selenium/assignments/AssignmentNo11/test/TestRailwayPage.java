@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestRailwayPage extends BrowserInitialisation {
+public class TestRailwayPage extends BaseTest {
 
     WebDriver driver;
 
@@ -25,7 +25,7 @@ public class TestRailwayPage extends BrowserInitialisation {
     }
 
     @Test
-    public void verifyRailwayPage() throws InterruptedException {
+    public void verifyRailwayPage() throws InterruptedException, IOException {
 
         IndianRailwayPage indianRailwayPage = new IndianRailwayPage(driver);
         indianRailwayPage.verifyIndianRailwayPage();
@@ -34,7 +34,7 @@ public class TestRailwayPage extends BrowserInitialisation {
         centralRailwayPage.verityCentralRailwayPage();
 
         HolidayPackagePage holidayPackagePage = new HolidayPackagePage(driver);
-        holidayPackagePage.verifyHolidayPackagePage();
+        holidayPackagePage.verifyHolidayPackagePage(ReadPropertiesFile.getPropertyValues("destination_city"));
 
         //Assertions
         String actualTitle = driver.getTitle();

@@ -13,14 +13,14 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    public void loginToApplication() {
+    public void loginToApplication(String enterFrom, String enterTo) {
 
         WebElement txtFrom = driver.findElement(boxFrom);
-        txtFrom.sendKeys("PUNE JN - PUNE (PUNE)");
+        txtFrom.sendKeys(enterFrom);
         txtFrom.sendKeys(Keys.TAB);
 
         WebElement txtTo = driver.findElement(boxTo);
-        txtTo.sendKeys("SOLAPUR JN - SUR ");
+        txtTo.sendKeys(enterTo);
         txtTo.sendKeys(Keys.TAB);
 
         driver.findElement(btnSearch).click();

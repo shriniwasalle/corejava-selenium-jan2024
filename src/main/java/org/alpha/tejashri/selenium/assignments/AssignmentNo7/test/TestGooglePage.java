@@ -13,7 +13,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestPage extends BrowserInitialisation {
+public class TestGooglePage extends BaseTest {
 
     WebDriver driver;
 
@@ -29,12 +29,12 @@ public class TestPage extends BrowserInitialisation {
     }
 
     @Test
-    public void verifySearch() {
+    public void verifySearch() throws IOException {
         //Testing Related Actions
 
         //Created the object of ProductsPage class
         ProductsPage productsPage = new ProductsPage(driver);
-        productsPage.getProductsPageSearch();
+        productsPage.getProductsPageSearch(ReadPropertiesFile.getPropertyValues("enter_product"));
 
         //Created the object of IphoneSearchPage class
         IphoneSearchPage iphoneSearchPage = new IphoneSearchPage(driver);

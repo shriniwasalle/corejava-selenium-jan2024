@@ -1,7 +1,8 @@
-package org.alpha.tejashri.selenium.assignments.AssignmentNo12.test;
+package org.alpha.tejashri.selenium.assignments.AssignmentNo10.test;
 
-import org.alpha.tejashri.selenium.assignments.AssignmentNo12.pages.ToolsQAPage;
-import org.alpha.tejashri.selenium.assignments.AssignmentNo12.utils.ReadPropertiesFile;
+
+import org.alpha.tejashri.selenium.assignments.AssignmentNo10.pages.LoanPage;
+import org.alpha.tejashri.selenium.assignments.AssignmentNo10.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestToolsQAPage extends BaseTest {
+public class TestEMIPage extends BaseTest {
 
     WebDriver driver;
 
@@ -25,15 +26,16 @@ public class TestToolsQAPage extends BaseTest {
     }
 
     @Test
-    public void verifyTestPage() {
+    public void verifyTestPage() throws IOException {
 
         //Created the object of GoogleSearchPage class
-        ToolsQAPage toolsQAPage = new ToolsQAPage(driver);
-        toolsQAPage.verifyToolsQAPage();
+        LoanPage loanPage = new LoanPage(driver);
+        loanPage.verifyLoanPage(ReadPropertiesFile.getPropertyValues("enter_Int_Rate"));
 
         //Assertions
         String actualTitle = driver.getTitle();
+        System.out.println("Actual Title : " + actualTitle);
 
-        Assert.assertEquals(actualTitle, "DEMOQA");
+        Assert.assertEquals(actualTitle, "EMI Calculator for Home Loan, Car Loan & Personal Loan in India");
     }
 }
