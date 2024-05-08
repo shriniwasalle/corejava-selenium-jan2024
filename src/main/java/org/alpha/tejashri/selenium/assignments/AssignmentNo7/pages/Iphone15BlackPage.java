@@ -12,9 +12,8 @@ public class Iphone15BlackPage {
     private final WebDriver driver;
     private final By iphone15Heading = By.xpath("//*[@id='productTitle']");
     private final By iphone15BlackPrice = By.xpath("//*[@id='corePriceDisplay_desktop_feature_div']/div[1]/span[3]/span[2]/span[2]");
-    private final By tablePath = By.xpath("//*[@id='productOverview_feature_div']/div/table");
     private final By rowsPath = By.xpath("//*[@id='productOverview_feature_div']/div/table/tbody/tr");
-    private final By cellsPath = By.xpath("//*[@id='productOverview_feature_div']/div/table/tbody//td");
+    private final By columnsPath = By.xpath("//*[@id='productOverview_feature_div']/div/table/tbody/tr[1]/td");
 
     //created parametrised constructor
     public Iphone15BlackPage(WebDriver driver) {
@@ -23,29 +22,29 @@ public class Iphone15BlackPage {
 
     public void verifyIphone15Details() {
 
-        System.out.println("Product Name : " + driver.findElement(iphone15Heading));
-        System.out.println("Product Price : " + driver.findElement(iphone15BlackPrice).getText());
-
-        //Locate the table element
-        WebElement table = driver.findElement(tablePath);
+        System.out.println("Product Name : " +driver.findElement(iphone15Heading).getText());
+        System.out.println("Product Price : " +driver.findElement(iphone15BlackPrice).getText());
 
         //Locate all rows of the table
-        List<WebElement> rows = table.findElements(rowsPath);
-        //System.out.println("Table Rows Size : " + rows.size());
+        List<WebElement> rows = driver.findElements(rowsPath);
+        int rowsSize = rows.size();
+        System.out.println("Total Number of rows  : " +rowsSize );
+
+        //To get table values
+        List<WebElement> columns = driver.findElements(columnsPath);
+        int columnsSize = columns.size();
+
+        System.out.println("Total Number of columns :  " +columnsSize);
 
         //Iterating each row
-        System.out.println("Product Details : ");
-        for (WebElement row : rows) {
+        System.out.println("---- Product Details ----");
+        for (int i = 1; i <= rowsSize; i++) {
 
-            //To get table values
-            List<WebElement> cells = row.findElements(cellsPath);
-            //System.out.println("Total Number of Table cells :  " + cells.size());
-
-            //Iterating each value
-            for (WebElement cell : cells) {
-                System.out.println(cell.getText());
+            //Iterating each column
+            for (int j = 1; j <= columnsSize; j++) {
+                System.out.print(driver.findElement(By.xpath("//*[@id='productOverview_feature_div']/div/table/tbody/tr[" + i + "]/td[" + j + "]")).getText() + " : ");
             }
-            break;
+            System.out.println();
         }
     }
 }

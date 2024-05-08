@@ -25,22 +25,19 @@ public class IphoneSearchPage {
     public void verifyWindowHandle() {
         String parentTabWindow = driver.getWindowHandle(); // To get the unique id of the Tab window
 
-        System.out.println("Parent Tab Window Id : " + parentTabWindow);
+        //System.out.println("Parent Tab Window Id : " + parentTabWindow);
         System.out.println("Parent Tab Window Title : " + driver.getTitle());
-        System.out.println("---------------------------------------------------");
 
         //After clicking on that button, new 1 child tab will open in the existing browser window
         //Now 2 tab windows are open, so use set<String>
         Set<String> tabWindows = driver.getWindowHandles();
-        System.out.println("Multiple Tab Window Id's : " + tabWindows);
-        System.out.println("---------------------------------------------------");
+        //System.out.println("Multiple Tab Window Id's : " + tabWindows);
 
         System.out.println("Iterating the Tab Window Id's with for each loop");
         //to iterate the Tab window ids with for each
         for (String tabWindow : tabWindows) {
-            System.out.println(tabWindow);
+            //System.out.println(tabWindow);
 
-            System.out.println("---------------------------------------------------");
             //Checking the condition of parent & child Ids
             if (!parentTabWindow.equals(tabWindow)) {
                 driver.switchTo().window(tabWindow);//To Switch the focus to child Tab Window

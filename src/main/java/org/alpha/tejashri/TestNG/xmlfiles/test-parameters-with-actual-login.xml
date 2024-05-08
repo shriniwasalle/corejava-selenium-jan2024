@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <!-- Valid userName, Valid Password -->
+
+    <test name="TestParameters1">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="username" value="standard_user"/>
+        <parameter name="password" value="secret_sauce"/>
+        <parameter name="type" value="valid"/>
+        <classes>
+            <class name="org.alpha.tejashri.TestNG.parameterizations.TestParametersWithActualLogin"/>
+        </classes>
+    </test>
+
+    <!-- locked out userName, Password -->
+    <test name="TestParameters2">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="username" value="locked_out_user"/>
+        <parameter name="password" value="secret_sauce"/>
+        <parameter name="type" value="locked_out"/>
+        <classes>
+            <class name="org.alpha.tejashri.TestNG.parameterizations.TestParametersWithActualLogin"/>
+        </classes>
+    </test>
+
+    <!-- Invalid userName, Invalid Password  -->
+    <test name="TestParameters3">
+        <parameter name="browser" value="edge"/>
+        <parameter name="username" value="standard_user123"/>
+        <parameter name="password" value="secret_sauce123"/>
+        <parameter name="type" value="invalid"/>
+        <classes>
+            <class name="org.alpha.tejashri.TestNG.parameterizations.TestParametersWithActualLogin"/>
+        </classes>
+    </test>
+</suite>

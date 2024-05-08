@@ -3,7 +3,7 @@
 <suite name="All Test Suite">
     <test name="Test Groups">
         <groups>
-            <!--1st way-->
+            <!--1st way groups in xml-->
             <!--<define name="group1">-->
             <!--<include name="regression" />-->
             <!--</define>-->
@@ -14,7 +14,7 @@
             <!--<include name="group1" />-->
             <!--</run>-->
 
-            <!--2nd way-->
+            <!--2nd way groups in class-->
             <run>
                 <!-- ignoring groups -->
                 <!--<include name="regression" />--> <!-- 1. By commenting -->
