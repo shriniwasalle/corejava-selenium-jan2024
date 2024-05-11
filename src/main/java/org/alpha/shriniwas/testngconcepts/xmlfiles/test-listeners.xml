@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="org.alpha.shriniwas.testngconcepts.TestListenerMethodsClass" />
+    </listeners>
+
+    <test name="TestListeners">
+        <classes>
+            <class name="org.alpha.shriniwas.testngconcepts.TestListeners1" />
+            <!-- class name="org.alpha.shriniwas.testngconcepts.TestGroup1" / -->
+        </classes>
+    </test>
+
+</suite>

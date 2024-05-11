@@ -1,5 +1,6 @@
 package org.alpha.shriniwas.testngconcepts;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class TestGroup1 {
@@ -7,6 +8,7 @@ public class TestGroup1 {
     @Test(groups = { "regression", "database-tests" } )
     public void test1() {
         System.out.println("Inside TestGroup1 :: Test1 method");
+        Assert.assertEquals("Test", "Testing");
     }
 
     @Test(groups = "database-tests")
