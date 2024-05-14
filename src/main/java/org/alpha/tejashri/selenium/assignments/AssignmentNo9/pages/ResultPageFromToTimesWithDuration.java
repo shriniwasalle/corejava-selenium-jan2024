@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class ResultPageUsingForLoop {
+public class ResultPageFromToTimesWithDuration {
 
     private final WebDriver driver;
     private final By resultHead = By.xpath("(//div[contains(@class,'top-header hidden-lg')])[1]");
@@ -15,11 +15,11 @@ public class ResultPageUsingForLoop {
     private final By to_FromPath = By.xpath("//*[@id=\"divMain\"]/div/app-train-list/div[4]/div/div[5]/div/div/app-train-avl-enq/div[1]/div[3]");
 
     //created parametrised constructor
-    public ResultPageUsingForLoop(WebDriver driver) {
+    public ResultPageFromToTimesWithDuration(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void getResultHeading() {
+    public void verifyResultPage() {
 
         //Implicit Wait added
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
@@ -29,19 +29,15 @@ public class ResultPageUsingForLoop {
 
         List<WebElement> trains = driver.findElements(trainsPath);
         System.out.println("Total Number of Available Trains : " + trains.size());
-
-        System.out.println("-----List of Available Trains-----");
-        for (int i = 0; i <= trains.size()-1; i++) {
-            System.out.println("Train Name : " +trains.get(i).getText());
-        }
-
-        System.out.println();
+        List<String> trainNames = trains.stream().map(WebElement::getText).toList();
 
         List<WebElement> to_FromTimings = driver.findElements(to_FromPath);
         System.out.println("Total Number of To-From Timings : " + to_FromTimings.size());
-            for (int j = 0; j <= to_FromTimings.size()-1; j++) {
-                System.out.println("Timing With Duration : \n" +to_FromTimings.get(j).getText());
-                System.out.println();
-            }
+        List<String> to_FromTimes = to_FromTimings.stream().map(WebElement::getText).toList();
+
+        for (int i = 0; i < trainNames.size(); i++) {
+            System.out.println(trainNames.get(i));
+            System.out.println(to_FromTimes.get(i) + "\n");
         }
     }
+}

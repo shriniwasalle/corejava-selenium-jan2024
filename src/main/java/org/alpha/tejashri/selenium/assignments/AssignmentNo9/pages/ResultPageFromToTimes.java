@@ -7,20 +7,20 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-public class ResultPageTo_FromTimings {
+public class ResultPageFromToTimes {
 
     private final WebDriver driver;
     private final By resultHead = By.xpath("(//div[contains(@class,'top-header hidden-lg')])[1]");
     private final By trainsPath = By.xpath("(//div[contains(@class,'col-sm-5 col-xs-11')])/strong");
-    private final By toPath = By.xpath("//*[@id=\"divMain\"]/div/app-train-list/div[4]/div/div[5]/div/div[1]/app-train-avl-enq/div[1]/div[3]/div[1]/span/strong");
+    private final By toPath = By.xpath("//*[@id=\"divMain\"]/div/app-train-list/div[4]/div/div[5]/div/div[1]/app-train-avl-enq/div[1]/div[3]/div[1]/span[1]/strong");
     private final By fromPath = By.xpath("//*[@id=\"divMain\"]/div/app-train-list/div[4]/div/div[5]/div/div[1]/app-train-avl-enq/div[1]/div[3]/div[2]/span[2]/strong");
 
     //created parametrised constructor
-    public ResultPageTo_FromTimings(WebDriver driver) {
+    public ResultPageFromToTimes(WebDriver driver) {
         this.driver = driver;
     }
 
-    public void getResultHeading() {
+    public void verifyResultPage() {
 
         //Implicit Wait added
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -28,28 +28,31 @@ public class ResultPageTo_FromTimings {
         WebElement resultHeading = driver.findElement(resultHead);
         System.out.println(resultHeading.getText());
 
-        List<WebElement> trains = driver.findElements(trainsPath);
-        System.out.println("Total Number of Available Trains : " + trains.size());
+        List<WebElement> trainsList = driver.findElements(trainsPath);
+        System.out.println("Total Number of Available Trains : " + trainsList.size());
 
-        System.out.println("-----List of Available Trains-----");
-        for (int i = 0; i <= trains.size() - 1; i++) {
-            System.out.println("Train Name : " + trains.get(i).getText());
-        }
+        List<String> trainNames = trainsList.stream().map(WebElement::getText).toList();
+
+                //OR use this
+//        List<String> trainNames = new ArrayList<>();
+//        for (int i = 0; i <= trainsList.size() - 1; i++) {
+//            trainNames.add(trainsList.get(i).getText());
+//        }
 
         List<WebElement> toTimings = driver.findElements(toPath);
         System.out.println("Total Number of To Timings : " + toTimings.size());
 
-        for (WebElement toTiming : toTimings) {
-            System.out.println("To :" + toTiming.getText());
-        }
+        List<String> toTimes = toTimings.stream().map(WebElement::getText).toList();
 
         List<WebElement> fromTimings = driver.findElements(fromPath);
         System.out.println("Total Number of from Timings : " + toTimings.size());
 
-        for (WebElement fromTiming : fromTimings) {
-            System.out.println("From :" + fromTiming.getText());
+        List<String> fromTimes = fromTimings.stream().map(WebElement::getText).toList();
 
+        for (int i = 0; i < trainNames.size(); i++) {
+            System.out.println(trainNames.get(i));
+            System.out.println(toTimes.get(i) + " \t  \t " + fromTimes.get(i));
+            System.out.println();
         }
     }
-
 }

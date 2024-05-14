@@ -2,7 +2,8 @@ package org.alpha.tejashri.selenium.assignments.AssignmentNo9.test;
 
 
 import org.alpha.tejashri.selenium.assignments.AssignmentNo9.pages.LoginPage;
-import org.alpha.tejashri.selenium.assignments.AssignmentNo9.pages.ResultPage;
+import org.alpha.tejashri.selenium.assignments.AssignmentNo9.pages.ResultPageFromToTimes;
+import org.alpha.tejashri.selenium.assignments.AssignmentNo9.pages.ResultPageFromToTimesWithDuration;
 import org.alpha.tejashri.selenium.assignments.AssignmentNo9.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
@@ -31,14 +32,13 @@ public class TestIRCTCPage extends BaseTest {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.loginToApplication(ReadPropertiesFile.getPropertyValues("enter_From"), ReadPropertiesFile.getPropertyValues("enter_to"));
 
-        ResultPage resultPage = new ResultPage(driver);
-        resultPage.getResultHeading();
+        ResultPageFromToTimes resultPageFromToTimes = new ResultPageFromToTimes(driver);
+        resultPageFromToTimes.verifyResultPage();
 
-//        ResultPageUsingForLoop resultPageUsingForLoop = new ResultPageUsingForLoop(driver);
-//        resultPageUsingForLoop.getResultHeading();
-//
-//        ResultPageTo_FromTimings resultPageTiming = new ResultPageTo_FromTimings(driver);
-//        resultPageTiming.getResultHeading();
+        //Or Use this
+
+        ResultPageFromToTimesWithDuration resultPageFromToTimesWithDuration = new ResultPageFromToTimesWithDuration(driver);
+        resultPageFromToTimesWithDuration.verifyResultPage();
 
         //Assertions
         String actualTitle = driver.getTitle();

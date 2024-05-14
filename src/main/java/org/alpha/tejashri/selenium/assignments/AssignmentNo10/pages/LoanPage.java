@@ -20,11 +20,8 @@ public class LoanPage {
     private final By emi = By.xpath("//div[@id='emiamount']//p[1]");
     private final By interestPay = By.xpath("//div[@id='emitotalinterest']//p[1]");
     private final By totalPay = By.xpath("//div[@id='emitotalamount']//p[1]");
-    private final By tablePath = By.xpath("/html/body/div[1]/div[1]/main/article/div[3]/div/div[3]/div[2]/table");
-    private final By rowsPath = By.xpath("/html/body/div[1]/div[1]/main/article/div[3]/div/div[3]/div[2]/table/tbody/tr");
-    private final By cellsPath = By.xpath("/html/body/div[1]/div[1]/main/article/div[3]/div/div[3]/div[2]/table/tbody//th");
-
-    private final By cells2Path = By.xpath("/html/body/div[1]/div[1]/main/article/div[3]/div/div[3]/div[2]/table/tbody/tr[2]/td");
+    private final By tdHeaders = By.xpath("//th[contains(@id,'yearheader') or contains(@class, 'col-sm') or contains(@id,'paidtodateheader')]");
+    private final By tdDetails2024 = By.xpath("//table/tbody/tr[contains(@class, 'yearlypaymentdetails')][1]//td[text()]");
 
     //created parametrised constructor
     public LoanPage(WebDriver driver) {
@@ -51,42 +48,22 @@ public class LoanPage {
         loanTenure.click();
 
         WebElement loanEmi = driver.findElement(emi);
-        System.out.println("Loan EMI : " + loanEmi.getText());
+        System.out.println("Loan EMI : " +loanEmi.getText() +"\n");
 
         WebElement totalInterestPayable = driver.findElement(interestPay);
-        System.out.println("Total Interest Payable : " + totalInterestPayable.getText());
+        System.out.println("Total Interest Payable : " +totalInterestPayable.getText() +"\n");
 
         WebElement totalPayment = driver.findElement(totalPay);
         System.out.println("     Total Payment\n" +
-                "(Principal + Interest) : " + totalPayment.getText());
+                "(Principal + Interest) : " +totalPayment.getText() +"\n");
 
-        System.out.println("-------------------------------------");
+        List<WebElement> headers = driver.findElements(tdHeaders);
+        List<WebElement> details2024 = driver.findElements(tdDetails2024);
 
-        //Locate the table element
-        WebElement table = driver.findElement(tablePath);
-        //Locate all rows of the table
-        List<WebElement> rows = table.findElements(rowsPath);
-        //Iterating each row
-        for (WebElement row : rows) {
+        System.out.println("---------- Payments for the year 2024 ----------");
 
-            //To get table cells
-            List<WebElement> cells = row.findElements(cellsPath);
-            //Iterating each cell
-            for (WebElement cell : cells) {
-                System.out.println(cell.getText());
-
-            }
-
-            System.out.println("-------------------------------------");
-
-            //To get table cells2
-            List<WebElement> cells2 = row.findElements(cells2Path);
-
-            //Iterating each cell
-            for (WebElement cell2 : cells2) {
-                System.out.println(cell2.getText());
-            }
-            break;
+        for (int i = 0 ; i <= headers.size() - 1; i ++) {
+            System.out.println(headers.get(i).getText() + " : " + details2024.get(i).getText() +"\n");
         }
     }
 }
