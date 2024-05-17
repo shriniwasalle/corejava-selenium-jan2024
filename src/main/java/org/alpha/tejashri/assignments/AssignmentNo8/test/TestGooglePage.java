@@ -1,7 +1,7 @@
-package org.alpha.tejashri.selenium.assignments.AssignmentNo13.test;
+package org.alpha.tejashri.assignments.AssignmentNo8.test;
 
-import org.alpha.tejashri.selenium.assignments.AssignmentNo13.pages.SeleniumPage;
-import org.alpha.tejashri.selenium.assignments.AssignmentNo13.utils.ReadPropertiesFile;
+import org.alpha.tejashri.assignments.AssignmentNo8.pages.GoogleSearchPage;
+import org.alpha.tejashri.assignments.AssignmentNo8.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-public class TestSeleniumPage extends BaseTest {
+public class TestGooglePage extends BaseTest {
 
     WebDriver driver;
 
@@ -25,15 +25,16 @@ public class TestSeleniumPage extends BaseTest {
     }
 
     @Test
-    public void verifyTestPage() throws InterruptedException {
+    public void verifyTestPage() throws IOException {
 
         //Created the object of GoogleSearchPage class
-        SeleniumPage seleniumPage = new SeleniumPage(driver);
-        seleniumPage.verifySeleniumPage();
+        GoogleSearchPage googleSearchPage = new GoogleSearchPage(driver);
+        googleSearchPage.getSearch(ReadPropertiesFile.getPropertyValues("enter_Search"));
 
         //Assertions
         String actualTitle = driver.getTitle();
+        System.out.println("Actual Title : " + actualTitle);
 
-        Assert.assertEquals(actualTitle, "WebElement");
+        Assert.assertEquals(actualTitle, "Google");
     }
 }

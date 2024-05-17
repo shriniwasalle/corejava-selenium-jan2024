@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="AssignmentNo16">
+        <classes>
+<!--            <class name="org.alpha.tejashri.assignments.AssignmentNo16.test.BaseTest"/>-->
+<!--            <class  name="org.alpha.tejashri.assignments.AssignmentNo16.utils.ReadPropertiesFile" />-->
+<!--            <class name="org.alpha.tejashri.assignments.AssignmentNo16.pageactions.PageActions" />-->
+<!--            <class name="org.alpha.tejashri.assignments.AssignmentNo16.pages.ProductsPage"/>-->
+            <class name="org.alpha.tejashri.assignments.AssignmentNo16.test.TestFlipkartPage">
+                <methods>
+                    <include name="verifySearch"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
