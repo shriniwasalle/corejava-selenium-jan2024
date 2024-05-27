@@ -11,6 +11,7 @@ public class TestMethodWithSameName {
 //    }
 
     public static void main(String[] args) {
+
         TestMethodWithSameName obj = new TestMethodWithSameName();
     }
 }
