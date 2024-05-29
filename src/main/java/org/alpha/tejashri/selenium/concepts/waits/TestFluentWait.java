@@ -35,12 +35,9 @@ public class TestFluentWait {
         //Or use
         //create the object of Wait with the reference og FluentWait
 //        Wait<WebDriver> fluentWait = new FluentWait<>(driver)
-        //Specify the timeout of the wait
-//                .withTimeout(Duration.ofSeconds(20))
-        //specify polling time
-//                .pollingEvery(Duration.ofSeconds(2))
-        //Specify what Exception to ignore
-//                .ignoring(Exception.class);
+//                .withTimeout(Duration.ofSeconds(20)) //Specify the timeout of the wait
+//                .pollingEvery(Duration.ofSeconds(2)) //specify polling time
+//                .ignoring(Exception.class);  //Specify what Exception to ignore
 
         //To Sign in to Account
         //with storing in another variable
