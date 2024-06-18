@@ -5,9 +5,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+
 public class TestHandleAlerts extends BaseTest {
     @Test
-    public void handleAlerts() throws InterruptedException {
+    public void handleAlerts() throws InterruptedException, MalformedURLException {
         WebDriver driver = initBrowser("https://the-internet.herokuapp.com/javascript_alerts", "chrome");
 
         driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
