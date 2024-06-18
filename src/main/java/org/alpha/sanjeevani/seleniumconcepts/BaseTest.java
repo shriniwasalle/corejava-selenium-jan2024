@@ -28,9 +28,9 @@ public class BaseTest {
         }
 
 
-        //  URL link=new URL(url);
-        //driver.navigate().to(link);
-
+         /* URL link=new URL(url);
+        driver.navigate().to(link);
+*/
              driver.get(url);
              driver.manage().window().maximize();
              return driver;

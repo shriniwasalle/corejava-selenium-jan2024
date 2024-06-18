@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.pom1.pages;
+package org.alpha.sanjeevani.assignment.AssignmentNo6ProductPurchaseFunctionality.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

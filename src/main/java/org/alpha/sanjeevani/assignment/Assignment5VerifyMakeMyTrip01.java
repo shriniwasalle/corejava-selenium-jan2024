@@ -9,9 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
 import java.util.List;
-import java.util.ListIterator;
 
-public class TestAssignment5VerifyMakeMyTrip01 {
+public class Assignment5VerifyMakeMyTrip01 {
     @Test
     public void verifyLinks() {
 

@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TestAssignment4FlipkartWebsite {
+public class Assignment4FlipkartWebsite {
     @Test
     public void verifyTitle() {
         WebDriverManager.chromedriver().setup();

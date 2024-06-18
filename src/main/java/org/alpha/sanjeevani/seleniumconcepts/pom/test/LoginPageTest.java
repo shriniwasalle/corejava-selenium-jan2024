@@ -1,10 +1,8 @@
-package org.alpha.sanjeevani.assignment.pom.test;
+package org.alpha.sanjeevani.seleniumconcepts.pom.test;
 
-import org.alpha.sanjeevani.assignment.pom.pages.LoginPage;
-import org.alpha.sanjeevani.assignment.pom.pages.ProductPage;
-import org.openqa.selenium.By;
+import org.alpha.sanjeevani.seleniumconcepts.pom.pages.LoginPage;
+import org.alpha.sanjeevani.seleniumconcepts.pom.pages.ProductPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

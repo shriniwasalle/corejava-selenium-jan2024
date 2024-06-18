@@ -1,8 +1,7 @@
-package org.alpha.sanjeevani.assignment.pom5.pages;
+package org.alpha.sanjeevani.assignment.AssignmentNo3RegisterAccount.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class AddToKartPage {
    private final WebDriver driver;
