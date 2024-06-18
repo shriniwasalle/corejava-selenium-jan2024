@@ -6,11 +6,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
 import java.util.List;
 
 public class TestSeleniumHandlingDropDowns extends BaseTest{
     @Test
-    public void verifyDropDowns() throws InterruptedException {
+    public void verifyDropDowns() throws InterruptedException, MalformedURLException, MalformedURLException {
        WebDriver driver= initBrowser("https://www.hyrtutorials.com/p/html-dropdown-elements-practice.html","chrome");
      //System.out.println(driver.getTitle());
 
