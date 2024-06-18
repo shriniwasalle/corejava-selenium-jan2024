@@ -6,9 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.net.MalformedURLException;
+
 public class TestSeleniumXpathMethods extends BaseTest{
     @Test
-    public void applyMethod(){
+    public void applyMethod() throws MalformedURLException {
         WebDriver driver=initBrowser("https://www.saucedemo.com/","chrome");
 
         WebElement txtUserName=driver.findElement(By.xpath("//input[contains(@name,'user-name')]"));
