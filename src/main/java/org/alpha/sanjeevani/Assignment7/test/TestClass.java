@@ -13,7 +13,8 @@ import java.io.IOException;
 public class TestClass extends BaseTestAss7 {
     WebDriver driver;
     @BeforeMethod
-    public void init() throws IOException {driver = initBrowser(ReadPropertiesFile.getPropertyValues("url"),ReadPropertiesFile.getPropertyValues("browser"));}
+    public void init() throws IOException {
+        driver = initBrowser(ReadPropertiesFile.getPropertyValues("url"),ReadPropertiesFile.getPropertyValues("browser"));}
     @Test
     public void iPhoneProductDetails() {
         ProductTitlePage productTitlePage = new ProductTitlePage(driver);
