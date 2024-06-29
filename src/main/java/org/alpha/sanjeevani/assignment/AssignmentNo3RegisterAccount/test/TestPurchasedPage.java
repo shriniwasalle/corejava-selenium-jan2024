@@ -1,6 +1,7 @@
-package org.alpha.sanjeevani.assignment.pom5.test;
+package org.alpha.sanjeevani.assignment.AssignmentNo3RegisterAccount.test;
 
-import org.alpha.sanjeevani.assignment.pom5.pages.*;
+import org.alpha.sanjeevani.assignment.AssignmentNo3RegisterAccount.pages.*;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;

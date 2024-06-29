@@ -11,6 +11,7 @@ import java.net.URL;
 
 public class BaseTest {
      WebDriver driver;
+
     public WebDriver initBrowser(String url, String browser) throws MalformedURLException {
 
         if (browser.equalsIgnoreCase("Chrome")) {
@@ -27,10 +28,10 @@ public class BaseTest {
              driver = new FirefoxDriver();
         }
 
-
          /* URL link=new URL(url);
         driver.navigate().to(link);
 */
+             //driver.navigate().to(url);
              driver.get(url);
              driver.manage().window().maximize();
              return driver;
