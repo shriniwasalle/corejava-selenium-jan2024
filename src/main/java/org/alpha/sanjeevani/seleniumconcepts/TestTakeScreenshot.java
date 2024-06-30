@@ -3,6 +3,7 @@ package org.alpha.sanjeevani.seleniumconcepts;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -22,22 +23,20 @@ public class TestTakeScreenshot extends BaseTest {
     @Test
     public void verifyScreenshot() throws IOException {
 
-        Date currentDatetime=new Date();
-        System.out.println("Before Format:"+currentDatetime);
+        Date currentDatetime = new Date();
+        System.out.println("Before Format:" + currentDatetime);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss");
+        String dateTime = simpleDateFormat.format(currentDatetime);
+        System.out.println("After Format:" + dateTime);
 
-        SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss");
-
-        String dateTime=simpleDateFormat.format(currentDatetime);
-
-        System.out.println("After Format:"+dateTime);
+        captureScreenshot(driver,"test_"+dateTime);
 
         //By File
-        TakesScreenshot ts =(TakesScreenshot)driver;
-        File srcFile=ts.getScreenshotAs(OutputType.FILE);
-        File destFile=new File(System.getProperty("user.dir")+"\\src\\main\\java\\org\\alpha\\sanjeevani\\seleniumconcepts\\screenshots\\Test_"+dateTime+".jpg");
-        FileUtils.copyFile(srcFile,destFile);
-
-
+      /*  TakesScreenshot ts = (TakesScreenshot) driver;
+        File srcFile = ts.getScreenshotAs(OutputType.FILE);
+        File destFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\org\\alpha\\sanjeevani\\seleniumconcepts\\screenshots\\Test_" + dateTime + ".jpg");
+        FileUtils.copyFile(srcFile, destFile);
+*/
         //By File BASE64
        /* String  base64Str= ts.getScreenshotAs(OutputType.BASE64);
         System.out.println(base64Str);
@@ -45,11 +44,17 @@ public class TestTakeScreenshot extends BaseTest {
         FileOutputStream fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\main\\java\\org\\alpha\\sanjeevani\\seleniumconcepts\\screenshots\\Test_"+dateTime+".jpg");
         fos.write(byteArr);
         fos.close();
-*/
+
         byte[] byteArr =ts.getScreenshotAs(OutputType.BYTES);
         FileOutputStream fos=new FileOutputStream(System.getProperty("user.dir")+"\\src\\main\\java\\org\\alpha\\sanjeevani\\seleniumconcepts\\screenshots\\Test_"+dateTime+".jpg");
         fos.write(byteArr);
         fos.close();
-
+        */
+    }
+        public static void captureScreenshot(WebDriver driver,String fileName) throws IOException {
+            TakesScreenshot ts = (TakesScreenshot) driver;
+            File srcFile = ts.getScreenshotAs(OutputType.FILE);
+            File destFile = new File(System.getProperty("user.dir") + "\\src\\main\\java\\org\\alpha\\sanjeevani\\seleniumconcepts\\screenshots\\"+fileName+".jpg");
+            FileUtils.copyFile(srcFile, destFile);
     }
     }
