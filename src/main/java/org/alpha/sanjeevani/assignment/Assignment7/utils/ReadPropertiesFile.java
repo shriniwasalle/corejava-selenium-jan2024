@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.Assignment7.utils;
+package org.alpha.sanjeevani.assignment.Assignment7.utils;
 
 import java.io.File;
 import java.io.FileInputStream;

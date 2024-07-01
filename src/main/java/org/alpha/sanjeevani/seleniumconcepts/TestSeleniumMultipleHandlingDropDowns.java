@@ -28,7 +28,6 @@ public class TestSeleniumMultipleHandlingDropDowns extends BaseTest{
         // ide.deselectByVisibleText("Eclipse");
         //ide.deselectByValue("ij");
         //ide.deselectByIndex(2);
-
        // ide.deselectAll();
 
        List<WebElement>options =ide.getAllSelectedOptions();
@@ -36,7 +35,7 @@ public class TestSeleniumMultipleHandlingDropDowns extends BaseTest{
            System.out.println(option.getText());
        }
 
-        driver.close();
+       // driver.close();
 
     }
 }

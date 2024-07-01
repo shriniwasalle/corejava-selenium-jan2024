@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.Assignment7.pages;
+package org.alpha.sanjeevani.assignment.Assignment7.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

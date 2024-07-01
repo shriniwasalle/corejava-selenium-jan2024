@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.Assignment7.test;
+package org.alpha.sanjeevani.assignment.Assignment7.test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;

@@ -1,9 +1,9 @@
-package org.alpha.sanjeevani.Assignment7.test;
+package org.alpha.sanjeevani.assignment.Assignment7.test;
 
-import org.alpha.sanjeevani.Assignment7.pages.FetchingProductDetails;
-import org.alpha.sanjeevani.Assignment7.pages.ProductTitlePage;
-import org.alpha.sanjeevani.Assignment7.pages.SelectIphone;
-import org.alpha.sanjeevani.Assignment7.utils.ReadPropertiesFile;
+import org.alpha.sanjeevani.assignment.Assignment7.pages.FetchingProductDetails;
+import org.alpha.sanjeevani.assignment.Assignment7.pages.ProductTitlePage;
+import org.alpha.sanjeevani.assignment.Assignment7.pages.SelectIphone;
+import org.alpha.sanjeevani.assignment.Assignment7.utils.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;

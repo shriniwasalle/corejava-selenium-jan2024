@@ -8,10 +8,11 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 
 public class TestHandleAlertsForPractice extends BaseTest {
+    WebDriver driver;
     @Test
     public void handleAlerts() throws InterruptedException, MalformedURLException {
 
-        WebDriver driver=initBrowser("https://the-internet.herokuapp.com/javascript_alerts","chrome");
+        driver=initBrowser("https://the-internet.herokuapp.com/javascript_alerts","chrome");
 
         driver.findElement(By.xpath("//button[text()='Click for JS Prompt']")).click();
 
