@@ -19,9 +19,10 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
 
         //1.To disable infoBar
-
         // options.setExperimentalOption("excludeSwitches", Collections.singletonList("enable-automation"));
         // options.setExperimentalOption("excludeSwitches",new String [] {"enable-automation"});
+
+        //2.To disable infoBar
 
         String[] strArr = {"enable-automation"};
         options.setExperimentalOption("excludeSwitches", strArr);
@@ -31,10 +32,10 @@ public class BaseTest {
         // options.addArguments("headless");
 
         //3.Incognito Mode
-        options.addArguments("incognito");
+       // options.addArguments("incognito");
 
         //4.to maximize window
-        options.addArguments("--start-maximized");
+        //options.addArguments("--start-maximized");
 
         //5.to change the location of Downloaded file
         //Map<String, Object> prefs = new HashMap<String, Object>();
@@ -61,7 +62,7 @@ public class BaseTest {
 */
         //driver.navigate().to(url);
         driver.get(url);
-        // driver.manage().window().maximize();
+        driver.manage().window().maximize();
         return driver;
     }
 }
