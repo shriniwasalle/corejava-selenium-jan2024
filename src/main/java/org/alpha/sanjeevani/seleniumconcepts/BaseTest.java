@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Collections;
+import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
     WebDriver driver;
@@ -63,6 +64,7 @@ public class BaseTest {
         //driver.navigate().to(url);
         driver.get(url);
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
     }
 }
