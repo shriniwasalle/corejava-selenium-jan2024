@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.assignment.assignment11.util;
+package org.alpha.sanjeevani.assignment.assignment12.util;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -7,8 +7,8 @@ import java.util.Properties;
 
 public class ReadPropertiesFile {
     public static String getPropertyValues(String key) throws IOException, IOException {
-        //without storing in another variable
-        File file = new File(System.getProperty("user.dir") + "\\src\\main\\java\\org\\alpha\\sanjeevani\\assignment\\assignment11\\resourses\\config.properties");
+
+        File file = new File(System.getProperty("user.dir") + "\\src\\main\\java\\org\\alpha\\sanjeevani\\assignment\\assignment12\\resourses\\config.properties");
         FileInputStream fileInputStream = new FileInputStream(file);
         Properties prop = new Properties();
         prop.load(fileInputStream);
@@ -17,4 +17,3 @@ public class ReadPropertiesFile {
         return prop.getProperty(key);
     }
 }
-//C:\Users\Dell\corejava-selenium-jan2024\src\main\java\org\alpha\sanjeevani\assignment\assignment12\resourses\config.properties

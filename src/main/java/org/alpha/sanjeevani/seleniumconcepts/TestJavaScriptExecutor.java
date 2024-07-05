@@ -10,14 +10,12 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 
 public class TestJavaScriptExecutor extends BaseTest {
-
     WebDriver driver;
 
     @BeforeMethod
     public void init() throws MalformedURLException {
         driver = initBrowser("https://www.saucedemo.com/", "chrome");
     }
-
     @Test
     public void jsExecutor() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
