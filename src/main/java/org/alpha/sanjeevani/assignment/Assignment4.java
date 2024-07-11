@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class Assignment4FlipkartWebsite {
+public class Assignment4 {
     @Test
     public void verifyTitle() {
         WebDriverManager.chromedriver().setup();
@@ -21,7 +21,6 @@ public class Assignment4FlipkartWebsite {
 
         Assert.assertTrue(driver.getTitle().length()>10);
        // Assert.assertTrue(actualTitle.length()>10,"Title has more than 10 characters");
-
 
         System.out.println("Title has more than 10 characters");
         driver.close();

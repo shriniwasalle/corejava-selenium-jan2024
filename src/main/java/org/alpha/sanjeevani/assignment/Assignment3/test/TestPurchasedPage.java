@@ -1,6 +1,6 @@
-package org.alpha.sanjeevani.assignment.AssignmentNo3RegisterAccount.test;
+package org.alpha.sanjeevani.assignment.Assignment3.test;
 
-import org.alpha.sanjeevani.assignment.AssignmentNo3RegisterAccount.pages.*;
+import org.alpha.sanjeevani.assignment.Assignment3.pages.*;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

@@ -1,7 +1,7 @@
-package org.alpha.sanjeevani.assignment.AssignmentNo6ProductPurchaseFunctionality.test;
+package org.alpha.sanjeevani.assignment.Assignment6.test;
 
-import org.alpha.sanjeevani.assignment.AssignmentNo6ProductPurchaseFunctionality.pages.LoginPage;
-import org.alpha.sanjeevani.assignment.AssignmentNo6ProductPurchaseFunctionality.pages.ProductsPage;
+import org.alpha.sanjeevani.assignment.Assignment6.pages.LoginPage;
+import org.alpha.sanjeevani.assignment.Assignment6.pages.ProductsPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;

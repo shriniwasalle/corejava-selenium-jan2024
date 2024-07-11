@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.assignment.AssignmentNo3RegisterAccount.pages;
+package org.alpha.sanjeevani.assignment.Assignment3.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

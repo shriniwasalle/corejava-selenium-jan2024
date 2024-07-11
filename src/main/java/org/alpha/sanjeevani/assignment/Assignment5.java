@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class Assignment5VerifyMakeMyTrip01 {
+public class Assignment5 {
     @Test
     public void verifyLinks() {
 
