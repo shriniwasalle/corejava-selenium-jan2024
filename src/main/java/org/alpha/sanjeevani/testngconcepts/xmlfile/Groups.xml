@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="Test Grouping">
+        <groups>
+            <run>
+                <exclude name="regression"/>
+</run>
+        </groups>
+        <classes>
+            <class name="org.alpha.sanjeevani.testngconcepts.TestGroup1"/>
+            <class name="org.alpha.sanjeevani.testngconcepts.TestGroup2"/>
+        </classes>
+    </test>
+</suite>
