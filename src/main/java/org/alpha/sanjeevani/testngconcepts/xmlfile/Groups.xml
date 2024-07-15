@@ -4,8 +4,9 @@
     <test name="Test Grouping">
         <groups>
             <run>
-                <exclude name="regression"/>
-</run>
+                <include name="database.*"/>
+                <exclude name="regression"/>  <!--Regular Expression-->
+            </run>
         </groups>
         <classes>
             <class name="org.alpha.sanjeevani.testngconcepts.TestGroup1"/>

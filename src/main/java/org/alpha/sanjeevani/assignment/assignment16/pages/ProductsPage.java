@@ -14,8 +14,6 @@ private final By priceDD = By.xpath("//div[@class='tKgS7w']//select[1]");
 private final By mobilePricePaths = By.xpath("//a/div[2]/div[2]/div[1]/div[1]/div[1]");
 private final By mobileNamePaths = By.xpath("//a/div[2]/div[1]/div[1]");
 PageActions actions;
-
-//created parametrised constructor
 public ProductsPage(WebDriver driver) {
     this.driver = driver;
     actions = new PageActions(driver);

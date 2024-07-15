@@ -1,11 +1,9 @@
 package org.alpha.sanjeevani.assignment.assignment12.pages;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-
 import javax.swing.*;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
