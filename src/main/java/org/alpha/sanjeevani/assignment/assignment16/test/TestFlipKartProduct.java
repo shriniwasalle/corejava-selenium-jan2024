@@ -2,6 +2,7 @@ package org.alpha.sanjeevani.assignment.assignment16.test;
 import org.alpha.sanjeevani.assignment.assignment16.pages.ProductsPage;
 import org.alpha.sanjeevani.assignment.assignment16.util.ReadPropertiesFile;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import java.io.IOException;
@@ -15,5 +16,10 @@ public class TestFlipKartProduct extends BaseTestAssign16 {
     public void verifyFlipKartProduct() throws IOException, InterruptedException {
         ProductsPage productPage=new ProductsPage(driver);
         productPage.getProductsPageSearch(ReadPropertiesFile.getPropertyValues("enter_product"));
+
+        String actualTitle=driver.getTitle();
+        String expectedTitle="Mobile- Buy Products Online at Best Price in India - All Categories | Flipkart.com";
+
+        Assert.assertEquals(actualTitle,expectedTitle);
     }
 }

@@ -20,7 +20,7 @@ public ProductsPage(WebDriver driver) {
 }
 public void getProductsPageSearch(String enterProduct) throws InterruptedException {
     //Implicit Wait added
-    driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
+    driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 
     //Product Page Related Actions
     WebElement element= driver.findElement(searchBox);
