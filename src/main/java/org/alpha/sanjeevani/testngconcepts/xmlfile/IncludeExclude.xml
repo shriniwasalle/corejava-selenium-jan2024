@@ -3,9 +3,8 @@
 <suite name="All Test Suite">
     <test name="Test IncludeExclude">
         <classes>
-            <!--class name="org.alpha.sanjeevani.testngconcepts.TestIgnore1"/>
-            <class name="org.alpha.sanjeevani.testngconcepts.TestIgnore2"/-->
-
+            <class name="org.alpha.sanjeevani.testngconcepts.TestIgnore1"/>
+            <class name="org.alpha.sanjeevani.testngconcepts.TestIgnore2"/>
             <class name="org.alpha.sanjeevani.testngconcepts.TestIgnore3">
                 <methods>
                 <exclude name="test9" />
