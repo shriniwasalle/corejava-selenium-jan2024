@@ -1,19 +1,17 @@
-package org.alpha.sanjeevani.testngconcepts;
+package org.alpha.sanjeevani.testngconcepts.parameterization;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.alpha.sanjeevani.testngconcepts.parameterization.DataProviderValuesClass;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 public class TestDataProvider1 {
-    @Test(dataProvider = "getIteratorObjectArrayData")
+    @Test(dataProvider = "getObject2DArrayData", dataProviderClass = DataProviderValuesClass.class)
     public void verifyLogin(String userName, String password, String type) {
 
         WebDriverManager.chromedriver().setup();
@@ -39,33 +37,27 @@ public class TestDataProvider1 {
         }
         driver.close();
     }
-    /*@DataProvider(name = "getObject2DArrayData")
-    public Object [][] getObject2DArrayData(){
 
-        Object [][] objArr= {
-                {"standard_user", "secret_sauce", "valid"},
-                {"locked_out_user", "secret_sauce", "locked_out"},
-                {"standard_user123", "secret_sauce123", "invalid"}
-        };
-                   return objArr;
+    @Test(dataProvider = "objectArrayData",dataProviderClass = DataProviderValuesClass.class)
+    public void verifyBrowser(String browser) {
+
+        WebDriver driver=null;
+
+        switch (browser) {
+            case "chrome" -> {
+                WebDriverManager.chromedriver().setup();
+                driver = new ChromeDriver();
+            }
+            case "firefox" -> {
+                WebDriverManager.firefoxdriver().setup();
+                driver = new FirefoxDriver();
+            }
+            case "edge" -> {
+                WebDriverManager.edgedriver().setup();
+                driver = new EdgeDriver();
+            }
+        }
+        driver.get("https://www.saucedemo.com/");
     }
-*/
-
-
-    @DataProvider(name = "getIteratorObjectArrayData")
-    public Iterator<Object[]> getIteratorObjectArrayData() {
-
-        Object[] objArr1 = {"standard_user", "secret_sauce", "valid"};
-        Object[] objArr2 = {"locked_out_user", "secret_sauce", "locked_out"};
-        Object[] objArr3 = {"standard_user123", "secret_sauce123", "invalid"};
-
-        List<Object[]> list = new ArrayList<>();
-        list.add(objArr1);
-        list.add(objArr2);
-        list.add(objArr3);
-
-       Iterator<Object[]>itr = list.iterator();
-       return itr;
-    }
-
 }
+

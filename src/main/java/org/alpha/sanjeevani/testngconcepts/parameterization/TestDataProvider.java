@@ -1,4 +1,4 @@
-package org.alpha.sanjeevani.testngconcepts;
+package org.alpha.sanjeevani.testngconcepts.parameterization;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
