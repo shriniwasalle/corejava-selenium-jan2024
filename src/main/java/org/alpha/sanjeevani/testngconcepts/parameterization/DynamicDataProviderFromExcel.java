@@ -1,4 +1,5 @@
 package org.alpha.sanjeevani.testngconcepts.parameterization;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -9,15 +10,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
-public class DataProviderFromExcel {
-
+public class DynamicDataProviderFromExcel {
     @Test(dataProvider = "getDataFromExcel")
     public void verifyLogin(String userName, String password, String type) {
 
@@ -54,32 +52,19 @@ public class DataProviderFromExcel {
 
         XSSFSheet sheet = workbook.getSheet("sheet1");
 
-        String data00 = sheet.getRow(0).getCell(0).getStringCellValue();
-        String data01 = sheet.getRow(0).getCell(1).getStringCellValue();
-        String data02 = sheet.getRow(0).getCell(2).getStringCellValue();
+        int rowNum=sheet.getLastRowNum();
+        System.out.println("Total rows number is :"+rowNum);
 
-        String data10 = sheet.getRow(1).getCell(0).getStringCellValue();
-        String data11 = sheet.getRow(1).getCell(1).getStringCellValue();
-        String data12 = sheet.getRow(1).getCell(2).getStringCellValue();
+        int cellNum=sheet.getRow(1).getLastCellNum();
+        System.out.println("Total columns number is :"+rowNum);
 
-        String data20 = sheet.getRow(2).getCell(0).getStringCellValue();
-        String data21 = sheet.getRow(2).getCell(1).getStringCellValue();
-        String data22 = sheet.getRow(2).getCell(2).getStringCellValue();
-      System.out.println(data00);
-        System.out.println(data01);
-        System.out.println(data02);
-        System.out.println(data10);
-        System.out.println(data11);
-        System.out.println(data12);
-        System.out.println(data20);
-        System.out.println(data21);
-        System.out.println(data22);
+        Object[][] objArr=new Object[3][3];
 
-        return new Object[][]{ {data00,data01,data02},
-                               {data10,data11,data12},
-                               {data20,data21,data22}
-                             };
-
-
-    }
+        for (int row=0;row<=rowNum-1;row++){
+            for (int col=0;col<=cellNum-1;col++){
+                objArr [row][col]=sheet.getRow(row+1).getCell(col).getStringCellValue();
+            }
+        }
+          return objArr;
+        }
 }

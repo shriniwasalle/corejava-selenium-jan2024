@@ -1,4 +1,5 @@
 package org.alpha.sanjeevani.testngconcepts.parameterization;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -9,15 +10,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
-public class DataProviderFromExcel {
-
+public class DynamicDataProviderFromExcelPractice {
     @Test(dataProvider = "getDataFromExcel")
     public void verifyLogin(String userName, String password, String type) {
 
@@ -44,8 +43,8 @@ public class DataProviderFromExcel {
         }
         driver.close();
     }
-    @DataProvider(name = "getDataFromExcel")
-    public Object[][] getDataFromExcel() throws IOException, InvalidFormatException {
+@DataProvider(name = "getDataFromExcel")
+public Object[][] getDataFromExcel() throws IOException {
         File file = new File("C:\\Users\\Dell\\corejava-selenium-jan2024\\src\\main\\java\\org\\alpha\\sanjeevani\\testngconcepts\\parameterization\\loginData.xlsx");
 
         FileInputStream fileInputStream = new FileInputStream(file);
@@ -54,32 +53,21 @@ public class DataProviderFromExcel {
 
         XSSFSheet sheet = workbook.getSheet("sheet1");
 
-        String data00 = sheet.getRow(0).getCell(0).getStringCellValue();
-        String data01 = sheet.getRow(0).getCell(1).getStringCellValue();
-        String data02 = sheet.getRow(0).getCell(2).getStringCellValue();
+        Object[][] objArr=new Object[3][3];
 
-        String data10 = sheet.getRow(1).getCell(0).getStringCellValue();
-        String data11 = sheet.getRow(1).getCell(1).getStringCellValue();
-        String data12 = sheet.getRow(1).getCell(2).getStringCellValue();
+    System.out.println(objArr[0][0]="sanju00");
+    System.out.println(objArr[0][1]="sanju01");
+    System.out.println(objArr[0][2]="sanju02");
 
-        String data20 = sheet.getRow(2).getCell(0).getStringCellValue();
-        String data21 = sheet.getRow(2).getCell(1).getStringCellValue();
-        String data22 = sheet.getRow(2).getCell(2).getStringCellValue();
-      System.out.println(data00);
-        System.out.println(data01);
-        System.out.println(data02);
-        System.out.println(data10);
-        System.out.println(data11);
-        System.out.println(data12);
-        System.out.println(data20);
-        System.out.println(data21);
-        System.out.println(data22);
+    System.out.println(objArr[1][0]="sanju10");
+    System.out.println(objArr[1][1]="sanju11");
+    System.out.println(objArr[1][2]="sanju12");
 
-        return new Object[][]{ {data00,data01,data02},
-                               {data10,data11,data12},
-                               {data20,data21,data22}
-                             };
+    System.out.println(objArr[2][0]="sanju20");
+    System.out.println(objArr[2][1]="sanju21");
+    System.out.println(objArr[2][2]="sanju22");
 
+    return objArr;
 
-    }
+       }
 }
