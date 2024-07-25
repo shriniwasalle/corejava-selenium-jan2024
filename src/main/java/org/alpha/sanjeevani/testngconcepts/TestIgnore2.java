@@ -1,5 +1,6 @@
 package org.alpha.sanjeevani.testngconcepts;
 
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 public class TestIgnore2 {
@@ -9,6 +10,7 @@ public class TestIgnore2 {
         System.out.println("I am in testIgnore4 method");
     }
     @Test
+    @Ignore
     public void test5(){
         System.out.println("I am in testIgnore5 method");
     }

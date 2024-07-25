@@ -1,7 +1,9 @@
 package org.alpha.sanjeevani.testngconcepts.parameterization;
 
+import com.fasterxml.jackson.core.format.DataFormatDetector;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
@@ -53,16 +55,19 @@ public class DynamicDataProviderFromExcel {
         XSSFSheet sheet = workbook.getSheet("sheet1");
 
         int rowNum=sheet.getLastRowNum();
-        System.out.println("Total rows number is :"+rowNum);
+        System.out.println("Total rows number is :"+rowNum);//total row number
 
-        int cellNum=sheet.getRow(1).getLastCellNum();
+        int cellNum=sheet.getRow(1).getLastCellNum();//total cols number
         System.out.println("Total columns number is :"+rowNum);
 
         Object[][] objArr=new Object[3][3];
-
         for (int row=0;row<=rowNum-1;row++){
             for (int col=0;col<=cellNum-1;col++){
-                objArr [row][col]=sheet.getRow(row+1).getCell(col).getStringCellValue();
+
+                DataFormatter formatter=new DataFormatter();
+                objArr [row][col]=formatter.formatCellValue(sheet.getRow(row+1).getCell(col));
+
+               // objArr [row][col]=sheet.getRow(row+1).getCell(col).getStringCellValue();
             }
         }
           return objArr;
