@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <test name="Login TestParameter1">
+        <parameter name="UserName" value="standard_user"/>
+        <parameter name="Password" value="secret_sauce"/>
+        <parameter name="condition" value="valid"/>
+        <classes>
+            <class name="org.alpha.sanjeevani.testngconcepts.parameterization.TestParameters"/>
+        </classes>
+    </test>
+    <!-- valid UserName invalid Password -->
+    <test name="Login TestParameter2">
+        <parameter name="UserName" value="standard_user"/>
+        <parameter name="Password" value="secret_sauce12"/>
+        <parameter name="condition" value="invalid"/>
+        <classes>
+            <class name="org.alpha.sanjeevani.testngconcepts.parameterization.TestParameters"/>
+        </classes>
+    </test>
+
+    <!-- invalid UserName valid Password -->
+    <test name="Login TestParameter3">
+        <parameter name="UserName" value="standard_user12"/>
+        <parameter name="Password" value="secret_sauce"/>
+        <parameter name="condition" value="invalid"/>
+        <classes>
+            <class name="org.alpha.sanjeevani.testngconcepts.parameterization.TestParameters"/>
+        </classes>
+    </test>
+
+    <!-- invalid UserName valid Password -->
+    <test name="Login TestParameter4">
+        <parameter name="UserName" value="standard_user12"/>
+        <parameter name="Password" value="secret_sauce21"/>
+        <parameter name="condition" value="invalid"/>
+        <classes>
+            <class name="org.alpha.sanjeevani.testngconcepts.parameterization.TestParameters"/>
+        </classes>
+    </test>
+</suite>
