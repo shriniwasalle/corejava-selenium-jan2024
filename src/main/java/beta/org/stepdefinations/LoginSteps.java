@@ -30,20 +30,40 @@ public class LoginSteps {
     public void users_enter_the_password() {
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
     }
-
     @When("users enter the {string} password")
     public void users_enter_the_password(String password) {
         driver.findElement(By.id("password")).sendKeys(password);
     }
-
     @When("users clicks on the login button")
     public void users_clicks_on_the_login_button() {
         driver.findElement(By.id("login-button")).click();
     }
-
     @Then("users_logged_in_successful")
     public void users_logged_in_successful() {
         String actualTitle = driver.findElement(By.xpath("//span[@data-test='title']")).getText();
         String expectedTitle = "Products";
         Assert.assertEquals(actualTitle, expectedTitle);}
+    @Then("Logged in successful or Unsuccessful with {string}")
+    public void logged_in_successful_or_unsuccessful_with(String type) {
+        System.out.println(type);
+
+        switch (type) {
+            case "valid" -> {
+                String actualTitle = driver.findElement(By.xpath("//span[@data-test='title']")).getText();
+                String expectedTitle = "Products";
+                Assert.assertEquals(actualTitle, expectedTitle);
+            }
+            case "locked_out" -> {
+                String error = driver.findElement(By.xpath("//h3[@data-test='error']")).getText();
+                String expectedError = "Epic sadface: Sorry, this user has been locked out.";
+                Assert.assertEquals(error, expectedError);
+            }
+            case "invalid" -> {
+                String errorInvalid = driver.findElement(By.xpath("//h3[@data-test='error']")).getText();
+                String expectedInvalidError = "Epic sadface: Username and password do not match any user in this service";
+                Assert.assertEquals(errorInvalid, expectedInvalidError);
+            }
+        }
+    }
+
 }
