@@ -33,4 +33,3 @@ public class TestClass extends BaseTestAss7 {
 
     }
 }
-// driver = initBrowser(ReadPropertiesFile.getPropertyValues("url"), ReadPropertiesFile.getPropertyValues("browser"));

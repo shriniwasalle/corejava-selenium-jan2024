@@ -9,7 +9,7 @@ import java.util.List;
 public class FetchingProductDetails {
     private final WebDriver driver;
     ////*[@id="productTitle"]
-    private final By iphone15Heading = By.xpath("//*[@id='productTitle']");
+    private final By iphone15Heading = By.id("productTitle");
     private final By iphone15BlackPrice = By.xpath("//*[@id='corePriceDisplay_desktop_feature_div']/div[1]/span[3]/span[2]/span[2]");
     private final By rowsPath = By.xpath("//*[@id='productOverview_feature_div']/div/table/tbody/tr");
     private final By columnsPath = By.xpath("//*[@id='productOverview_feature_div']/div/table/tbody/tr[1]/td");

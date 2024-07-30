@@ -27,7 +27,7 @@ public class TestAmazonPage extends BaseTestAssign15{
 
         String actualTitle=driver.getTitle();
         System.out.println("actualTitle is :"+actualTitle);
-        String expectedTitle="TIMEWEAR Analog White Number Dial Brown Leather Strap Watch for Men : Amazon.in: Fashion";
+        String expectedTitle="TIMEX Men's Analog Watch -Blue, TW00ZR262E : Amazon.in: Fashion";
 
         Assert.assertEquals(actualTitle,expectedTitle);
     }
